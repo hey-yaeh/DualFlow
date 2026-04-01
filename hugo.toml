@@ -1,0 +1,76 @@
+baseURL = "https://hey-yaeh.github.io/DualFlow/"
+title = "DualFlow"
+theme = "bearblog"
+languageCode = "en-US"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "sitemap"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+[params]
+  subtitle = "A multimodal dyadic social interaction dataset with eye tracking, facial performance, and high-fidelity body motion"
+  description = "DualFlow is a multimodal dataset of dyadic social interaction with identity-obscured egocentric video, native wearable eye tracking, facial-performance parameters, consent-aware audio, aligned transcripts, and high-fidelity body motion."
+  email_primary = "hey3@tcd.ie"
+  email_secondary = "jovanea@tcd.ie"
+  personnel = "https://www.scss.tcd.ie/personnel/"
+  scss = "https://www.scss.tcd.ie/"
+  tcd = "https://www.tcd.ie/"
+  github = ""
+  paper = ""
+  access = "/access/"
+  hideMadeWithLine = true
+  favicon = "favicon.ico"
+  images = ["images/modalities.png"]
+
+[markup]
+  [markup.highlight]
+    style = "friendly"
+    lineNos = true
+    lineNumbersInTable = false
+    codeFences = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menu.main]]
+  name = "Dataset"
+  url = "/dataset/"
+  weight = 10
+
+[[menu.main]]
+  name = "Curation"
+  url = "/curation/"
+  weight = 20
+
+[[menu.main]]
+  name = "Directions"
+  url = "/benchmarks/"
+  weight = 30
+
+[[menu.main]]
+  name = "Organization"
+  url = "/organization/"
+  weight = 40
+
+[[menu.main]]
+  name = "Access"
+  url = "/access/"
+  weight = 50
+
+[[menu.main]]
+  name = "Ethics"
+  url = "/ethics/"
+  weight = 60
+
+[[menu.main]]
+  name = "FAQ"
+  url = "/faq/"
+  weight = 70
+
+[[menu.main]]
+  name = "Citation"
+  url = "/citation/"
+  weight = 80
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"

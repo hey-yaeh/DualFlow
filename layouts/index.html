@@ -1,0 +1,39 @@
+{{ define "main" }}
+<h1>{{ .Site.Title }}</h1>
+<p class="tagline">{{ .Site.Params.subtitle }}</p>
+
+<nav class="quick-links" aria-label="Primary">
+  <a href="{{ "dataset/" | relURL }}">Dataset</a>
+  <a href="{{ "curation/" | relURL }}">Collection &amp; curation</a>
+  <a href="{{ "benchmarks/" | relURL }}">Research directions</a>
+  <a href="{{ "organization/" | relURL }}">Data organization</a>
+  <a href="{{ "access/" | relURL }}">Access &amp; license</a>
+  <a href="{{ "ethics/" | relURL }}">Ethics &amp; privacy</a>
+  <a href="{{ "citation/" | relURL }}">Citation</a>
+  <a href="{{ "faq/" | relURL }}">FAQ</a>
+</nav>
+
+{{ .Content }}
+
+<div class="info-box">
+  <table>
+    <tr><td><strong>contacts</strong>.</td><td>{{ .Site.Params.email_primary }}<br>{{ .Site.Params.email_secondary }}</td></tr>
+    <tr><td><strong>institution</strong>.</td><td>Trinity College Dublin</td></tr>
+    <tr><td><strong>paper</strong>.</td><td>ACM Multimedia 2026 Dataset Track submission, under review</td></tr>
+    <tr><td><strong>access</strong>.</td><td>Request by email under the DualFlow research-use workflow</td></tr>
+    {{ with .Site.Params.github }}<tr><td><strong>code</strong>.</td><td><a href="{{ . }}">repository</a></td></tr>{{ end }}
+  </table>
+</div>
+
+{{ partial "footer-logos.html" . }}
+
+<hr>
+
+<p style="text-align:center; font-size:0.95em;">
+  [<a href="{{ .Site.Params.personnel }}">Personnel</a>]
+  [<a href="{{ .Site.Params.scss }}">School of Computer Science and Statistics</a>]
+  [<a href="{{ .Site.Params.tcd }}">Trinity College Dublin</a>]
+  <br><br>
+  Documentation, review material, and access instructions for the DualFlow dataset.
+</p>
+{{ end }}
