@@ -5,7 +5,7 @@ slug = "dataset"
 
 # Dataset
 
-Dataset can be currently access [here](https://drive.google.com/drive/folders/10VXA4nWM4lNd5JxDo_33nAFeB1iKor7C?usp=drive_link).
+Dataset can be currently accessed [here](https://drive.google.com/drive/folders/10VXA4nWM4lNd5JxDo_33nAFeB1iKor7C?usp=drive_link).
 
 DualFlow is a multimodal dataset of dyadic social interaction built around synchronized face-to-face episodes rather than isolated gestures or single-user tasks. The dataset is designed to support analysis of **where people look**, **how they move**, **how facial behavior evolves**, **what they say**, and **how these channels interact over time**.
 
