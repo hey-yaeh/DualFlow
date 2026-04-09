@@ -57,6 +57,7 @@ DualFlow spans **19 locations**, **22 relationship settings**, and **five famili
 ## Use this site
 
 - [Dataset]({{< relref "dataset.md" >}}) for the download link, release scope, modalities, and metadata.
+- [aligner.]({{< relref "aligner.md" >}}) to get to the aligner page.
 - [Collection and curation]({{< relref "curation.md" >}}) for the recording workflow, hardware stack, synchronization, and quality control.
 - [Representative research directions]({{< relref "benchmarks.md" >}}) for the task families supported by the current release.
 - [Data organization]({{< relref "organization.md" >}}) for manifests, identifiers, and recommended directory layout.

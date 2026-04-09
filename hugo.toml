@@ -37,6 +37,11 @@ ignoreErrors = ["error-disable-taxonomy"]
   weight = 10
 
 [[menu.main]]
+  name = "Aligner"
+  url = "/aligner/"
+  weight = 15
+
+[[menu.main]]
   name = "Curation"
   url = "/curation/"
   weight = 20
