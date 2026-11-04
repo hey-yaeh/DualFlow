@@ -48,17 +48,18 @@ jobs:
               done
           printf '%s\n' "$BASELINE_URL" > oculostudio_v02171_source/BASELINE_URL.txt
           sha256sum work/baseline.zip > oculostudio_v02171_source/BASELINE_SHA256.txt
+          bash oculostudio_v02172_build/source_index.sh oculostudio_v02171_source/wheel/oculostudio > out/source_index.txt
 
           git config user.name 'OculoStudio build bot'
           git config user.email 'actions@users.noreply.github.com'
           git add oculostudio_v02171_source
           if ! git diff --cached --quiet; then
-            git commit -m 'Export v0.21.71 text sources for v0.21.72 [skip ci]'
+            git commit -m 'Refresh v0.21.71 text sources for v0.21.72 [skip ci]'
             git push origin HEAD:oculostudio-v02172-build
           fi
       - name: Upload inspection artifact
         uses: actions/upload-artifact@v4
         with:
-          name: oculostudio-v02171-inspection
+          name: oculostudio-v02171-inspection-${{ github.run_number }}
           path: out
           if-no-files-found: error
