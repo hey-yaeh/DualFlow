@@ -7,10 +7,11 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   inspect:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
     runs-on: ubuntu-latest
     env:
       BASELINE_URL: "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-e7d4-8211-b58b-1ad94394ce58/raw?se=2026-11-04T18%3A55%3A58Z&sp=r&sv=2026-02-06&sr=b&scid=80b43e8e-a3f2-548a-ae29-44e081409ea5&skoid=a0b9f82a-c86e-4064-a822-2aa38890bb37&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-04T03%3A54%3A04Z&ske=2026-11-05T03%3A54%3A04Z&sks=b&skv=2026-02-06&sig=scvcq1aapXGqf14Sg2fhA3NoMha12Ls0clGNVVuV88s%3D"
@@ -24,20 +25,37 @@ jobs:
           curl -L --fail --retry 3 "$BASELINE_URL" -o work/baseline.zip
           sha256sum work/baseline.zip | tee out/baseline_sha256.txt
           unzip -q work/baseline.zip -d work/base
-          echo '=== INSTALLER ROOT ===' | tee out/inventory.txt
-          find work/base -maxdepth 3 -type f -printf '%P\n' | sort | tee -a out/inventory.txt
-          WHEEL=$(find work/base -type f -name 'oculostudio-*.whl' | head -n1)
+          INSTALL_ROOT=$(find work/base -mindepth 1 -maxdepth 1 -type d | head -n1)
+          WHEEL=$(find "$INSTALL_ROOT" -type f -name 'oculostudio-*.whl' | head -n1)
           test -n "$WHEEL"
-          echo "WHEEL=$WHEEL" | tee -a out/inventory.txt
           unzip -q "$WHEEL" -d work/wheel
-          echo '=== PACKAGE FILES ===' | tee -a out/inventory.txt
+          echo "INSTALL_ROOT=$INSTALL_ROOT" | tee out/inventory.txt
+          echo "WHEEL=$WHEEL" | tee -a out/inventory.txt
           find work/wheel -maxdepth 4 -type f -printf '%P\n' | sort | tee -a out/inventory.txt
-          echo '=== VERSION ===' | tee -a out/inventory.txt
-          grep -RIn --include='*.py' --include='*.js' --include='*.json' '0\.21\.71\|__version__' work/wheel | head -n 80 | tee -a out/inventory.txt || true
-          echo '=== DATA MANAGEMENT SYMBOLS ===' | tee -a out/inventory.txt
-          grep -RIn --include='*.py' --include='*.js' 'Calibration Data\|Interaction Data\|calibration set\|face_mapper\|facemapper\|session_shared\|interaction_id\|append' work/wheel/oculostudio | head -n 600 | tee -a out/inventory.txt || true
-          cp work/wheel/oculostudio/static/app.js out/app.js
-          find work/wheel/oculostudio -type f -name '*.py' -maxdepth 4 -print0 | xargs -0 -I{} sh -c 'echo "===== {} ====="; sed -n "1,260p" "{}"' > out/python_sources_head.txt
+
+          rm -rf oculostudio_v02171_source
+          mkdir -p oculostudio_v02171_source/wheel oculostudio_v02171_source/payload
+          cp -a work/wheel/oculostudio oculostudio_v02171_source/wheel/
+          cp -a work/wheel/neon_vicon_gaze3d oculostudio_v02171_source/wheel/
+          cp work/wheel/oculostudio-0.21.71.dist-info/METADATA oculostudio_v02171_source/wheel/METADATA.txt
+          cp work/wheel/oculostudio-0.21.71.dist-info/entry_points.txt oculostudio_v02171_source/wheel/entry_points.txt
+          rm -f oculostudio_v02171_source/wheel/oculostudio/resources/media_probe_test.mp4
+          find "$INSTALL_ROOT/payload" -maxdepth 2 -type f \( -name '*.py' -o -name '*.bat' -o -name '*.md' -o -name '*.txt' -o -name '*.json' \) -print0 \
+            | while IFS= read -r -d '' f; do
+                rel=${f#"$INSTALL_ROOT/payload/"}
+                mkdir -p "oculostudio_v02171_source/payload/$(dirname "$rel")"
+                cp "$f" "oculostudio_v02171_source/payload/$rel"
+              done
+          printf '%s\n' "$BASELINE_URL" > oculostudio_v02171_source/BASELINE_URL.txt
+          sha256sum work/baseline.zip > oculostudio_v02171_source/BASELINE_SHA256.txt
+
+          git config user.name 'OculoStudio build bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add oculostudio_v02171_source
+          if ! git diff --cached --quiet; then
+            git commit -m 'Export v0.21.71 text sources for v0.21.72 [skip ci]'
+            git push origin HEAD:oculostudio-v02172-build
+          fi
       - name: Upload inspection artifact
         uses: actions/upload-artifact@v4
         with:
