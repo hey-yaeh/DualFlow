@@ -1,0 +1,34 @@
+{
+  "privacy_clip_id": "artifact_a375c035db4a",
+  "output_frame_index": 0,
+  "native_frame_index": 60,
+  "role_id": "R01",
+  "relation": "partner",
+  "bbox": [
+    238.9191836877885,
+    110.95692575813284,
+    279.48081631221146,
+    161.17608995979936
+  ],
+  "coverage": {
+    "code": "partner_face_covered",
+    "severity": "good",
+    "title": "Partner face is covered by an accepted FaceMapper detection.",
+    "detail": "Fine facial AOIs use the exact accepted FaceMapper box and landmarks for this Native frame.",
+    "recommendation": "No coverage problem is detected for this frame; use manual review only if the source landmarks are visibly misplaced.",
+    "face_region_count": 5,
+    "identity_row_count": 1,
+    "partner_projection_valid": true,
+    "matched_partner": true,
+    "identity_confidence": 0.7483703288624043,
+    "projected_box_iou": 0.1934813154496171,
+    "bbox_overlap_present": true,
+    "normalized_center_error": 0.1472378799017414,
+    "weak_geometric_agreement": false,
+    "filter_status_counts": {},
+    "filter_reason_counts": {},
+    "filter_reason_details": [],
+    "face_tolerance_ms": 8.0,
+    "geometry_policy": "exact_source_box_and_landmarks_no_interpolation"
+  }
+}

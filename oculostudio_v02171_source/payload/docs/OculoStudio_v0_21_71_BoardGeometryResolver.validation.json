@@ -1,0 +1,12 @@
+{
+  "release": "0.21.71",
+  "page_errors": [],
+  "console_errors": [],
+  "checks": {
+    "board_mapped_visible": true,
+    "etm_a_ready": true,
+    "etm_b_ready": true,
+    "six_sources_visible": true
+  },
+  "all_pass": true
+}

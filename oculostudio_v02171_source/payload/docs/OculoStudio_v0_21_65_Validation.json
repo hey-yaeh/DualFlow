@@ -1,0 +1,150 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "application_version": "0.21.65",
+  "release": "OculoStudio v0.21.65 — Context-Locked AOI Review",
+  "feature_summary": {
+    "problem": "Human Review and AOI Review Player could fall back to R01 or an obsolete R02 trim when the active R02 trim had no Face/Body AOI yet.",
+    "context_key": [
+      "session_id",
+      "interaction_id",
+      "active_wearer_role_id",
+      "native_reference_trim_artifact_id"
+    ],
+    "empty_context_policy": "remain empty; never fall back to another role or trim",
+    "surfaces_locked": [
+      "pipeline cards",
+      "analytics",
+      "Human Review sidebar",
+      "AOI Review Player",
+      "video selectors",
+      "Face + Body fusion selectors"
+    ]
+  },
+  "targeted_context_lock": {
+    "release": "0.21.65",
+    "feature": "Context-locked AOI review gating",
+    "checks": {
+      "active_context_is_r02": true,
+      "context_lock_names_exact_trim": true,
+      "no_face_review_button_before_current_artifact": true,
+      "no_body_review_button_before_current_artifact": true,
+      "face_placeholder_requires_r02": true,
+      "body_placeholder_requires_r02": true,
+      "r01_pending_counts_do_not_leak": true,
+      "obsolete_r02_trim_counts_do_not_leak": true,
+      "pipeline_face_not_run": true,
+      "pipeline_body_not_run": true,
+      "review_player_face_disabled": true,
+      "review_player_body_disabled": true,
+      "fusion_face_has_no_cross_context_option": true,
+      "fusion_body_has_no_cross_context_option": true,
+      "page_errors_absent": true,
+      "console_errors_absent": true
+    },
+    "page_errors": [],
+    "console_errors": [],
+    "screenshot": "/mnt/data/oculostudio_v02165_work/final_installed_context_lock.png",
+    "passed": 16,
+    "total": 16,
+    "failed": [],
+    "all_passed": true
+  },
+  "regressions": {
+    "role_locked_partner_projection": {
+      "release": "OculoStudio v0.21.65 — Role-Locked Partner Projection",
+      "checks": {
+        "installed_version": true,
+        "wrong_role_profile_blocked": true,
+        "r02_resolves_etm_a": true,
+        "profile_from_paired_handoff": true,
+        "valid_in_view_partner_projection": true,
+        "projection_count_audited": true,
+        "same_trim_face_aoi_created": true,
+        "mismatched_trim_blocked": true,
+        "zero_projection_blocked": true,
+        "zero_projection_publishes_nothing": true,
+        "role_locked_card_present": true,
+        "profile_override_hidden_by_default": true,
+        "exact_trim_filter_present": true,
+        "role_switch_does_not_autofill_profile": true,
+        "zero_projection_ui_explained": true
+      },
+      "passed": 15,
+      "total": 15,
+      "failed": [],
+      "all_passed": true
+    },
+    "existing_human_review_entry": {
+      "release": "0.21.65",
+      "feature": "Persistent Face AOI Human review entry from Body AOI",
+      "page_errors": [],
+      "console_errors": [],
+      "checks": {
+        "entry_visible_in_body_mode": true,
+        "entry_enabled_with_face_artifact": true,
+        "pending_count_is_truthful": true,
+        "body_mode_was_active_before_open": true,
+        "opens_matching_face_artifact": true,
+        "manual_panel_is_open": true,
+        "jumps_to_first_pending_frame": true,
+        "manual_queue_reports_pending": true,
+        "responsive_without_horizontal_overflow": true,
+        "body_aoi_source_unchanged": true,
+        "installed_version": true,
+        "persistent_player_entry_is_packaged": true,
+        "expert_panel_and_job_entries_are_packaged": true,
+        "guided_workflow_entry_is_packaged": true,
+        "no_page_errors": true,
+        "no_console_errors": true
+      },
+      "before_click": {
+        "mode": "body",
+        "artifact": "artifact_ce9eca8ec42d",
+        "entryVisible": true,
+        "buttonVisible": true,
+        "buttonDisabled": false,
+        "buttonText": "Review flagged samples",
+        "status": "S001_I01_R01_face_aoi · 3 flagged samples in 2 frames still need a human decision."
+      },
+      "after_click": {
+        "mode": "face",
+        "artifact": "artifact_da4d66c9f8ed",
+        "manualHidden": false,
+        "progress": "0 / 3 review events resolved · 3 samples remain",
+        "status": "not started",
+        "badge": "Face AOI · 3 pending groups · 2 frames",
+        "currentFrame": 0,
+        "scrollTop": 0,
+        "panelTop": 205.375,
+        "pageWidth": 1660
+      },
+      "first_pending_frame": 0,
+      "failed": [],
+      "ok": true
+    }
+  },
+  "language_syntax": {
+    "python_compileall": true,
+    "javascript_app_js_node_check": true,
+    "javascript_aoi_review_js_node_check": true,
+    "javascript_interaction_workspace_js_node_check": true
+  },
+  "installed_wheel": {
+    "version": "0.21.65",
+    "filename": "oculostudio-0.21.65-py3-none-any.whl",
+    "size_bytes": 2294088,
+    "sha256": "52c022da0cba036acf48d5c596103af61d67e0b65520319ceb06ab66590d155e",
+    "zip_crc_passed": true,
+    "zip_entries": 227,
+    "record_rows": 227,
+    "record_failures": [],
+    "isolated_target_install": true
+  },
+  "all_passed": true,
+  "notes": [
+    "Old R01 and obsolete-R02-trim artifacts remain immutable and available in Results & QC.",
+    "Only current interaction + active role + exact Native-reference trim artifacts are offered for review or fusion.",
+    "Failed generation jobs do not create a Human Review entry.",
+    "Windows WebView2 shell and batch installer require final confirmation on the user’s Windows machine; FastAPI and Chromium UI were exercised here."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "assignment_artifact_id": "artifact_9e311edf4ec3",
+  "time_sync_artifact_ids": [
+    "artifact_af6d510d2e86",
+    "artifact_7a42cf68a8b0"
+  ],
+  "handoff_artifact_id": "artifact_0c16ce167ac3",
+  "roles": {
+    "R01": {
+      "artifact_id": "artifact_af6d510d2e86",
+      "artifact_label": "Automatic time sync \u00b7 R01 \u00b7 S001_I01_R01_TSD \u2194 S001_I01_ETM_B",
+      "source_asset_id": "asset_d8a4f849305f",
+      "target_asset_id": "asset_e5fda5f25810",
+      "time_map_id": "map_aa39cb9433c9",
+      "confidence": "HIGH",
+      "accepted_by_user": false,
+      "sync_verified": true,
+      "distributed_drift_validated": true,
+      "precision_validated": true,
+      "production_ready": true,
+      "ego_video_used": false,
+      "estimated_offset_sec": 2.8411753953333374,
+      "estimated_drift_ppm": 143.22007759304256,
+      "matched_window_count": 11,
+      "window_count": 11,
+      "p95_residual_ms": 2.0033345000000002,
+      "assignment_artifact_id": "artifact_9e311edf4ec3"
+    },
+    "R02": {
+      "artifact_id": "artifact_7a42cf68a8b0",
+      "artifact_label": "Automatic time sync \u00b7 R02 \u00b7 S001_I01_R02_TSD \u2194 S001_I01_ETM_A",
+      "source_asset_id": "asset_0fcb4487ecab",
+      "target_asset_id": "asset_d7da27f91752",
+      "time_map_id": "map_76a1b1052900",
+      "confidence": "HIGH",
+      "accepted_by_user": false,
+      "sync_verified": true,
+      "distributed_drift_validated": true,
+      "precision_validated": true,
+      "production_ready": true,
+      "ego_video_used": false,
+      "estimated_offset_sec": -1.7587365226666662,
+      "estimated_drift_ppm": -108.76878067545005,
+      "matched_window_count": 11,
+      "window_count": 12,
+      "p95_residual_ms": 2.5879635,
+      "assignment_artifact_id": "artifact_9e311edf4ec3"
+    }
+  },
+  "checks": [
+    "two role-specific Pupil IMU\u2194ETM mappings created without ego video",
+    "R01\u2192ETM-B and R02\u2192ETM-A assignment preserved",
+    "role-mismatched Pupil Timeseries blocked",
+    "missing role synchronization blocked",
+    "video-derived synchronization blocked",
+    "distributed drift required",
+    "sub-sample local lags and independent leave-one-window-out residuals required",
+    "drift reported with a finite non-zero 95% interval",
+    "accepted synchronization preview evidence is readable without ego video",
+    "calibration profiles and TimeGraphs bound into one immutable handoff",
+    "legacy profile-only handoff blocked",
+    "Gaze3D shared-start bypass blocked",
+    "stale assignment synchronization blocked"
+  ]
+}

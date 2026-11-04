@@ -1,0 +1,29 @@
+{
+  "release": "0.21.71",
+  "feature": "Context-locked AOI review gating",
+  "checks": {
+    "active_context_is_r02": true,
+    "context_lock_names_exact_trim": true,
+    "no_face_review_button_before_current_artifact": true,
+    "no_body_review_button_before_current_artifact": true,
+    "face_placeholder_requires_r02": true,
+    "body_placeholder_requires_r02": true,
+    "r01_pending_counts_do_not_leak": true,
+    "obsolete_r02_trim_counts_do_not_leak": true,
+    "pipeline_face_not_run": true,
+    "pipeline_body_not_run": true,
+    "review_player_face_disabled": true,
+    "review_player_body_disabled": true,
+    "fusion_face_has_no_cross_context_option": true,
+    "fusion_body_has_no_cross_context_option": true,
+    "page_errors_absent": true,
+    "console_errors_absent": true
+  },
+  "page_errors": [],
+  "console_errors": [],
+  "screenshot": "/mnt/data/oculo_v2171_work/OculoStudio_v0_21_71_BoardGeometryResolver_Installer/payload/docs/OculoStudio_v0_21_66_ContextLockedAOIReview.png",
+  "passed": 16,
+  "total": 16,
+  "failed": [],
+  "all_passed": true
+}

@@ -1,0 +1,1802 @@
+{
+  "schema_version": "oculostudio-package-manifest-1.0",
+  "release": "OculoStudio v0.21.71 Independent Board Geometry Resolver",
+  "file_count": 359,
+  "files": [
+    {
+      "path": ".editorconfig",
+      "size_bytes": 283,
+      "sha256": "b29027719418dcd52910ff996dda7127860016de97e5277888f477f4646b3002"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "size_bytes": 922,
+      "sha256": "4768a68f7396198deac34bc96ad49c8134c6c6540fb4547482503936a2f4c8ff"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 393,
+      "sha256": "1bc10bc5d0cf8c57d994f7025e5f6714e06039aa938a151ffafa3a650b06eb87"
+    },
+    {
+      "path": "CHECK_ALIGNED_CLIP_EXPORT_WINDOWS.bat",
+      "size_bytes": 505,
+      "sha256": "585f6044191a5f0b674f39647465257a241097a0a7116dd065f7688fb9f6124a"
+    },
+    {
+      "path": "CHECK_ALIGNED_CLIP_QC_PREVIEW_WINDOWS.bat",
+      "size_bytes": 533,
+      "sha256": "23a254fdd978f6ce43271973ccb31977a0fc5d90dde9765641e39dd56aa54005"
+    },
+    {
+      "path": "CHECK_ALIGNED_FACIAL_VIDEO_EXPORT_WINDOWS.bat",
+      "size_bytes": 498,
+      "sha256": "bf7cfc0e1d7b0f67578bcdd45916e6c4a98c2600cf7e905802be4837bd8660c1"
+    },
+    {
+      "path": "CHECK_AOI_REALTIME_PLAYBACK_WINDOWS.bat",
+      "size_bytes": 552,
+      "sha256": "78617733031799adb787c35a884fd9913c7ec4995454afd4116bf73cf98b08b5"
+    },
+    {
+      "path": "CHECK_AOI_TIMEBASE_END_TO_END_WINDOWS.bat",
+      "size_bytes": 682,
+      "sha256": "09064f833a62603ad1105691666d1aa39df6720611c216ca0ee959898423b97a"
+    },
+    {
+      "path": "CHECK_BODY_AOI_DIRECT_CLOCK_WINDOWS.bat",
+      "size_bytes": 559,
+      "sha256": "62bb92e9f7f6555a16f9a9872bb8032dae6a07a9bb899579770d3abcdd83be4b"
+    },
+    {
+      "path": "CHECK_BODY_AOI_FIXATION_REDUCTION_WINDOWS.bat",
+      "size_bytes": 537,
+      "sha256": "160495844c881dd5a3b717f234a04ea4ddab14ebd80338beeccff7f5cbc04df3"
+    },
+    {
+      "path": "CHECK_BODY_AOI_HUMAN_REVIEW_WINDOWS.bat",
+      "size_bytes": 802,
+      "sha256": "851d16b5b68720461f01207e787f17a417121c6f41f3b278d85b5fb40d88feef"
+    },
+    {
+      "path": "CHECK_BODY_AOI_RESOLUTION_WINDOWS.bat",
+      "size_bytes": 397,
+      "sha256": "6071217630b6689ede8563cffbc06d115c352d18f9054675ae1c2f7d498c1304"
+    },
+    {
+      "path": "CHECK_BODY_AOI_RESULT_HANDOFF_WINDOWS.bat",
+      "size_bytes": 370,
+      "sha256": "c402a5e2981f40cfc1f02304ed467debe2749e411d59a1a15169aa02292c1b19"
+    },
+    {
+      "path": "CHECK_BODY_AOI_SEMANTIC_REDUCTION_WINDOWS.bat",
+      "size_bytes": 602,
+      "sha256": "b488a59426d7ccc92622c1fb5ff6dfa84525764e7d079ac37314300e17404db9"
+    },
+    {
+      "path": "CHECK_BODY_AOI_TORSO_REVIEW_WINDOWS.bat",
+      "size_bytes": 542,
+      "sha256": "fdfa57d086c4e5f844ae622bb25f867c26fcaa3b9bf2382ff7d89fa4564e8760"
+    },
+    {
+      "path": "CHECK_BODY_AOI_TORSO_SURFACES_WINDOWS.bat",
+      "size_bytes": 342,
+      "sha256": "97b35f49f2ca02951699a77ea8a00f7ab9efa8493f116ecd9d63689fcf36e4c6"
+    },
+    {
+      "path": "CHECK_BODY_AOI_VISUAL_ANALYTICS_WINDOWS.bat",
+      "size_bytes": 376,
+      "sha256": "992466449cf9b5122a6b4162f9ca4ac62fcb36cb624312016c8ca5a2e19c5e69"
+    },
+    {
+      "path": "CHECK_BODY_GEOMETRY_INTEGRITY_WINDOWS.bat",
+      "size_bytes": 574,
+      "sha256": "6778f0cc1bad0a59276b47b052fb09d60834e32d17049768d2e21c8ec17b8761"
+    },
+    {
+      "path": "CHECK_C3D_DEFINED_CLIPS_WINDOWS.bat",
+      "size_bytes": 470,
+      "sha256": "fc3c430eee2f12095c4e60cb553ee885e6346d11d84216c2d982304e5425d270"
+    },
+    {
+      "path": "CHECK_CALIBRATION_AUTOSYNC_WINDOWS.bat",
+      "size_bytes": 535,
+      "sha256": "7ca3f7ec1d7de02084104f2ccc11499e411b661b59e01efd1052ac467801e3da"
+    },
+    {
+      "path": "CHECK_CALIBRATION_IMPORT_WINDOWS.bat",
+      "size_bytes": 270,
+      "sha256": "0fd3c7757890299f9518df4d32cbe10f1bf3aa10d92ed983f37ab1067890966a"
+    },
+    {
+      "path": "CHECK_CALIBRATION_SETS_WINDOWS.bat",
+      "size_bytes": 401,
+      "sha256": "dcfb9cedd09c532257375f2ea7ec0b16b86de2bf4bfceb4529fd0a8d279ce0ef"
+    },
+    {
+      "path": "CHECK_CALIBRATION_SET_PROFILES_WINDOWS.bat",
+      "size_bytes": 273,
+      "sha256": "77694d1bf7f19fe8d6f87cd9bc82b7ec37648c9628de6c1e329580d354ff59cb"
+    },
+    {
+      "path": "CHECK_CALIBRATION_SYNC_PRECISION_WINDOWS.bat",
+      "size_bytes": 486,
+      "sha256": "b1d503eb027f66755f24aa8a94ab2a8b7d586677d400952712fe89bff9fd7548"
+    },
+    {
+      "path": "CHECK_CONTEXT_LOCKED_AOI_REVIEW_WINDOWS.bat",
+      "size_bytes": 390,
+      "sha256": "0565b8c432335b4929c920b004710a376c77c3e788a33c661e69f79210eb5fa7"
+    },
+    {
+      "path": "CHECK_DATA_MANAGEMENT_WINDOWS.bat",
+      "size_bytes": 267,
+      "sha256": "aad66916a8815d916b5f6f0ee1869ce47b8be373d653e483f81d68f2c77f946d"
+    },
+    {
+      "path": "CHECK_FACE_AOI_GEOMETRY_WINDOWS.bat",
+      "size_bytes": 991,
+      "sha256": "8d874cc53b881c2b441e7ed567bf46a17e0cb9eb8bc88ab116535c344244b0a5"
+    },
+    {
+      "path": "CHECK_FACE_AOI_REVIEW_WINDOWS.bat",
+      "size_bytes": 2515,
+      "sha256": "59d8bb8e6481ab173dbd4062ef433585554286782350737708c496d293c04b5c"
+    },
+    {
+      "path": "CHECK_FACE_EDGE_TOLERANCE_WINDOWS.bat",
+      "size_bytes": 300,
+      "sha256": "7f9035f5c0615473c9e1c6f5cdced215769220f1e46f078d391e8666ecc570c1"
+    },
+    {
+      "path": "CHECK_GAZE_SAMPLE_CLOCK_AOI_WINDOWS.bat",
+      "size_bytes": 280,
+      "sha256": "3c3e1f9778b60d69d5708ac847ae0e27b143a96a572885589670d6f6ee4b4b32"
+    },
+    {
+      "path": "CHECK_HUMAN_REVIEW_ENTRY_WINDOWS.bat",
+      "size_bytes": 639,
+      "sha256": "691087477488af018283f2bccddfc122671aae34e5fe3220ea2a085972b4a84e"
+    },
+    {
+      "path": "CHECK_MEDIA_TOOLS_WINDOWS.bat",
+      "size_bytes": 318,
+      "sha256": "5c95c5dfd67b20c90ac188b0d097b7ab863eb7d62f0436401c11151de2b20e3e"
+    },
+    {
+      "path": "CHECK_MOTIONSTUDIO_BRIDGE_WINDOWS.bat",
+      "size_bytes": 483,
+      "sha256": "b6dbc7cf127195dab61cb83907ed3215605069b75557406889e8c16cd57155b8"
+    },
+    {
+      "path": "CHECK_NASAL_ENVELOPE_WINDOWS.bat",
+      "size_bytes": 394,
+      "sha256": "c1983a7dbe10bb396cc153f9c371738d26ca46daaa4dcd7ba41a351bf29c44b7"
+    },
+    {
+      "path": "CHECK_OBJECT_AOI_DIRECT_CLOCK_WINDOWS.bat",
+      "size_bytes": 567,
+      "sha256": "7e617649a15f7de1823c05e7c651afeb0cd581c593fe5e5c8f3f684de3bc3ace"
+    },
+    {
+      "path": "CHECK_PRIVACY_PREVIEW_WINDOWS.bat",
+      "size_bytes": 477,
+      "sha256": "d065eac92cb437ce287c07440536b0c89e773624e38f4bd8d8694dead9d6d2a3"
+    },
+    {
+      "path": "CHECK_PROJECT_SESSION_WORKSPACE_WINDOWS.bat",
+      "size_bytes": 404,
+      "sha256": "e6e0c146bd4d276bb953934de77623cca2b22fcac246c535239735806a70288a"
+    },
+    {
+      "path": "CHECK_RAW_VICON_BODY_PROFILE_WINDOWS.bat",
+      "size_bytes": 683,
+      "sha256": "6e51f787626b664630b6f7d840bc1803e591026166f2cb0ddf9db164a1d8e748"
+    },
+    {
+      "path": "CHECK_ROLE_LOCKED_PARTNER_PROJECTION_WINDOWS.bat",
+      "size_bytes": 405,
+      "sha256": "b80ca45323d172c8c57de5b025169d9963c0e76c9111151a88f153070453c5dc"
+    },
+    {
+      "path": "CHECK_SHARED_AUDIO_VIDEO_SYNC_WINDOWS.bat",
+      "size_bytes": 508,
+      "sha256": "f59900f61a455a31d5f85e4d00213fa8d3fb0acd2149f184c0161126e8f12f82"
+    },
+    {
+      "path": "CHECK_WINDOWS.bat",
+      "size_bytes": 266,
+      "sha256": "e1d98f721dddedcbde01026616b052654dc370f3df7c20af95446ad555afafdc"
+    },
+    {
+      "path": "CREATE_AND_OPEN_DEMO_WINDOWS.bat",
+      "size_bytes": 119,
+      "sha256": "0caa3fbe21644db212d7dbc46af219c5cbfa133286a436d0404423a33b1e10f5"
+    },
+    {
+      "path": "CREATE_AOI_REVIEW_DEMO_WINDOWS.bat",
+      "size_bytes": 542,
+      "sha256": "ed6894aac3ac02321cf7ddeab9242b2c2300d044b4a555c5cf2a3239c8face10"
+    },
+    {
+      "path": "CREATE_DYADIC_ATTENTION_DEMO_WINDOWS.bat",
+      "size_bytes": 493,
+      "sha256": "1845e39eb279fbc28f152a08a4157bfd3f5c6789b8f52bc4c367f5396cfb3dba"
+    },
+    {
+      "path": "CREATE_ETM_ROLE_DEMO_WINDOWS.bat",
+      "size_bytes": 541,
+      "sha256": "d662f6c3fa24d191f2bb94ac21c7c5fe318aa2f98f96abccfdb153cd1c9cab93"
+    },
+    {
+      "path": "CREATE_NATIVE_TRIM_DEMO_WINDOWS.bat",
+      "size_bytes": 563,
+      "sha256": "33a7e19d9acb595051aa493936f2a81069c1bef142c8f806a22dcd2a1bac7056"
+    },
+    {
+      "path": "CREATE_PARTICIPANT_ASSOCIATION_DEMO_WINDOWS.bat",
+      "size_bytes": 445,
+      "sha256": "b666cae61c712f1d4f54af2241df33465ea73c35848730dca84988630ac74cba"
+    },
+    {
+      "path": "CREATE_PRIVACY_AOI_DEMO_WINDOWS.bat",
+      "size_bytes": 544,
+      "sha256": "2a03284b9a2762ac364b4d76c7d6b165e10d35a6f0e96d949219dcb6015313e1"
+    },
+    {
+      "path": "CREATE_RESULTS_WORKSPACE_DEMO_WINDOWS.bat",
+      "size_bytes": 562,
+      "sha256": "cada67efe9bdd172927560d33ab69371a25c1fe49a5c56a1d38c54b91733095e"
+    },
+    {
+      "path": "INSTALL_AND_RUN_WINDOWS.bat",
+      "size_bytes": 4862,
+      "sha256": "53b36a6d85a777f0468bb690d9e81304852e70040772ea6e5cf86698484aef76"
+    },
+    {
+      "path": "INSTALL_MOTIONSTUDIO_BRIDGE_WINDOWS.bat",
+      "size_bytes": 785,
+      "sha256": "935185a7a616a230b75d5d816286cea8aa8897b966ca21e47ffc7bf45c2ff3a5"
+    },
+    {
+      "path": "LAUNCH_OCULOSTUDIO.vbs",
+      "size_bytes": 479,
+      "sha256": "08eb3917023b5e289c428e37a9acf88f18f6ffac2ab2370e0ae3716238ff5b12"
+    },
+    {
+      "path": "LICENSE.txt",
+      "size_bytes": 1120,
+      "sha256": "263f91d034d855165c7bfe8fcfc474d8ed14de4c46cc1d50af3500aa5fe0e1a4"
+    },
+    {
+      "path": "OculoStudio.ico",
+      "size_bytes": 24089,
+      "sha256": "60a2f05e2712ecff63364f89274214672ad61675c595187c465e71c303543f65"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 1930,
+      "sha256": "a00d64755ec8b8ed3f3c6a3819d06acabcf1c445305c60456e237d038a6eb438"
+    },
+    {
+      "path": "README_CN.md",
+      "size_bytes": 1949,
+      "sha256": "769e5c972ef53c2d0ccab9954547bca81456f0cf5909b4ab3f424c07bcec2563"
+    },
+    {
+      "path": "REPAIR_FFPROBE_WINDOWS.bat",
+      "size_bytes": 736,
+      "sha256": "8a94561a228bf0777d309a9dfe5311ee923e89bd1b6931307bd3565f75db8f4b"
+    },
+    {
+      "path": "REPAIR_INSTALLATION_WINDOWS.bat",
+      "size_bytes": 1098,
+      "sha256": "dff6c1a545e4d70cdfe4ebe4545f7ba3b0e1f1301d54413f217fde6f66bbb9f4"
+    },
+    {
+      "path": "REPAIR_MEDIA_TOOLS_WINDOWS.bat",
+      "size_bytes": 1282,
+      "sha256": "114d3e8940038f38e2514bf3244f765d44b7c762d01b23c9054279b3da81def2"
+    },
+    {
+      "path": "START_WINDOWS.bat",
+      "size_bytes": 286,
+      "sha256": "02d968cf8420ce8c9232018a9c28b1903f75b7551570c724ff5123ccbcc7d3e1"
+    },
+    {
+      "path": "START_WINDOWS_BROWSER.bat",
+      "size_bytes": 296,
+      "sha256": "455ecf802b18e38fdd0329c3de7f8885b5de2b2a233bfe21567c971432ff3960"
+    },
+    {
+      "path": "UNINSTALL_OCULOSTUDIO.bat",
+      "size_bytes": 870,
+      "sha256": "deb1731269267ba908bf3357d5f56c0baf3bb6694cf9cd88c77e80bacc35e01d"
+    },
+    {
+      "path": "dist/oculostudio-0.21.71-py3-none-any.whl",
+      "size_bytes": 1081566,
+      "sha256": "7441b9f174ea438e8cb301315ddf7076c02c81fba437ebfe49dc665ce2caef22"
+    },
+    {
+      "path": "docs/BODY_AOI_TORSO_SURFACES_UI_VALIDATION_v0_21_46.json",
+      "size_bytes": 573,
+      "sha256": "f1b2b47fc0fd88f164f060bc5443a6cc583e0233ceb1b3d799f9ef8c79229aaf"
+    },
+    {
+      "path": "docs/BODY_HUMAN_REVIEW_UI_VALIDATION_v0_21_48.json",
+      "size_bytes": 1405,
+      "sha256": "ababaa559d027c1b3d647e888fcf7338868e5326b431b6ade4fa41a0764d962a"
+    },
+    {
+      "path": "docs/HUMAN_REVIEW_ENTRY_UI_VALIDATION_v0_21_47.json",
+      "size_bytes": 1531,
+      "sha256": "0e31c6daf605bb86e393cad228ab030479341cb6f1945a351ab97c75937ede25"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_46_BodyAOI_TorsoSurfaces_Preview.png",
+      "size_bytes": 170473,
+      "sha256": "43a120b891c17f528ad833706769ae8492989355bff3c57e74d8946f2737aa04"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_46_BodyAOI_TorsoSurfaces_QCPreview.png",
+      "size_bytes": 23889,
+      "sha256": "176f00fa914cab8d1531cdbc508e6327be039f70f4857b2b440de98f8c081c64"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_47_HumanReviewEntry.png",
+      "size_bytes": 412043,
+      "sha256": "3a32fdc5c08c339027a7ba1946bfd723dda47b3a7d980fb233e0f78d2f4a1720"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_48_BodyHumanReview.png",
+      "size_bytes": 388836,
+      "sha256": "f6677d3b6980ca171ce175bf8a5d6d72d39c1e96d41e63f5261a61b27507827a"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_48_BodyHumanReview.validation.json",
+      "size_bytes": 1405,
+      "sha256": "ababaa559d027c1b3d647e888fcf7338868e5326b431b6ade4fa41a0764d962a"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_48_FaceHumanReviewRegression.png",
+      "size_bytes": 412775,
+      "sha256": "74d14dcce0767a358a21ad302ac1587f62f51b7a5b78921ac2f5ca81139e95e1"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_48_FaceHumanReviewRegression.validation.json",
+      "size_bytes": 1531,
+      "sha256": "7935ac23afeb108ddbe16a8b6fcfe5efa68211a6196bea8982a32122279c7b42"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_48_HumanReviewEntry.png",
+      "size_bytes": 414146,
+      "sha256": "1ec613b1dfba511e5cf0f06ca8a6f46ce555b0c24fa6196b2247add29a73d4c0"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_48_HumanReviewEntry.validation.json",
+      "size_bytes": 1531,
+      "sha256": "f1b71e45c9db63a881085016057e07b4ee9ddb72722782db58b3cf8fa868b687"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_49_BodyHumanReviewRegression.png",
+      "size_bytes": 390036,
+      "sha256": "ff16c3a83242b93eb1d00ab44d2e41023b8be1a017fd99c9dc989296a7192178"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_49_TorsoFallback_QCPreview.png",
+      "size_bytes": 23102,
+      "sha256": "d7bd227b418cda8ac0c2d9e4ef1d2350d172fc25b55a3a768e7a6bc53aee1047"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_49_Torso_AutoReview_Preview.png",
+      "size_bytes": 110066,
+      "sha256": "9db1528eeef282a1caa232856c7c6b40f1296f530973d6641460ef12c40fb298"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_50_BodyGeometryBlocked_Preview.png",
+      "size_bytes": 414301,
+      "sha256": "37ef62b7fb2de5f65e2bf017cde31b6f657506303ebff24492737577a4208d7c"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_50_BodyGeometryIntegrity_Preview.png",
+      "size_bytes": 403477,
+      "sha256": "c5a3005798461196e7908f7f037e4f973a466594fc9804323a615f8c975427a9"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_50_BodyGeometryIntegrity_Preview.validation.json",
+      "size_bytes": 524,
+      "sha256": "cedef019b360eb055c1551894200a1b7906f14b67b2e4c412ab5da5f47040505"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_50_BodyHumanReviewRegression.png",
+      "size_bytes": 418954,
+      "sha256": "553c0551d745159e849e69d3c83d3d2356a65f94040d9129128b8c776a611f24"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_50_BodyHumanReviewRegression.validation.json",
+      "size_bytes": 1405,
+      "sha256": "1b56594976c924e6ccb8e956cf4759ca29090e8a32b484233bf1027693e60fe4"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_50_HumanReviewEntryRegression.png",
+      "size_bytes": 413162,
+      "sha256": "a2e21ce21b0f34fb7b1e13bcb60fe039d7807584cbb2607d3da1ed978237160c"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_50_HumanReviewEntryRegression.validation.json",
+      "size_bytes": 1528,
+      "sha256": "369366a98e030211e2ef1dcf4ae725570169b1133a9f5ca32d669e4ea129c766"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_53_BodyReviewReduction_Preview.png",
+      "size_bytes": 425394,
+      "sha256": "9624a3c02781fdd9bd26bc60d811b990e5839792370efa5324a9c7d368e86f20"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_53_BodyReviewReduction_Preview.validation.json",
+      "size_bytes": 1550,
+      "sha256": "13ad967cfcba6b226af087166bef627a01706faf7b345b12dfbc41b50d211cdd"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_54_AOIReview_UI.png",
+      "size_bytes": 428315,
+      "sha256": "2d2d0af4512b3d7e4550582426004a17d6eb6c14d55d1ceabd6758d6ae5d3438"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_54_RealTimeAOIReview_Preview.png",
+      "size_bytes": 420063,
+      "sha256": "8b34b71cc5145bea6d1587388b25d8ffe7e6de28af353026d5648275db333ec2"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_54_ReviewPaused_Preview.png",
+      "size_bytes": 418206,
+      "sha256": "d0b2ea584d006290b2b00c5192a8c4d0d5ba220c14577dc156554cc32f273ff5"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_55_CalibrationAutoSync_Preview.png",
+      "size_bytes": 600245,
+      "sha256": "16c231a5c8148040feaac19ece5ae33d24cc1a1e02393d995bcbc1bcc455a6c9"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_56_SyncPrecisionAudit_Preview.png",
+      "size_bytes": 250674,
+      "sha256": "69ad90de7207ac330f871c3f64b0f1f1a8884d2ee1eff7f0ea0b0186b9224df0"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_57_C3DDefinedClips_Preview.png",
+      "size_bytes": 416624,
+      "sha256": "389b3b12691b7aaa9d930123a187641ae3fde8b00866dfdf4e4f3db84cef8266"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_57_TrimReview_Preview.png",
+      "size_bytes": 354264,
+      "sha256": "e5caef2561ed32a02ea963437cc2f7d0df814f92cc8a1400195b3c3f62c80792"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_57_Validation.json",
+      "size_bytes": 8533,
+      "sha256": "3c6bd44655d572038fb756737b2ee9743d99a907be9d3648da39c6f31287a6f4"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_57_Validation_Report.txt",
+      "size_bytes": 4903,
+      "sha256": "f8b38ab602e10746b27a421ca5e941caacddc05b45239e314ba94e3cf91c4958"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_58_AlignedClipQCPreview.png",
+      "size_bytes": 304686,
+      "sha256": "ad1ca368991d34cfc886a5ea90a70c57b5b7b387d50c90d65d45c77de89a0baa"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_58_Validation.json",
+      "size_bytes": 1585,
+      "sha256": "83b3374d9f57da82ac616befc0e3c6c810d68fdb932abb2b006882e33c212a6c"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_58_Validation_Report.txt",
+      "size_bytes": 1340,
+      "sha256": "59b370ca2e47bef086c97190464c46ea499d5a6f022766fa3b49796cf85c4f14"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_59_AlignedEgoDataExport.png",
+      "size_bytes": 365706,
+      "sha256": "b3451f8dc073268213f42a6ff71ebba525d40cecc39a419297beec26c2dbdd44"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_59_Validation.json",
+      "size_bytes": 2784,
+      "sha256": "2b856fbec95836bfb4c967f7effb51f03c3858bcde674b1a0f779c4ec7472344"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_59_Validation_Report.txt",
+      "size_bytes": 1440,
+      "sha256": "751f13014a5cade5263fb0a942fdc22074dd4d70e2158d8a65dffe7a847c4a39"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_60_PairedCalibration_ModeDropdown.png",
+      "size_bytes": 463282,
+      "sha256": "2ce34153a1361935619247778afe2e43a147d7e570e2880ec697e7a1d0649df1"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_60_Validation.json",
+      "size_bytes": 6326,
+      "sha256": "db17798e6417eb73a92e6ff61e4fb5d4194894146efbbcb870d4f23211886fde"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_60_Validation_Report.txt",
+      "size_bytes": 1772,
+      "sha256": "ea066e5ead0cd94ff074cf2000f3f9a44ab7203f60c93d74e0b164de02452b2a"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_61_SharedAudioVideoSync.png",
+      "size_bytes": 529704,
+      "sha256": "de17d4fa88cec2bcbd6dcf105836e081b3ed2d26fa7432e462fbb7f45996bfa8"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_61_SharedAudioVideoSync.validation.json",
+      "size_bytes": 981,
+      "sha256": "cffa9b50dbabd93d0fa8e2229f700ff3b2c0e20899f95cd88b78426f161efe5d"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_61_SharedAudioVideoSync_Panel.png",
+      "size_bytes": 473264,
+      "sha256": "e0361d4f47a0387512e3b2cb6993245de6fbdac1ae35ff5bb1be20ac34b94c99"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_61_Validation.json",
+      "size_bytes": 4532,
+      "sha256": "a74dfbd6d9e1320e50e6f00aeaa623c0275bda4c0521151e3f703baa217411cf"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_61_Validation_Report.txt",
+      "size_bytes": 2646,
+      "sha256": "4d0be25e70891c6db1e510cdcdbb0f0c0fbb8413f26d6a6f4a4ba9516e99118f"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_62_Validation.json",
+      "size_bytes": 11487,
+      "sha256": "6bbc6755ede909b32967910641637b53893aeb5f0e3c561e6096ccd340c903c8"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_62_Validation_Report.txt",
+      "size_bytes": 2333,
+      "sha256": "f8ab011df4ff24eee924ed6e305c52ab260f73a390bb290a256b1aff7916a40d"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_63_AlignedFacialVideoExport.png",
+      "size_bytes": 344725,
+      "sha256": "cfcd8ae664bd0af21f93bc1b1efac2d1bade6a8baf26193c9d468871e8088f6f"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_63_AlignedFacialVideoExport_Controls.png",
+      "size_bytes": 396550,
+      "sha256": "24227385b31b1f1a93638068d27fee0d63c65deecf959d71efe0b919f9b3b967"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_63_AlignedFacialVideoExport_UI.validation.json",
+      "size_bytes": 609,
+      "sha256": "5dc834802f4b227928ba6ae25ca6844d5a6ee635cb6832ebe775514fb017beab"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_63_Validation.json",
+      "size_bytes": 2733,
+      "sha256": "d33f1f41b04cc69703da5194d76b216ce4ad1ea83875f597a7fd265853088c6b"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_63_Validation_Report.txt",
+      "size_bytes": 1984,
+      "sha256": "588b3253ef5d9dd8a6eba7ee4e274c6896d36e1f27fe264aea96029cbca30157"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_64_RoleLockedPartnerProjection.png",
+      "size_bytes": 419364,
+      "sha256": "80c2098c479e56e56ff5f3f600aa3d9f9e040f8a0344c605545f106a05c8a3f4"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_64_Validation.json",
+      "size_bytes": 3565,
+      "sha256": "ddc380d01f4dddcfded6ca4d0df9c77af29d6cc0059146a05c30d6edece0d2de"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_64_Validation_Report.txt",
+      "size_bytes": 2410,
+      "sha256": "f2f94fbc9ca58b82b8c67169fb82464d535dea8989b44338b8b01d1ff82b5b8b"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_65_ContextLockedAOIReview.png",
+      "size_bytes": 390242,
+      "sha256": "9bdd38529dcd4b8e9175758e46e63392edad9b3101bce1c9ee836ca3303a92e2"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_65_ContextLockedAOIReview_Validation.json",
+      "size_bytes": 1076,
+      "sha256": "f1984908d73b6debca448431c180bccf50accb7f8a6217d518f90bf4b87e678f"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_65_HumanReviewEntryRegression.png",
+      "size_bytes": 423842,
+      "sha256": "3d80e3d2627296d138d97c0902e91913e0fd7b8c98b0993926285a040458cdca"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_65_HumanReviewEntryRegression.validation.json",
+      "size_bytes": 1547,
+      "sha256": "dcf1c72e854556fd697f092da7a329fabd3df443c06a98ebe2f3060f30ed60af"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_65_Validation.json",
+      "size_bytes": 5581,
+      "sha256": "e366658e5ffec5b3d73185a89983859d9374ea0d3b591087cfdd6fd4834a8322"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_65_Validation_Report.txt",
+      "size_bytes": 1937,
+      "sha256": "70288bfdb9e025f8692847c2218811375a663d5884e1fd098c52a192fa2b96c7"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_66_ContextLockedAOIReview.png",
+      "size_bytes": 390105,
+      "sha256": "a44d89ead04c6a24e158007e29c1823a569bfa913f37cb8a88c4f9d9ed1826cb"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_66_ContextLockedAOIReview_Validation.json",
+      "size_bytes": 1068,
+      "sha256": "b127143a84fc0bf79d626ce8408822115bbf3d65362b93fd675e4a2f18ba691c"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_66_ProjectCreationWizard.png",
+      "size_bytes": 264586,
+      "sha256": "f1afb6c99217267d9efb508dc74ec61385de56e37f3cbc4da5b97005906151dc"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_66_ProjectSessionWorkspace.png",
+      "size_bytes": 348265,
+      "sha256": "c34ea574f523ce9be48e1a40533348d8e251fe2a198b1c4eb1852ca84d162e94"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_66_ProjectSessionWorkspace_Validation.json",
+      "size_bytes": 2049,
+      "sha256": "dcc322225ea7eb504b8e507da770fee5e1e5b2d87fa25235fe0f66adcd71e03b"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_66_Validation.json",
+      "size_bytes": 15565,
+      "sha256": "306456b76ec79db161f44938e4a32f7668f1e8468312910b9d6c7a04f6562ed6"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_66_Validation_Report.txt",
+      "size_bytes": 2207,
+      "sha256": "920686d48e78792990b8c9d59a620b1a001ba990dcccccbc5ce46b3de9eb11c4"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_67_CalibrationSetManager.png",
+      "size_bytes": 375886,
+      "sha256": "aade32965c1fe774c7f44ac1c0346ec9dd68e6bdcb11715d413df645b6cdc9f6"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_67_CalibrationSetWizard.png",
+      "size_bytes": 264158,
+      "sha256": "92c0224178c9d4e00aa1e461a81e948b087ed1fd61f42e314c81f7e2189d2ee7"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_67_CalibrationSets_Validation.json",
+      "size_bytes": 2005,
+      "sha256": "cbf190d7372f2120cd26badbe6a109b15e45bf9b8730c0a0b1ae0b06cec87d3f"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_67_DataCalibrationSets.png",
+      "size_bytes": 383417,
+      "sha256": "8f7793f35e2b60f8b8e15b33c6348f2e3d103c73a69381d3a51a33fb0399aa9d"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_67_Validation.json",
+      "size_bytes": 22221,
+      "sha256": "3468cb9311cedeb4cd01f3bce4bb318fa60e8548d3319bd76d5286ef80fd2d82"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_67_Validation_Report.txt",
+      "size_bytes": 2355,
+      "sha256": "8a80f87e3e7347509fdcdfa362de0dba4f78df3aed4c125368cdb144d9ad9c6a"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_68_CalibrationImportDialog.png",
+      "size_bytes": 388060,
+      "sha256": "cd7c01939373f48bff993d70831b276ee402901c373b4da3966509e0afcd111f"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_68_CalibrationImportValidation.json",
+      "size_bytes": 1000,
+      "sha256": "71b1d0143467db0c72682cf7ccc790be95065476262f6ad85ab4b2533bcb6373"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_68_CalibrationSetManager.png",
+      "size_bytes": 385438,
+      "sha256": "11064adb2b32c49268e1056a73e3a949b4cdc789433a999ec89bce662989a755"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_68_CalibrationSetWizard.png",
+      "size_bytes": 264416,
+      "sha256": "c7d181007d6f9b55c9b26ebb51b798b5576d87dff644c7718668c98358030b24"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_68_CalibrationSets_Validation.json",
+      "size_bytes": 2005,
+      "sha256": "9ec3b99140be5f6c20c8a7d7cef1e22f2be0df0daa56987f29ec0a43cdaa77c4"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_68_DataCalibrationSets.png",
+      "size_bytes": 396983,
+      "sha256": "c88889616c261b5c00e2ec2ebf32ffc2deccad4afe0e6416b2f0a4355c810005"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_68_DataImportScopes.png",
+      "size_bytes": 397974,
+      "sha256": "b9a8100a8f5c38cc704f3dbe7f844431f747f0d116db188cb1e170bcb332a24f"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_68_Validation.json",
+      "size_bytes": 2301,
+      "sha256": "c52741d4a5a795463754a46080562834b598ce408090abf7aac30afde363b229"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_68_Validation_Report.txt",
+      "size_bytes": 2432,
+      "sha256": "f95485f428ff46b2f90f6ec1bf262801185ac02b6c16341d0dd1eb45b7e183a8"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_69_CalibrationPairedProfiles.png",
+      "size_bytes": 447509,
+      "sha256": "35f3f8ebfe1117a3e4a00d731d74cf055e5a518da06d29b06a5196f92a4bf2ab"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_69_CalibrationSetProfileBuilder.png",
+      "size_bytes": 339558,
+      "sha256": "0085fc13531568d79287668e15d7c5636d276a53c838de074de0b4a02105152c"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_69_CalibrationSetProfileBuilder_Data.png",
+      "size_bytes": 393704,
+      "sha256": "c915f1b52cb4d8ef1351820ef42ef0fe1591d364fe97452ba26d831d48eb3486"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_69_Validation.json",
+      "size_bytes": 2834,
+      "sha256": "baae320028aece240367abb644b71301e50835d2d7ae2951ad1bc15fbc36a186"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_69_Validation_Report.txt",
+      "size_bytes": 1778,
+      "sha256": "98becd7fd07fcd0371807959c05a184579729c885ab07f2f12376ec676600f9e"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_70_CalibrationImportDialog.png",
+      "size_bytes": 395836,
+      "sha256": "171f279f2058efe645901fb4cf528d200140568b44733d0285a2d844786a6e39"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_70_CalibrationOperationsOnly.png",
+      "size_bytes": 441942,
+      "sha256": "e6860dae7b8480417bd9f1bb324dec9cde5a402fb870e0a9be06892dfc561dda"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_70_DataManagementValidation.json",
+      "size_bytes": 1206,
+      "sha256": "413be744c522babc07e7cb5a4ee7baee75e7760b8399ffd6530af0016366b7d7"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_70_DataManagementWorkspaces.png",
+      "size_bytes": 381701,
+      "sha256": "07ae2e987a62905cda8b4a59beeafb9ccf0ed8e891b0fcbf8af54a62c35e4408"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_70_Validation.json",
+      "size_bytes": 2247,
+      "sha256": "e98ca50059dd5c804942590c1438f19585a7186e9b0e9bb2d18601d1d638e7fe"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_70_Validation_Report.txt",
+      "size_bytes": 991,
+      "sha256": "0351ec94e3dad8652c2533991e5bf1ef0d14f1c8c03b2afba4350f8143536219"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_71_BoardGeometryResolver.png",
+      "size_bytes": 396070,
+      "sha256": "ebbcda129efa3f4c362c6db1f54711b6ae5d5867664c3e61010f0df2d3cd0ddf"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_71_BoardGeometryResolver.validation.json",
+      "size_bytes": 226,
+      "sha256": "1ae97e05d96b5f7f808384c803b32f7ba220f464202405ecaf7cceafd9cdbb5c"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_71_Validation.json",
+      "size_bytes": 6167,
+      "sha256": "dae34de63c278d227d99d04a69a7a734031c3b8c038ff9b2c6fe707e788b63c6"
+    },
+    {
+      "path": "docs/OculoStudio_v0_21_71_Validation_Report.txt",
+      "size_bytes": 2091,
+      "sha256": "281f27a455f52fe833690977a33a5c8a47dc9978217bcbfb424ad316af33afbd"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_46.md",
+      "size_bytes": 1084,
+      "sha256": "c55ad4a39051a5fdf0ccc6c014a200b082b79e4bed329777d7cd91809059fb19"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_47.md",
+      "size_bytes": 1173,
+      "sha256": "75942292f3fe895af8c9569e0e2dac5b2041178a04e6269bf3298af09a7eb59d"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_48.md",
+      "size_bytes": 1171,
+      "sha256": "fd40e88a0f88add0c727e0cb35b764b2f2a49784f570a2189dc2e21e11845c20"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_49.md",
+      "size_bytes": 2270,
+      "sha256": "a368f5147a91d778f34e2a0afd4d542564eee2acca2fda59364b1f9c9a488065"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_50.md",
+      "size_bytes": 1563,
+      "sha256": "4452e7a37b75d9f1363af574cfd06235fbd52ad19a2228725f922e3cbbc59c1f"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_51.md",
+      "size_bytes": 1250,
+      "sha256": "8a4365cf315676e80bf6c2d341f3debf8abd87d5c4135a251780b7f895a5266b"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_52.md",
+      "size_bytes": 1431,
+      "sha256": "27c6ddb4f7282dd4f7cc6ba3275d78f79c4d798045a430bacfd7aad3eea718de"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_53.md",
+      "size_bytes": 1212,
+      "sha256": "8aba0273ebb99d31ec28a56d2e7a7f72801cd680f0cb7d2f4ccf4f2e9c754e2b"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_54.md",
+      "size_bytes": 1490,
+      "sha256": "91876d17ebe1759d7f0d0afbeada573a6890dde37a63c7aaa59faaa836093011"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_55.md",
+      "size_bytes": 3745,
+      "sha256": "c8087ebf9cce01cdbb97dca3c7cdb1ff24bd10bfeafc4cd57f662d1cf7811098"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_55_CN.md",
+      "size_bytes": 3042,
+      "sha256": "ab56848e963b35daa8fb2636c1efd0182c9574f74eae971c56a04e12abd9b9ee"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_56.md",
+      "size_bytes": 2153,
+      "sha256": "8c63c58a7f373d0e129f6c32a83194539af724272392fb4387d4f7513092481c"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_56_CN.md",
+      "size_bytes": 1776,
+      "sha256": "f4a9d248c915f7678d38ff96ac4c7adc17d0401c14b9a8298bd1e95288b58f5a"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_57.md",
+      "size_bytes": 3095,
+      "sha256": "37b04165b85a03793839a5ef46141dca108e1c66a218432051223c31193e39c9"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_57_CN.md",
+      "size_bytes": 2667,
+      "sha256": "70720a1e2aa75085dad19ba6d420f40e5b0ac71b9d7e76c014967122cf87ffaa"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_58.md",
+      "size_bytes": 2770,
+      "sha256": "26d23f696ef1a50b51746913fdab138f1e6e8b9481a89cd92d1f27caaeed699f"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_58_CN.md",
+      "size_bytes": 2534,
+      "sha256": "cdeec2e4f7f8f0c0ad5f62f09fdcd3fa0de12f6d2d737b5f5c91329ad7a072b7"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_59.md",
+      "size_bytes": 3775,
+      "sha256": "2df771b7398a4e50e5f76da1ef2e266ebffdf448f28a4a3a14febbd24145115a"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_59_CN.md",
+      "size_bytes": 3432,
+      "sha256": "37a770e5d3f1c956764b462d509d615c9467c73ce40646b510c13cbeabe36c39"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_60.md",
+      "size_bytes": 2952,
+      "sha256": "b4d37348a83d90766a3a8ceb520ab9cc1083a70d06534130288288f1879aeb31"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_60_CN.md",
+      "size_bytes": 2695,
+      "sha256": "67b105e997dfe651ab398944b2db09cda4f15ecf300a265d547a8333245d1724"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_61.md",
+      "size_bytes": 4801,
+      "sha256": "0b284587ee474f26ac2f530a7bbe1e700a90fc0d036b9c10d6dcdc5d115f4c39"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_61_CN.md",
+      "size_bytes": 4785,
+      "sha256": "1bcdbdb4abb135e835b4f856b3f793170dc3c0d8d06958e389aae504b59f8387"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_62.md",
+      "size_bytes": 2804,
+      "sha256": "c3bdd6668bc698aa341dcb4f326943c9d67fb278e323193c70df27648c50de44"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_62_CN.md",
+      "size_bytes": 2659,
+      "sha256": "4bf2cb208801305b03777e4147f333860b6be018c0d177a9f191ebc5e1916d43"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_63.md",
+      "size_bytes": 3681,
+      "sha256": "4c671dc1d19c001b163cb6e452cd45438d82885de92d5c165cf848da85743a29"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_63_CN.md",
+      "size_bytes": 3516,
+      "sha256": "afe4e0d9b32a68e2a95581dae8c86cdb5d776911fa6938d2181c13e5b8a45a5b"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_64.md",
+      "size_bytes": 2950,
+      "sha256": "94f2a0f67ff0d49580fabe1b423716e33d003c8f1e415709e15f0388ec27d5d1"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_64_CN.md",
+      "size_bytes": 2923,
+      "sha256": "18b6edc0f68e60e6c1f45077a31f7343a66f1cca5cdaafb4550e438bc65ebc53"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_65.md",
+      "size_bytes": 1580,
+      "sha256": "203d318a1b84db040801480b4e2b8d0f76567ad97ee294ba654442163d29c4a5"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_65_CN.md",
+      "size_bytes": 1593,
+      "sha256": "b9b4a1eadfdcd637b06896eb0109badb5918fed9a0160c28d55b25053a1f7fc0"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_66.md",
+      "size_bytes": 934,
+      "sha256": "ab9153cfc35fe5182a892c915896de71de28cedadb21c0e1c80a53f5ac4017b1"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_66_CN.md",
+      "size_bytes": 4065,
+      "sha256": "f18f79bcb5b0c22ff88161d152f6528c1e65d7b8f0dd6c9de618f57c6e1bdf78"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_67.md",
+      "size_bytes": 3319,
+      "sha256": "29318e25ed4946b1199cac2558a7acb8f2379e4109daa7663340986679b9c98e"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_67_CN.md",
+      "size_bytes": 3461,
+      "sha256": "df6b1c750c2890073a29c2eebbc68fa26839f1681e5e201433c64bc3c595714c"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_68.md",
+      "size_bytes": 835,
+      "sha256": "809420a0d415a48594d33ddfb47b5fc463d3677635a82edf2f9a513e0e555c67"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_68_CN.md",
+      "size_bytes": 3230,
+      "sha256": "541fcbf5c49d80ed479ff3a728c19d9bfeec0822c461051d66d1bbb05825f85c"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_69.md",
+      "size_bytes": 1545,
+      "sha256": "16599e21530667b68e7465c1c854428485b66ac8928a1ebd2e9cbf2c45f9ddb4"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_69_CN.md",
+      "size_bytes": 4748,
+      "sha256": "43d82d2b1e653efb045be1c29b98b9dc658b6395faba767e8b16ea0e83a58a9a"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_70.md",
+      "size_bytes": 1620,
+      "sha256": "c9d50b9db171f02d7b5ade9f9d71ba5cc6e1cf883ec695781187626da2bff49f"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_70_CN.md",
+      "size_bytes": 3162,
+      "sha256": "5d2bd6af1c528deac2dd39e49709f6b1dbf7ac1c643525a794e4eac6dd9117ef"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_71.md",
+      "size_bytes": 1438,
+      "sha256": "c7017e41619099866919d83ee5d179ff70f0b82bb23af4d4870e4f127f93deea"
+    },
+    {
+      "path": "docs/RELEASE_NOTES_v0_21_71_CN.md",
+      "size_bytes": 1443,
+      "sha256": "868a63b12c2c846b27f60cc5007521b6922d9d34512ad1b0ea06e493a7c5cf74"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_46.json",
+      "size_bytes": 1687,
+      "sha256": "e7ee5eade9ead7ba8dadd60fc87d4bdb606bb8c8c6b2f90e4e8905868b6c287f"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_47.json",
+      "size_bytes": 3081,
+      "sha256": "990db0833aba750414fe58bbfd41023f8a1a1c9e8cca111cccf04eae1b6d14b4"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_48.json",
+      "size_bytes": 2038,
+      "sha256": "84c000ddbd49119e6cdd0caf14f8221671f684fc67ca2e7a424212aeda45c2e0"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_49.json",
+      "size_bytes": 5471,
+      "sha256": "d96947380a37c2a60a879b92a2f78e0b866208db330f7ce14f8d5a1d84cf8697"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_50.json",
+      "size_bytes": 2892,
+      "sha256": "cd5fd98ac55887d18c51edbc8e720a89caade24daecc7604e5b329d007d395d6"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_51_GEOMETRY_GATE.json",
+      "size_bytes": 9133,
+      "sha256": "589d810bf0546e66bdb06e85698dc923c9b4e172532967dbd05c52667d0124e8"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_52_AOI_TIMEBASE_END_TO_END.json",
+      "size_bytes": 1662,
+      "sha256": "233a5a805fb004a78b57edefb9116618784d19c1a9d8ac191506564fcfba36d7"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_52_BODY_GEOMETRY_GATE.json",
+      "size_bytes": 9133,
+      "sha256": "f6003beb0757b47cccc37b890e2afffb13f52d20129f8159c05d1da7d30c49b5"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_52_GAZE_SAMPLE_CLOCK_AOI.json",
+      "size_bytes": 7111,
+      "sha256": "d38d9b8a0e805c30711ce7b47cad97bee70b6e406d53e008554f8bbfb814ed39"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_52_GAZE_SAMPLE_CLOCK_AOI.txt",
+      "size_bytes": 2794,
+      "sha256": "38e6f20c0d95e9bff95373e5d1ffc6c01c7b4532870c054f350849cdc84cf23a"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_52_GAZE_SAMPLE_CLOCK_CORE.json",
+      "size_bytes": 2158,
+      "sha256": "e34db1acdbe9f271efb445643dc68150b9790c34c3acc79c9c86e44e554ea789"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_52_RAW_VICON_BODY_PROFILE.json",
+      "size_bytes": 1127,
+      "sha256": "d393ccabae523c589c2aa933430ef772731b9efef079d2b69a106b524243d682"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_53_AOI_TIMEBASE_END_TO_END.json",
+      "size_bytes": 1662,
+      "sha256": "35f2fe73621d6b46799a1b323f4f364fffc4704e5ccb6a28635581e407272a3b"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_53_BODY_GEOMETRY_GATE.json",
+      "size_bytes": 9133,
+      "sha256": "97620e43df9e6367e68e6321bbdc7e665442471962afc9d0d5a042b0043cca27"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_53_BODY_REVIEW_REDUCTION.json",
+      "size_bytes": 3701,
+      "sha256": "62958f3998a1621b950914b75d4e565c94b2ccce714ba2d53f4e5c1c6d48bce0"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_53_RELEASE.json",
+      "size_bytes": 3843,
+      "sha256": "03a950ede57723454829715d3d7362acf7e3944f1548d9915a4ed3432686f038"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_53_RELEASE.txt",
+      "size_bytes": 2424,
+      "sha256": "e826333d632a2703d47ff3c3831ee3f09937d35f8f2618abb6cf03e405b6b1ee"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_53_RUNTIME_CHECK.json",
+      "size_bytes": 1891,
+      "sha256": "0c47262b0a0fcbc928e53136665dbcd602f2f74c3f1ab217a72f6477ad9b75cc"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_54_AOI_REVIEW_UI.json",
+      "size_bytes": 859,
+      "sha256": "ee028017114d3727d1f22b58004fcfc950f5cb9008e960206acc2a9119d68198"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_54_BODY_GEOMETRY_GATE.json",
+      "size_bytes": 9133,
+      "sha256": "47c86cd4f53dcf97f19901f1b86207c371b129040dcdae6a5918ea1100e8a61a"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_54_BODY_SEMANTIC_REDUCTION.json",
+      "size_bytes": 3803,
+      "sha256": "4095671b514f8577e4a06fb44dd21f2e3731b066085e65160de675448bd1efed"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_54_FIXATION_REDUCTION.json",
+      "size_bytes": 3701,
+      "sha256": "71148435554e7e2ac5e5baa8f8e852332d5144c0fb3f1f2accbfc7679b47ec1d"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_54_GAZE_SAMPLE_CLOCK.json",
+      "size_bytes": 1717,
+      "sha256": "f7baca1ac2de7f90342adcf75e09e1260cd5ee5ccc82cfef1d4ee6869619bf59"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_54_REALTIME_PLAYBACK.json",
+      "size_bytes": 1494,
+      "sha256": "a438c6a61fbee9506612edf0da189331816f69ec998e266b49b375fc6472d38c"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_54_RELEASE.json",
+      "size_bytes": 3095,
+      "sha256": "f56e086744790769fdd583e9e2889b25b792d89833fe1a640cecc3cf75be1e81"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_54_RELEASE.txt",
+      "size_bytes": 2133,
+      "sha256": "0e5d9d2b4a005f02c57eabb1c4a63e76b07b3302489a01073e72ff3c8cd0298f"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_55_CALIBRATION_AUTOSYNC.json",
+      "size_bytes": 3534,
+      "sha256": "376ded6278929364a62ae7368fdd48d2e7283ac2268abf85ac1e15b363f102f3"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_55_CALIBRATION_AUTOSYNC.txt",
+      "size_bytes": 2512,
+      "sha256": "6943c9fbf790a81bb2bff79fc63da939278e3fbd36b89f399de81c0a13075e2c"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_55_CALIBRATION_AUTOSYNC_UI.json",
+      "size_bytes": 531,
+      "sha256": "d4b1cd537fdae261ebdd3a58bee3373324b0d3b74429f1b9178125b8f785048a"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_56_SYNC_PRECISION.json",
+      "size_bytes": 8676,
+      "sha256": "b366cd9f7582995074a27310dc29ca65fede6b53ea119b0de53165a57079b7f5"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_56_SYNC_PRECISION.txt",
+      "size_bytes": 3771,
+      "sha256": "9e2c4e8adf3c16def60ba302a0a097e5c60b000ccff1a395ee2ecef5ea7ffcb9"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_56_SYNC_PRECISION_UI.json",
+      "size_bytes": 552,
+      "sha256": "5896cb3dc668b5f3f1168dd9ccd5ebc0bb3faa1c5275f126232ad5cbe0f3605d"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_57_API.json",
+      "size_bytes": 209,
+      "sha256": "eb7887f23bc8a3c083b61433f316cd6c6f40e75f6de56dd301874a32a1076f1e"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_57_C3D_DEFINED_TRIM.json",
+      "size_bytes": 331,
+      "sha256": "c769cc0aa77cb907d184228e2ddc7063654f16f71fd739d27e15e1239f4222d6"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_57_FAILURE_GATES.json",
+      "size_bytes": 332,
+      "sha256": "3bbdb4ee57b083f2a67a92ecf38251f8e7fbbf0bea75bdc599662422197795ea"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_57_INSTALLED_WHEEL.json",
+      "size_bytes": 356,
+      "sha256": "1a2a5cbf16c6a96619b42c0f40b467cb83f9a780efe9922f18cdbfe6a66564cf"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_57_UI.json",
+      "size_bytes": 493,
+      "sha256": "4cc18146ec828f4ac13051835505f1254407cff8c3e1b6c54e6e50178c267d2b"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_57_WHEEL.json",
+      "size_bytes": 119,
+      "sha256": "e7d7d23c7e3707e5a8c2f149896aa51d7d45782a5c4f74079311af7318f7379c"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_58_ALIGNED_CLIP_QC_PREVIEW_BACKEND.json",
+      "size_bytes": 1382,
+      "sha256": "43b63ddd6ae1094a33677e4f5f90da335989451b57095705a64bcfb7becd343b"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_58_ALIGNED_CLIP_QC_PREVIEW_UI.json",
+      "size_bytes": 8030,
+      "sha256": "c3b27b5a467fe26b3719c729f433bef7fbdf48f6ca049390b43dedf15e3917d8"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_58_C3D_DEFINED_CLIPS.json",
+      "size_bytes": 355,
+      "sha256": "8353f07665eef0330b50fc8e7624be98af6a095d11bdc6e567b5a83cccfc704b"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_58_CLEAN_CORE.json",
+      "size_bytes": 1890,
+      "sha256": "100af221433967330facd18be52e4598a92724260a4c58645e99a2101f44f1b9"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_59_ALIGNED_EXPORT.json",
+      "size_bytes": 2050,
+      "sha256": "a83e652b98fe2e49dde39220e16844c611aa8fc6041a4418098b545adc5f4abc"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_59_C3D_DEFINED_CLIPS.json",
+      "size_bytes": 356,
+      "sha256": "a9b088a492b545ef89e93ac7cf2002d9698d71d3222e054392d9d57762a818a6"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_59_CLEAN_CORE.txt",
+      "size_bytes": 1891,
+      "sha256": "70d2cb4bf0244698ddb135cd73334c0fb0ebcb16e0d872faa999de2db6bfe619"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_59_QC_PREVIEW.json",
+      "size_bytes": 1383,
+      "sha256": "7b1c7347056213d8d197f395f44cf21d7f939f0322b1fef2e0fd3ff826db43c9"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_59_UI.json",
+      "size_bytes": 427,
+      "sha256": "4137b6f234103962eafc8dffe2ae088e0b8f536b69397a83ef20c23d6977aa57"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_60_UI.json",
+      "size_bytes": 617,
+      "sha256": "f22a09049811f349f570fb20952c4ffa58125938e8c52af9d3db7f46df1af470"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_61_SHARED_AUDIO_VIDEO_SYNC.json",
+      "size_bytes": 2418,
+      "sha256": "4cebe84d3b7289c5bf49df56cff34457bcc6395ae2583df8afa3f5eeb0fb8a28"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_61_SHARED_AUDIO_VIDEO_SYNC_UI.json",
+      "size_bytes": 982,
+      "sha256": "bad1c9ecb8d11508bd0bc559f8550a0d024cc2898661ed9c1e3cf04840d702f7"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_62_BODY_AOI_DIRECT_CLOCK.json",
+      "size_bytes": 625,
+      "sha256": "6694187d2841a7a34af31e9b8c43e0a77ccbbe0ce1a95017e6a579d3d5188cdb"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_62_OBJECT_AOI_DIRECT_CLOCK.json",
+      "size_bytes": 583,
+      "sha256": "547c151ce7b9cf29584b294989e74e16258e891c5f5b54d28cd3f57e403c415d"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_63_ALIGNED_FACIAL_VIDEO.json",
+      "size_bytes": 1809,
+      "sha256": "a70be5e7f4c13445ced0eef2ceea72699331db3646da64c998319b37eb973b7a"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_63_CLEAN_CORE.json",
+      "size_bytes": 1891,
+      "sha256": "0fc316076de16c69acefd82c71f57b8149534e9b1ded2a4e567a748b27ee0524"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_64_BLUE_PROJECTION_PAYLOAD.json",
+      "size_bytes": 1209,
+      "sha256": "422d4e4e5c5a65826c5a34b249db7638b9713f5c1b2cccc0365618cbcd06d5b2"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_64_ROLE_LOCK_BACKEND.json",
+      "size_bytes": 511,
+      "sha256": "3349cade68d7608fa948414aae9818ea1e7a15f3bc3f3ec76cebd655c44281cb"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_64_ROLE_LOCK_UI.json",
+      "size_bytes": 846,
+      "sha256": "dac3c21f2192a11a100b0152238db554250f29816de526034803d98b8a435eee"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_64_ZERO_PROJECTION_GATE.json",
+      "size_bytes": 332,
+      "sha256": "d9ddc3eea245dc04931e10fe6e9204eb2419d9d821690a8fcd23f124ae964d05"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_69_C3D_DEFINED_CLIPS.json",
+      "size_bytes": 356,
+      "sha256": "f61926f7fef677d4854f209e06705c60ae94c8cff8d6a5a093d94be5d14676e2"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_69_CALIBRATION_AUTOSYNC.json",
+      "size_bytes": 2575,
+      "sha256": "d49451c863efc707d7bcbfca59c55eadabc645836fd50249ce9e9e4b073da746"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_69_CALIBRATION_IMPORT.json",
+      "size_bytes": 1001,
+      "sha256": "f69f859165c763560c2127cd619a4103f922e99e2b85e1bac4de5985f06023fa"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_69_CALIBRATION_SETS.json",
+      "size_bytes": 2006,
+      "sha256": "6587978379cc04c9f3b76486d361837e7f6aea6895c7b98b3d8e752ecae4de82"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_69_CALIBRATION_SET_PROFILE_BUILDER.json",
+      "size_bytes": 9476,
+      "sha256": "4691d1aeaf658fcad2ff2b132965427d9c650ab127f066249a518d0b72132417"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_69_CALIBRATION_SET_PROFILE_UI.json",
+      "size_bytes": 882,
+      "sha256": "9aae1c243b168393c6521bad99f7745a0292b4e9b44d1a342066b3e6945d07d5"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_69_CLEAN_CORE.json",
+      "size_bytes": 1891,
+      "sha256": "3046d37ec72f5a9d48c8d057519db4f2df26b0ebeb43abd362151051a2b8f32f"
+    },
+    {
+      "path": "docs/VALIDATION_v0_21_69_SYNC_PRECISION.json",
+      "size_bytes": 842,
+      "sha256": "951c7b0a327ff2a878cf6ed5264cc27ca920e4af43a54dfa7888ae755f56cb1c"
+    },
+    {
+      "path": "docs_motionstudio_compile.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs_motionstudio_targeted_tests.log",
+      "size_bytes": 4354,
+      "sha256": "eb704483e6289f7d66b83dad584cb87f41f450db56dc0d9ec27c70d49b67173b"
+    },
+    {
+      "path": "tools/capture_ui_runtime.py",
+      "size_bytes": 434,
+      "sha256": "4ba0c91d9a024dead801dc36196b8e038a5437e1f650fa591020dcae62f6c539"
+    },
+    {
+      "path": "tools/check_aligned_clip_export.py",
+      "size_bytes": 6950,
+      "sha256": "daa2a9e0562d1f9edc8bf6de604e9e647fe79fb9ebac8031611141d71c1cc67a"
+    },
+    {
+      "path": "tools/check_aligned_clip_qc_preview.py",
+      "size_bytes": 5266,
+      "sha256": "be992c3698235ac5509ee4257f8b0257067609258ad5feb13ef4e5db5e8b3ed3"
+    },
+    {
+      "path": "tools/check_aligned_facial_video_export.py",
+      "size_bytes": 13226,
+      "sha256": "0295e74d32966b49603f572a8d4a4879621477ae3470ca06b0af87ce2d518682"
+    },
+    {
+      "path": "tools/check_aligned_facial_video_export_ui.py",
+      "size_bytes": 10493,
+      "sha256": "5055536b75985a3af08ab112757eff983a71bf7d311687b256e9bbb5583fb637"
+    },
+    {
+      "path": "tools/check_aoi_review_realtime_playback.py",
+      "size_bytes": 10358,
+      "sha256": "82f0e0c84c90c363b20462162aba5e86978fe2349bbc4bad99295bf6d39a6998"
+    },
+    {
+      "path": "tools/check_aoi_review_ui.py",
+      "size_bytes": 11240,
+      "sha256": "027bec0d10b5d054d1bdb7ebaf85ea61fbb1fb9338db09e5c5715c6c4cc554b7"
+    },
+    {
+      "path": "tools/check_aoi_review_unblurred_facemapper.py",
+      "size_bytes": 27226,
+      "sha256": "ed50b4cc061f9d0605aec59884d85cdd7554b89e2e7d0eed48c965b4a88d2ac2"
+    },
+    {
+      "path": "tools/check_aoi_timebase_end_to_end.py",
+      "size_bytes": 11153,
+      "sha256": "42efd44e3c269296c882ce31a93343661a686b147986f87f637a568a0d13fb1c"
+    },
+    {
+      "path": "tools/check_artifact_cleanup_ui.py",
+      "size_bytes": 8091,
+      "sha256": "8141acf3c4ccc9d70faca612874d5e4b659340636a483909427d138efe11b0b8"
+    },
+    {
+      "path": "tools/check_asset_identity_ui.py",
+      "size_bytes": 7851,
+      "sha256": "0834a2f2a4cfa72eb2bdbaf1eb45c32f35b34f6622e743025a403dcedbda6d50"
+    },
+    {
+      "path": "tools/check_asset_import_ui.py",
+      "size_bytes": 18247,
+      "sha256": "7d21703f1fe76920c30f405b56d3af4e5900dcdff294286a49e644954cfa514a"
+    },
+    {
+      "path": "tools/check_balanced_facial_aoi.py",
+      "size_bytes": 10514,
+      "sha256": "1cf7b8d5ea19bb1e620eff9eb7eb73c35605a2a7e0cd2d150eb1fe890debbdea"
+    },
+    {
+      "path": "tools/check_body_aoi_direct_c3d_clock.py",
+      "size_bytes": 4377,
+      "sha256": "477528d4140911c617436f359626de5c7f39dd35e8c7b43fa5d1806bc159c1b2"
+    },
+    {
+      "path": "tools/check_body_aoi_manual_review.py",
+      "size_bytes": 19789,
+      "sha256": "6c9b9d144943f7ac2c7302d04c26d8edb98880a67c9d2d20bc1d1e3f1625315f"
+    },
+    {
+      "path": "tools/check_body_aoi_resolution_fallback.py",
+      "size_bytes": 3669,
+      "sha256": "c085b7b8f4ae5e082a9a08baf00703f59b4f0f5cfa3e726df54538d0d8f23a0c"
+    },
+    {
+      "path": "tools/check_body_aoi_result_handoff.py",
+      "size_bytes": 2246,
+      "sha256": "d4939e4f4574d75ae2ec1687c7f72b74767f095f6e8ae67155369725b82d67a6"
+    },
+    {
+      "path": "tools/check_body_aoi_torso_review_reduction.py",
+      "size_bytes": 9334,
+      "sha256": "ee961756fa68dea2c4feb8b7447a9ed0f14c5bbbc0a36dd211d9ad612cac90ac"
+    },
+    {
+      "path": "tools/check_body_aoi_torso_surfaces.py",
+      "size_bytes": 9334,
+      "sha256": "ee961756fa68dea2c4feb8b7447a9ed0f14c5bbbc0a36dd211d9ad612cac90ac"
+    },
+    {
+      "path": "tools/check_body_aoi_visual_analytics.py",
+      "size_bytes": 5726,
+      "sha256": "ef45699e740cb5c1c3466e17ddfb48f703d5ce82cbfd2cf51a9dfcb1fc9be00a"
+    },
+    {
+      "path": "tools/check_body_fixation_review_reduction.py",
+      "size_bytes": 12236,
+      "sha256": "ec02faa57163f39bec6d2a7008385839ead8ec7339f82cccbc3fbfc5080d638b"
+    },
+    {
+      "path": "tools/check_body_geometry_integrity_gate.py",
+      "size_bytes": 9587,
+      "sha256": "918d27934dd7dbbf8ec47f738da2f1c90492af4f4f68c78a2152d8d3b7ef8ce6"
+    },
+    {
+      "path": "tools/check_body_geometry_integrity_ui.py",
+      "size_bytes": 9861,
+      "sha256": "439f85d827c1afd7b5618791f823df3da3b6aa623b4b4014fcb9f4e4f637cea4"
+    },
+    {
+      "path": "tools/check_body_human_review_ui.py",
+      "size_bytes": 12302,
+      "sha256": "5820d6b3b52e70d109254610cf9ffb5d8bf5152451b1badc3e0448b90d8dd241"
+    },
+    {
+      "path": "tools/check_body_semantic_review_reduction.py",
+      "size_bytes": 7173,
+      "sha256": "4015013e20710006c0ed4b167eab4452bea8caf590c9e6a524bf5bdfe579490d"
+    },
+    {
+      "path": "tools/check_c3d_defined_clips.py",
+      "size_bytes": 12310,
+      "sha256": "0396b3b366e548d8aef96145d5238323848f02b166d747ae61e9a9e0d169c6d6"
+    },
+    {
+      "path": "tools/check_calibration_acceptance_ui.py",
+      "size_bytes": 9815,
+      "sha256": "9f1edfadda8755785757c62570927656661d72724843f5338cb5f00f5028a4e2"
+    },
+    {
+      "path": "tools/check_calibration_autosync.py",
+      "size_bytes": 20860,
+      "sha256": "19c61161ff06f2773a1398f13c692a4f0a266cf3b5aa2de88516d6768ee6b903"
+    },
+    {
+      "path": "tools/check_calibration_import_workspace.py",
+      "size_bytes": 11427,
+      "sha256": "6a44c3161f3b16bf330ec4a65e9ab5964efd5efba1a2e671ced9a60d3c04a83e"
+    },
+    {
+      "path": "tools/check_calibration_profiles_ui.py",
+      "size_bytes": 11469,
+      "sha256": "9a0505539a861f908269638b50bb0b6f8fb3541b698b0d443aea6e7ae14a85e8"
+    },
+    {
+      "path": "tools/check_calibration_set_profile_builder.py",
+      "size_bytes": 18293,
+      "sha256": "a3de1014ac83f2c03d287e7416cd8595a4e6ee251b7884a9bc8b703032b99a25"
+    },
+    {
+      "path": "tools/check_calibration_sets_workspace.py",
+      "size_bytes": 14254,
+      "sha256": "87db7eec5ce0141a8823be347ab8f108c9f3fc490481bc3f2face14bf1367a0b"
+    },
+    {
+      "path": "tools/check_calibration_sync_precision.py",
+      "size_bytes": 4600,
+      "sha256": "2bc1c04ed930fe5284a69a207264eddf4a29c386dc2261767adde8fcd188751e"
+    },
+    {
+      "path": "tools/check_calibration_sync_precision_ui.py",
+      "size_bytes": 2238,
+      "sha256": "731d63e3adebccf8097f0295b5c65fb915a2e3f128459641e11795badc20c135"
+    },
+    {
+      "path": "tools/check_context_locked_aoi_review.py",
+      "size_bytes": 13362,
+      "sha256": "c28986722aabed3b9c4a6c3ad6798fd90302044084a31a66e69c420e45931619"
+    },
+    {
+      "path": "tools/check_data_management_workspace.py",
+      "size_bytes": 11427,
+      "sha256": "6a44c3161f3b16bf330ec4a65e9ab5964efd5efba1a2e671ced9a60d3c04a83e"
+    },
+    {
+      "path": "tools/check_dyadic_attention_ui.py",
+      "size_bytes": 6692,
+      "sha256": "b1532916ab491eb9478f9ce512bdbc96273979d576c3dcdaa5035131592649d2"
+    },
+    {
+      "path": "tools/check_etm_assignment_ui.py",
+      "size_bytes": 5782,
+      "sha256": "8817e76f1dff55aefe69ccf49051f9f6e0f83f0ca65c8fb00d3646aa59ab7bad"
+    },
+    {
+      "path": "tools/check_face_aoi_auto_review_reduction.py",
+      "size_bytes": 11270,
+      "sha256": "41596a41a05e5c15db68034ec828c88a55061eae4eede80776fb74ed7177c412"
+    },
+    {
+      "path": "tools/check_face_aoi_feature_geometry.py",
+      "size_bytes": 17763,
+      "sha256": "2163527c5c3ac352959900176d842c2d229cd5b71e77d8f7a308aca98224159b"
+    },
+    {
+      "path": "tools/check_face_aoi_manual_review.py",
+      "size_bytes": 23590,
+      "sha256": "5a34a084f22065ac4dcd184f15f18db7fd8e78181c74dff5587a3b6254afb218"
+    },
+    {
+      "path": "tools/check_face_aoi_review_load_reduction.py",
+      "size_bytes": 8857,
+      "sha256": "32eaedd33b9bc2b3d9246d1fc141e04d01d517accc4cec21ddaab9d4883d43e7"
+    },
+    {
+      "path": "tools/check_face_edge_tolerance.py",
+      "size_bytes": 12624,
+      "sha256": "a72d04c776b3b0cd2c4f68801d8191cc3be69d4aca4da5c7b7d37c16e88408a9"
+    },
+    {
+      "path": "tools/check_ffprobe_ui.py",
+      "size_bytes": 9124,
+      "sha256": "6998eec442a3b7678c4b20f5d45d8f2033029879326d437f0b54fd1f0a487243"
+    },
+    {
+      "path": "tools/check_gaze_sample_clock_aoi.py",
+      "size_bytes": 17775,
+      "sha256": "0e0075f73aa1dac86fa4757b7c95f316fa82f7f2174961736785755a857ea0fd"
+    },
+    {
+      "path": "tools/check_human_review_entry.py",
+      "size_bytes": 16732,
+      "sha256": "2d2792b7820e549990a57c6ec6faf5e65b0a9d43d5eb3d8dc0ab18b0d50591d6"
+    },
+    {
+      "path": "tools/check_interaction_workspace_ui.py",
+      "size_bytes": 9655,
+      "sha256": "78fe922bb6c3c2e87d60e691c8890eeb2fa152ed13388148abb8273dd21f29b6"
+    },
+    {
+      "path": "tools/check_media_tools_ui.py",
+      "size_bytes": 8816,
+      "sha256": "5e865cf0192d7be6df85ae43e9543c88d46b4cca27bcb0ab8db72a2fb8941a62"
+    },
+    {
+      "path": "tools/check_motionstudio_body_profile.py",
+      "size_bytes": 8518,
+      "sha256": "7024fc80518634ee2457eb0088511fa0b18da6d023a2ccac92ff091d29acee45"
+    },
+    {
+      "path": "tools/check_motionstudio_bridge_ui.py",
+      "size_bytes": 1795,
+      "sha256": "6f93f5213246ce2f6d8c8a4a5c80d23b6401a84bae445aeb973159ccfae1ff14"
+    },
+    {
+      "path": "tools/check_nasal_envelope_direct_accept.py",
+      "size_bytes": 7688,
+      "sha256": "dd12e70f4ba08e1928a2066b048b66470a688c13bc672e1256e6874340590623"
+    },
+    {
+      "path": "tools/check_native_trim_ui.py",
+      "size_bytes": 7887,
+      "sha256": "c2d8f369ff68d62ff209eadbb14ac21192a2ba79c0d8642eb9409c1ca47805d8"
+    },
+    {
+      "path": "tools/check_object_aoi_direct_c3d_clock.py",
+      "size_bytes": 3555,
+      "sha256": "4b95b40f73d0592332af3b3da3c80d22e0282f9db68f0d322c421342a35d9103"
+    },
+    {
+      "path": "tools/check_participant_association_ui.py",
+      "size_bytes": 8596,
+      "sha256": "7365a6e400898b9f4cd9662536e07efedb7c7269176568a7f3cacd8592da5d79"
+    },
+    {
+      "path": "tools/check_pretrim_overlay_ui.py",
+      "size_bytes": 7190,
+      "sha256": "214c99c3fde4b5fd45361acbe4e7103571e683814d0b9d765c37d67856277e76"
+    },
+    {
+      "path": "tools/check_privacy_aoi_ui.py",
+      "size_bytes": 11488,
+      "sha256": "9a21b7b9d59ae01d9520763865bed1eacbd5f9095ee9fcffda72dc8d6ce8eb87"
+    },
+    {
+      "path": "tools/check_privacy_preview_controls.py",
+      "size_bytes": 1792,
+      "sha256": "88db59d63a9ba69569712bb08935a4f58f9d485634685e0edba0e617a2e37df2"
+    },
+    {
+      "path": "tools/check_project_session_workspace.py",
+      "size_bytes": 17809,
+      "sha256": "a55f756d98408eb74c5ec18dd980f5ccc95665839264cbedddb9cc301ec3f5f5"
+    },
+    {
+      "path": "tools/check_real_timecode_equivalence.py",
+      "size_bytes": 3747,
+      "sha256": "30d2798590ff0df189ae25c5b815e079f62462818aae254597d9cd0e23c02f76"
+    },
+    {
+      "path": "tools/check_results_workspace_ui.py",
+      "size_bytes": 8622,
+      "sha256": "7f58741257d8d0abfd817c6810127ef169b4954cde11a574734bd3dc59102032"
+    },
+    {
+      "path": "tools/check_role_locked_partner_projection.py",
+      "size_bytes": 8984,
+      "sha256": "543e8cb22bb98e5d42af70250e0678b718044091c7e0ac5b23d1ecd5578c1683"
+    },
+    {
+      "path": "tools/check_shared_audio_video_sync.py",
+      "size_bytes": 19754,
+      "sha256": "fe92cd486e586cb49f042afbea9a65a410fff175c9968c0fce30203e1c7d64ca"
+    },
+    {
+      "path": "tools/check_shared_audio_video_sync_ui.py",
+      "size_bytes": 11766,
+      "sha256": "0f7d8440629b9dcd1b7c45f10724665da62b5b58ba17de76e52ae502e81e6c61"
+    },
+    {
+      "path": "tools/check_strict_green_gate_environment.py",
+      "size_bytes": 12156,
+      "sha256": "86acc49d1314b25b0795379e2e998c4dc049cbb923e172c8efa6b7c610c4ecfa"
+    },
+    {
+      "path": "tools/check_timecode_ui.py",
+      "size_bytes": 10627,
+      "sha256": "efba587f9bb2d4cf8400dbf579ea953f090bc8e6ae09b3dcf556f965cd556922"
+    },
+    {
+      "path": "tools/check_workflow_hub_ui.py",
+      "size_bytes": 10736,
+      "sha256": "71ffd54b80e240f233c273ed284e8af265b80e07387b88cbcb8b8f7f05cb6c69"
+    },
+    {
+      "path": "tools/check_workflow_return_fix.py",
+      "size_bytes": 9058,
+      "sha256": "bcc4dc628174d04c0399b0681272e371c63a84a4943dc8c33ed705c19c4ce43c"
+    },
+    {
+      "path": "tools/create_dyadic_attention_demo.py",
+      "size_bytes": 5351,
+      "sha256": "9f890b63f7732f44c13574730e9fef47562384afb5232fbd8471781fb44bc3be"
+    },
+    {
+      "path": "tools/create_etm_assignment_demo.py",
+      "size_bytes": 5401,
+      "sha256": "2ae3f5537be63943305ce31660ec279ac57d243989081c59fc78ff7a7f55fd42"
+    },
+    {
+      "path": "tools/create_package_manifest.py",
+      "size_bytes": 1567,
+      "sha256": "644258dfacde03209aba9e4484b01721c6b93f4749723e431b3538f229881bda"
+    },
+    {
+      "path": "tools/create_participant_association_demo.py",
+      "size_bytes": 7415,
+      "sha256": "cc602c5000f07f1c005c7073f13722d51daa8c94b635bce758f2fe0e508b215a"
+    },
+    {
+      "path": "tools/create_privacy_aoi_demo.py",
+      "size_bytes": 4746,
+      "sha256": "66b76f4f0736d45e58402d3080ddeb264592921dfaab5e3a061986fe519f1717"
+    },
+    {
+      "path": "tools/create_results_workspace_demo.py",
+      "size_bytes": 4340,
+      "sha256": "7f722686215676b54cc6bf5df20fcf279841df3ac69531657783aec29e81649d"
+    },
+    {
+      "path": "tools/create_shortcuts.ps1",
+      "size_bytes": 1460,
+      "sha256": "ef486816fbadc43ecd773a9543715d3e426387f7b64262bfab8169132905b9ae"
+    },
+    {
+      "path": "tools/ffmpeg/BUNDLED_RUNTIME.json",
+      "size_bytes": 1108,
+      "sha256": "0833223aa081b95f22e8fc177097666a19d530b9b4c1e6e7e54a874687447088"
+    },
+    {
+      "path": "tools/ffmpeg/COPYING.GPLv3.txt",
+      "size_bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "tools/ffmpeg/README.txt",
+      "size_bytes": 1191,
+      "sha256": "616c1a1da3368ff6e96387d597755df525ac5c06d73d2faa23f253493565e915"
+    },
+    {
+      "path": "tools/ffmpeg/bin/ffmpeg.exe",
+      "size_bytes": 101897728,
+      "sha256": "1326dde4c84ff1f96fe6b8916c5bed29e163e9b5dccf995f6f3db069d143ec5e"
+    },
+    {
+      "path": "tools/ffmpeg/bin/ffprobe.exe",
+      "size_bytes": 101692928,
+      "sha256": "b49ccc7c6547b141ad5a2f6ec69cc04323d7133d7704d70b331b904c63eecb07"
+    },
+    {
+      "path": "tools/remove_shortcuts.ps1",
+      "size_bytes": 286,
+      "sha256": "24fa45d425230d692fde870b60043c6ee08e6c2bf61f6a758bf36ee3a22e422e"
+    },
+    {
+      "path": "tools/repair_media_runtime.py",
+      "size_bytes": 1298,
+      "sha256": "a42023d127e1206ae1ca843a688e8dfd3ec9e2e3403bdc3f836ccb611016f8bb"
+    },
+    {
+      "path": "tools/validate_canonical_face_semantics.py",
+      "size_bytes": 2716,
+      "sha256": "691870ba5f707542997d1fff599580dbd59d6e773ab4571a67ce44cd82d422e0"
+    },
+    {
+      "path": "tools/verify_package_manifest.py",
+      "size_bytes": 1462,
+      "sha256": "65963e5360292499f788dcfe84f5a85a5f241ae208ceb09d61bcf8bcfec86d77"
+    },
+    {
+      "path": "tools/windows_python_check.py",
+      "size_bytes": 560,
+      "sha256": "073df74bcb598df33912d351e569a681643bc1a72525ed5a1f4697c3f9f449b5"
+    },
+    {
+      "path": "tools/windows_runtime.bat",
+      "size_bytes": 907,
+      "sha256": "8bc2bca83fecacd4171f8b4a13dfbff92dedb8080f804f7c6016a0cd914d26bd"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "release": "0.21.54",
+  "transport": "python",
+  "page_errors": [],
+  "console_errors": [],
+  "checks": [
+    "Fusion AOI artifact loaded against a real trimmed Privacy MP4",
+    "Frame and within-frame gaze-sample navigation rendered",
+    "Review/conflict/low-confidence navigation controls rendered",
+    "Dynamic layer controls rendered",
+    "Pre-rendered review MP4 artifact listed"
+  ],
+  "player": {
+    "mode": "fusion",
+    "artifact": "artifact_1ae0348dab14",
+    "video": "artifact_a915fe6d7cdf",
+    "readyState": 4,
+    "duration": 5,
+    "samplePosition": "2 / 3",
+    "summary": "CURRENT FRAME\nVideo frame\n1\nNative frame\n61\nSamples\n3\nMean confidence\n0.998\nFrame primary target\nP02 · left eye\nleft_eye 3",
+    "reviewButtons": 5,
+    "layerToggles": 10,
+    "existingReviewVideos": 1,
+    "scrollWidth": 1780
+  },
+  "ok": true
+}

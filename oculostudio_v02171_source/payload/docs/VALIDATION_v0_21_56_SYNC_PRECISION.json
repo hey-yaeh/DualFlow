@@ -1,0 +1,229 @@
+{
+  "schema_version": "oculostudio-validation-report-1.0",
+  "release": "OculoStudio 0.21.56",
+  "release_name": "Precision-Audited Clock Synchronization",
+  "date": "2026-11-02",
+  "status": "PASS",
+  "purpose": "Correct artificially exact-looking drift/residual metrics after manual co-start trimming and make synchronization evidence independently auditable.",
+  "algorithm": {
+    "engine": "pupil_imu_vicon_angular_velocity_v3_precision_audited",
+    "comparison_rate_hz_default": 120.0,
+    "local_lag": "quadratic sub-sample refinement around each independent correlation peak",
+    "drift_validation": "weighted distributed-window fit with finite 95% confidence interval",
+    "residual_validation": "leave-one-window-out prediction",
+    "zero_policy": "residuals below estimator resolution are precision-limited, never proof of exact zero",
+    "co_start_policy": "manual co-start is recorded as a prior for relative offset; drift remains estimated from windows across the recording"
+  },
+  "precision_synthetic_validation": {
+    "ok": true,
+    "drift_case": {
+      "estimated_drift_ppm": 62.84060618266807,
+      "drift_ci95_ppm": 14.17345691272106,
+      "p95_residual_ms": 1.7536271999999997,
+      "residual_resolution_ms": 2.0833333333333335,
+      "holdout_window_count": 9,
+      "window_time_span_sec": 300.0
+    },
+    "zero_case": {
+      "estimated_drift_ppm": -0.00023424229222968052,
+      "drift_ci95_ppm": 12.977685242509452,
+      "p95_residual_ms": 0.0003223499999999999,
+      "residual_resolution_ms": 2.0833333333333335,
+      "holdout_window_count": 10,
+      "residual_below_resolution": true
+    },
+    "checks": [
+      "60 ppm drift recovered from co-start-like signals",
+      "local lags refined below one sample",
+      "leave-one-window-out residuals used for QC",
+      "zero drift retains a finite 95% interval",
+      "zero residual retains a finite estimator resolution"
+    ]
+  },
+  "two_role_integration": {
+    "ok": true,
+    "roles": {
+      "R01": {
+        "artifact_id": "artifact_f74640ef75f9",
+        "artifact_label": "Automatic time sync · R01 · S001_I01_R01_TSD ↔ S001_I01_ETM_B",
+        "source_asset_id": "asset_d9f7b5e0d577",
+        "target_asset_id": "asset_3e3713888b18",
+        "time_map_id": "map_104498652bd5",
+        "confidence": "HIGH",
+        "accepted_by_user": false,
+        "sync_verified": true,
+        "distributed_drift_validated": true,
+        "precision_validated": true,
+        "production_ready": true,
+        "ego_video_used": false,
+        "estimated_offset_sec": 2.8411753953333374,
+        "estimated_drift_ppm": 143.22007759304256,
+        "matched_window_count": 11,
+        "window_count": 11,
+        "p95_residual_ms": 2.0033345000000002,
+        "assignment_artifact_id": "artifact_7e6f8427315c"
+      },
+      "R02": {
+        "artifact_id": "artifact_1dc81621a46c",
+        "artifact_label": "Automatic time sync · R02 · S001_I01_R02_TSD ↔ S001_I01_ETM_A",
+        "source_asset_id": "asset_33417ed30a68",
+        "target_asset_id": "asset_f863d358aba2",
+        "time_map_id": "map_9c06d0064698",
+        "confidence": "HIGH",
+        "accepted_by_user": false,
+        "sync_verified": true,
+        "distributed_drift_validated": true,
+        "precision_validated": true,
+        "production_ready": true,
+        "ego_video_used": false,
+        "estimated_offset_sec": -1.7587365226666662,
+        "estimated_drift_ppm": -108.76878067545005,
+        "matched_window_count": 11,
+        "window_count": 12,
+        "p95_residual_ms": 2.5879635,
+        "assignment_artifact_id": "artifact_7e6f8427315c"
+      }
+    },
+    "checks": [
+      "two role-specific Pupil IMU↔ETM mappings created without ego video",
+      "R01→ETM-B and R02→ETM-A assignment preserved",
+      "role-mismatched Pupil Timeseries blocked",
+      "missing role synchronization blocked",
+      "video-derived synchronization blocked",
+      "distributed drift required",
+      "sub-sample local lags and independent leave-one-window-out residuals required",
+      "drift reported with a finite non-zero 95% interval",
+      "accepted synchronization preview evidence is readable without ego video",
+      "calibration profiles and TimeGraphs bound into one immutable handoff",
+      "legacy profile-only handoff blocked",
+      "Gaze3D shared-start bypass blocked",
+      "stale assignment synchronization blocked"
+    ]
+  },
+  "preview_api": {
+    "ok": true,
+    "signal_rows_returned": 300,
+    "window_rows_returned": 11,
+    "metrics": {
+      "estimated_drift_ppm": 143.22007759304256,
+      "drift_ci95_ppm": 42.779508223634046,
+      "holdout_window_count": 11,
+      "cross_validated_p95_residual_ms": 2.0033345000000002,
+      "residual_resolution_ms": 2.416666666666667,
+      "residual_validation_mode": "leave_one_window_out",
+      "precision_audit_version": "subsample-lag+leave-one-window-out+drift-ci-v1"
+    },
+    "ego_video_used": false
+  },
+  "regression": {
+    "suite_count": 11,
+    "assertions_passed": 195,
+    "assertions_total": 195,
+    "suites": [
+      {
+        "id": "calibration_autosync",
+        "name": "Calibration role-specific automatic synchronization",
+        "assertions": 13,
+        "passed": true
+      },
+      {
+        "id": "calibration_sync_precision",
+        "name": "Sub-sample lag, drift CI and holdout residuals",
+        "assertions": 5,
+        "passed": true
+      },
+      {
+        "id": "calibration_sync_precision_ui",
+        "name": "Calibration precision-audit UI contract",
+        "assertions": 16,
+        "passed": true
+      },
+      {
+        "id": "gaze_sample_clock",
+        "name": "Gaze-sample-clock AOI regression",
+        "assertions": 24,
+        "passed": true
+      },
+      {
+        "id": "aoi_timebase_e2e",
+        "name": "AOI timebase end-to-end regression",
+        "assertions": 18,
+        "passed": true
+      },
+      {
+        "id": "body_geometry_gate",
+        "name": "Body geometry integrity gate regression",
+        "assertions": 23,
+        "passed": true
+      },
+      {
+        "id": "body_fixation_reduction",
+        "name": "Body fixation review reduction regression",
+        "assertions": 14,
+        "passed": true
+      },
+      {
+        "id": "body_semantic_reduction",
+        "name": "Body semantic review reduction regression",
+        "assertions": 11,
+        "passed": true
+      },
+      {
+        "id": "face_manual_review",
+        "name": "Face AOI manual review regression",
+        "assertions": 40,
+        "passed": true
+      },
+      {
+        "id": "body_manual_review",
+        "name": "Body AOI manual review regression",
+        "assertions": 21,
+        "passed": true
+      },
+      {
+        "id": "body_result_handoff",
+        "name": "Body AOI result handoff regression",
+        "assertions": 10,
+        "passed": true
+      }
+    ]
+  },
+  "packaging_preflight": {
+    "fresh_wheel_install": true,
+    "installed_version": "0.21.56",
+    "wheel_record_verified": true,
+    "runtime_clean_core": true,
+    "node_syntax_check": true,
+    "python_compile_check": true,
+    "preview_png": "OculoStudio_v0_21_56_SyncPrecisionAudit_Preview.png",
+    "preview_png_bytes": 250674,
+    "preview_png_sha256": "69ad90de7207ac330f871c3f64b0f1f1a8884d2ee1eff7f0ea0b0186b9224df0"
+  },
+  "ui_contract": {
+    "release": "0.21.56",
+    "ok": true,
+    "checks": {
+      "version_0_21_56": true,
+      "preview_button": true,
+      "preview_api_called": true,
+      "preview_endpoint": true,
+      "drift_ci_display": true,
+      "precision_limited_display": true,
+      "co_start_explanation": true,
+      "holdout_display": true,
+      "trace_chart": true,
+      "offset_chart": true,
+      "modal_css": true,
+      "subsample_engine": true,
+      "leave_one_out": true,
+      "finite_drift_interval": true,
+      "old_artifact_blocked": true,
+      "production_requires_precision": true
+    }
+  },
+  "limitations": [
+    "The execution environment blocks browser navigation to loopback and file URLs with ERR_BLOCKED_BY_ADMINISTRATOR. The live preview API was exercised directly, the JavaScript/CSS/server contract passed static integration checks, and the supplied UI preview was rendered from release markup using page.set_content rather than a navigated local server.",
+    "The final Windows batch installer is statically validated here; the actual Windows installation is performed on the user machine.",
+    "Synthetic validation demonstrates recovery of known drift and finite uncertainty. It does not assert the user’s real R01/R02 drift values; those must be recomputed from the local Pupil IMU and ETM C3D assets after installation."
+  ]
+}

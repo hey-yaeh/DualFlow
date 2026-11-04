@@ -1,0 +1,219 @@
+{
+  "release": "OculoStudio v0.21.49",
+  "feature": "Torso geometry fallback and auditable Body AOI review reduction",
+  "checks": {
+    "torso_created_without_central_markers": true,
+    "pelvis_created_from_bilateral_hips": true,
+    "fallback_provenance_recorded": true,
+    "torso_coverage_diagnostic": true,
+    "clear_margin_candidate_auto_accepted": true,
+    "same_fixation_candidate_auto_accepted": true,
+    "competing_surfaces_remain_pending": true,
+    "self_occlusion_remains_pending": true,
+    "missing_scene_frame_remains_pending": true,
+    "automatic_target_unchanged": true,
+    "sample_level_audit_columns": true,
+    "old_artifact_visual_torso_fallback": true,
+    "installed_version": true,
+    "cache_busting_version": true,
+    "live_visual_fallback_packaged": true,
+    "near_body_language_packaged": true,
+    "body_policy_selector_packaged": true,
+    "body_review_summary_packaged": true
+  },
+  "region_counts": {
+    "head": 4,
+    "left_forearm": 4,
+    "left_lower_leg": 4,
+    "left_thigh": 4,
+    "left_upper_arm": 4,
+    "neck": 4,
+    "pelvis": 4,
+    "right_forearm": 4,
+    "right_lower_leg": 4,
+    "right_thigh": 4,
+    "right_upper_arm": 4,
+    "torso": 4
+  },
+  "geometry_diagnostics": {
+    "entity_id": "P01",
+    "source_asset_id": "body_asset",
+    "profile_name": "OculoStudio standard Vicon body primitives",
+    "marker_prefix_requested": "P01",
+    "marker_prefix_used": "P01",
+    "available_marker_prefixes": [
+      "P01"
+    ],
+    "marker_count": 14,
+    "scene_frame_count": 4,
+    "frames_with_any_primitive": 4,
+    "primitive_row_count": 48,
+    "unresolved_landmarks": {
+      "neck_top": {
+        "requested": [
+          "C7",
+          "CLAV",
+          "NECK"
+        ],
+        "matched": [],
+        "minimum_markers": 1
+      },
+      "chest_center": {
+        "requested": [
+          "CLAV",
+          "STRN",
+          "C7",
+          "T10",
+          "CHEST"
+        ],
+        "matched": [],
+        "minimum_markers": 2
+      },
+      "pelvis_center": {
+        "requested": [
+          "LASI",
+          "RASI",
+          "LPSI",
+          "RPSI",
+          "SACR",
+          "PELV"
+        ],
+        "matched": [],
+        "minimum_markers": 2
+      },
+      "left_hand": {
+        "requested": [
+          "LFIN",
+          "LHAND",
+          "LMC2",
+          "LMC3"
+        ],
+        "matched": [],
+        "minimum_markers": 1
+      },
+      "right_hand": {
+        "requested": [
+          "RFIN",
+          "RHAND",
+          "RMC2",
+          "RMC3"
+        ],
+        "matched": [],
+        "minimum_markers": 1
+      },
+      "left_toe": {
+        "requested": [
+          "LTOE",
+          "LFOOT",
+          "LMT5"
+        ],
+        "matched": [],
+        "minimum_markers": 1
+      },
+      "right_toe": {
+        "requested": [
+          "RTOE",
+          "RFOOT",
+          "RMT5"
+        ],
+        "matched": [],
+        "minimum_markers": 1
+      }
+    },
+    "landmark_matches": {
+      "head_center": [
+        "P01:LFHD",
+        "P01:RFHD"
+      ],
+      "neck_top": [],
+      "chest_center": [],
+      "pelvis_center": [],
+      "left_shoulder": [
+        "P01:LSHO"
+      ],
+      "left_elbow": [
+        "P01:LELB"
+      ],
+      "left_wrist": [
+        "P01:LWRI"
+      ],
+      "left_hand": [],
+      "right_shoulder": [
+        "P01:RSHO"
+      ],
+      "right_elbow": [
+        "P01:RELB"
+      ],
+      "right_wrist": [
+        "P01:RWRI"
+      ],
+      "right_hand": [],
+      "left_hip": [
+        "P01:LHIP"
+      ],
+      "left_knee": [
+        "P01:LKNE"
+      ],
+      "left_ankle": [
+        "P01:LANK"
+      ],
+      "left_toe": [],
+      "right_hip": [
+        "P01:RHIP"
+      ],
+      "right_knee": [
+        "P01:RKNE"
+      ],
+      "right_ankle": [
+        "P01:RANK"
+      ],
+      "right_toe": []
+    },
+    "landmark_fallback_counts": {
+      "bilateral_hips": 4,
+      "bilateral_shoulders": 8
+    },
+    "torso_primitive_frame_count": 4,
+    "pelvis_primitive_frame_count": 4
+  },
+  "auto_review": {
+    "schema_version": "oculostudio-body-aoi-auto-review-1.0",
+    "policy": "adaptive",
+    "review_samples_before": 5,
+    "auto_resolved_samples": 2,
+    "review_samples_remaining": 3,
+    "sample_review_reduction_fraction": 0.4,
+    "review_frames_before": 2,
+    "review_frames_remaining": 1,
+    "frame_review_reduction_fraction": 0.5,
+    "review_fixations_before": 1,
+    "review_fixations_remaining": 1,
+    "fixation_review_reduction_fraction": 0.0,
+    "resolution_source_counts": {
+      "near_body_margin": 1,
+      "same_fixation_exact_consensus": 1
+    },
+    "review_reason_counts_before": {
+      "multiple_uncertainty_candidates": 1,
+      "no_scene_frame": 1,
+      "self_occlusion": 1,
+      "uncertainty_cone_candidate": 2
+    },
+    "remaining_review_reason_counts": {
+      "multiple_uncertainty_candidates": 1,
+      "no_scene_frame": 1,
+      "self_occlusion": 1
+    },
+    "safety_guards": [
+      "automatic target relation, entity and body region are never changed",
+      "no-scene-frame and self-occlusion rows remain in human review",
+      "other-person and unresolved-entity candidates remain in human review",
+      "near-body acceptance requires angular, confidence and competing-candidate margins",
+      "frame and fixation consensus require matching exact-hit targets",
+      "all cleared flags retain sample-level audit columns"
+    ]
+  },
+  "visual_torso_like_pixels": 3765,
+  "failed": [],
+  "ok": true
+}

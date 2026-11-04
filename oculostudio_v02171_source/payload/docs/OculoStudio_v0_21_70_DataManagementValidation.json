@@ -1,0 +1,33 @@
+{
+  "release": "OculoStudio v0.21.71 \u2014 Scope-Separated Data Management",
+  "application_version": "0.21.71",
+  "checks": {
+    "installed_version_0_21_70": true,
+    "two_scope_workspaces": true,
+    "old_global_dropzone_removed": true,
+    "calibration_dropzone_visible": true,
+    "interaction_dropzone_visible": true,
+    "both_upload_targets_explicit": true,
+    "calibration_has_inventory_and_inspector": true,
+    "interaction_has_inventory_and_inspector": true,
+    "current_interaction_filter_hides_other_i_codes": true,
+    "calibration_import_stays_on_data": true,
+    "calibration_modal_project_scope": true,
+    "browser_file_reviewed_before_import": true,
+    "board_definition_detected": true,
+    "confirm_before_mutation": true,
+    "browser_upload_backend_completed": true,
+    "calibration_source_visible_in_set": true,
+    "calibration_source_excluded_from_interaction_inventory": true,
+    "calibration_page_is_operations_only": true,
+    "calibration_page_has_no_data_dropzone": true,
+    "page_errors_absent": true,
+    "console_errors_absent": true
+  },
+  "page_errors": [],
+  "console_errors": [],
+  "passed_count": 21,
+  "check_count": 21,
+  "failed": [],
+  "all_pass": true
+}

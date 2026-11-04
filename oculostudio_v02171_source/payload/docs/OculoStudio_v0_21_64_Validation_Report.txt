@@ -1,0 +1,51 @@
+OculoStudio v0.21.64 — Role-Locked Partner Projection
+Validation report · 2026-11-02
+=====================================================
+
+ROOT CAUSE REPRODUCED
+- R02 could retain/use the R01 ETM-B profile after active-role switching.
+- Face AOI could expose an association produced from another Native-reference trim.
+- Partner-only participant association could complete without any valid in-view partner projection.
+
+RELEASE-SPECIFIC FIXES
+PASS  R02 resolves through the paired handoff to ETM-A.
+PASS  The paired handoff profile is authoritative.
+PASS  A manually supplied R01/ETM-B profile is rejected for R02.
+PASS  Participant Association and Face AOI selectors are filtered by exact trim lineage.
+PASS  A cross-trim Face AOI request is rejected with both trim identities reported.
+PASS  Partner-only processing with zero in-view partner projections fails before artifact publication.
+PASS  The UI displays a read-only R02 → ETM-A role-lock card.
+PASS  The normal calibration-profile selector is hidden; emergency override is collapsed.
+PASS  Live Chromium UI produced 0 page errors and 0 console errors.
+PASS  The Face AOI review payload contains a valid in-view partner projection and matched-partner coverage.
+
+REGRESSION VALIDATION
+PASS  Nasal envelope and direct FaceMapper acceptance: 11/11
+PASS  Facial feature geometry and clip statistics: 34/34
+PASS  Green-box edge tolerance: 16/16
+PASS  Face automatic-review reduction: 15/15
+PASS  Balanced facial AOIs: 23/23
+PASS  Strict green gate and environment fallback: 13/13
+PASS  Face AOI manual review: 40/40
+PASS  Face review-load reduction: 17/17
+PASS  AOI timebase end-to-end: 18/18
+PASS  Gaze-sample-clock AOI: 24/24
+PASS  Body AOI direct C3D clock: 6/6
+PASS  Object AOI direct C3D clock: 6/6
+PASS  Aligned clip QC preview: 26/26
+PASS  Aligned ego + TSD + FaceMapper export: 37/37
+PASS  Shared-audio video synchronization: 37/37
+PASS  Aligned facial-video export: 34/34
+PASS  Paired C3D-defined clips: 6/6
+
+Regression assertions: 363/363 PASS
+
+LANGUAGE / RUNTIME
+PASS  Python compileall
+PASS  app.js syntax
+PASS  interaction_workspace.js syntax
+PASS  aoi_review.js syntax
+PASS  CleanCore self-check
+
+PLATFORM BOUNDARY
+The core processing, FastAPI backend, OpenCV/FFmpeg video paths and Chromium UI were executed in Linux. The Windows WebView2 desktop shell and .bat installer still require final confirmation on the user's Windows machine.

@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "drift_case": {
+    "estimated_drift_ppm": 62.84060618266807,
+    "drift_ci95_ppm": 14.17345691272106,
+    "p95_residual_ms": 1.7536271999999997,
+    "residual_resolution_ms": 2.0833333333333335,
+    "holdout_window_count": 9,
+    "window_time_span_sec": 300.0
+  },
+  "zero_case": {
+    "estimated_drift_ppm": -0.00023424229222968052,
+    "drift_ci95_ppm": 12.977685242509452,
+    "p95_residual_ms": 0.0003223499999999999,
+    "residual_resolution_ms": 2.0833333333333335,
+    "holdout_window_count": 10,
+    "residual_below_resolution": true
+  },
+  "checks": [
+    "60 ppm drift recovered from co-start-like signals",
+    "local lags refined below one sample",
+    "leave-one-window-out residuals used for QC",
+    "zero drift retains a finite 95% interval",
+    "zero residual retains a finite estimator resolution"
+  ]
+}

@@ -1,0 +1,74 @@
+OculoStudio v0.21.52 — Gaze-Sample Clock AOI
+========================================================================
+Generated: 2026-11-01T14:21:42.123164+00:00
+Wheel: oculostudio-0.21.52-py3-none-any.whl
+Wheel SHA-256: afe1a55f7d004062731189efe6dfabfc619fa9edaaa660b3ff1c7bb9ff05a507
+
+Validation summary
+- Suites passed: 19/19
+- Checks passed: 345/345
+- Included failures: 0
+
+Real raw C3D validation
+{
+  "path": "/mnt/data/S001_I01_R01_C3D(1).c3d",
+  "c3d_frames": 67762,
+  "c3d_rate_hz": 120.0,
+  "query_count": 112669,
+  "torso_count": 112669,
+  "pelvis_count": 112669,
+  "p95_query_error_ms": 3.958311144253912,
+  "seconds_including_read": 4.861023681000006
+}
+
+End-to-end timebase validation
+{
+  "body": {
+    "sample_count": 300,
+    "gaze_rate_hz": 59.99999880000002,
+    "video_rate_hz": 30.000000300000004,
+    "body_source_rates_hz": [
+      120.0
+    ],
+    "assignment_status_counts": {
+      "body_3d_exact_partner": 300
+    }
+  },
+  "face": {
+    "sample_count": 5,
+    "time_mode_counts": {
+      "nearest_frame": 3,
+      "track_interpolated": 2
+    },
+    "interpolated_fraction": 0.4,
+    "gaze_rate_hz": 60.00000060000001,
+    "video_rate_hz": 30.000000300000004
+  }
+}
+
+Suites
+- PASS check_gaze_sample_clock_aoi: 27/27
+- PASS check_aoi_timebase_end_to_end: 18/18
+- PASS check_motionstudio_body_profile: 23/23
+- PASS check_body_geometry_integrity_gate: 23/23
+- PASS check_body_aoi_torso_review_reduction: 18/18
+- PASS check_body_aoi_manual_review: 21/21
+- PASS check_body_aoi_resolution_fallback: 6/6
+- PASS check_body_aoi_result_handoff: 10/10
+- PASS check_body_aoi_visual_analytics: 14/14
+- PASS check_body_geometry_integrity_ui: 9/9
+- PASS check_body_human_review_ui: 14/14
+- PASS check_human_review_entry: 16/16
+- PASS check_face_aoi_feature_geometry: 34/34
+- PASS check_face_aoi_auto_review_reduction: 15/15
+- PASS check_face_edge_tolerance: 16/16
+- PASS check_nasal_envelope_direct_accept: 11/11
+- PASS check_face_aoi_review_load_reduction: 17/17
+- PASS check_face_aoi_manual_review: 40/40
+- PASS check_strict_green_gate_environment: 13/13
+
+Limitations
+- The user-provided raw S001_I01_R01 C3D was tested; the corresponding R02 raw C3D was not available in this environment.
+- The full private S001 OculoStudio project, its gaze-ray artifact and FaceMapper artifact were not available for a complete project-level rerun.
+- A generic legacy AOI Review browser test was attempted twice but Chromium refused its random loopback URL with ERR_BLOCKED_BY_ADMINISTRATOR. Three other live Chromium suites for geometry gating, Body human review and persistent Human Review entry passed with no page or console errors.
+- Windows batch files were inspected and the bundled wheel was installed in a clean Linux target; an actual Windows installation must run on the user machine.

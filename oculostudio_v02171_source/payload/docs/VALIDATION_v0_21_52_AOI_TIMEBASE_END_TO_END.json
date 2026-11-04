@@ -1,0 +1,51 @@
+{
+  "release": "OculoStudio v0.21.52 — Gaze-Sample Clock AOI",
+  "feature": "End-to-end separation of AOI computation clocks from video display clocks",
+  "checks": {
+    "application_version": true,
+    "body_rows_preserved": true,
+    "body_uses_gaze_sample_clock": true,
+    "body_has_one_query_time_per_gaze_row": true,
+    "body_video_clock_is_display_only": true,
+    "body_timebase_reports_distinct_rates": true,
+    "body_geometry_gate_is_sample_clock_ready": true,
+    "body_exact_partner_intersection_present": true,
+    "body_scene_frames_are_preview_metadata": true,
+    "face_rows_preserved": true,
+    "face_observations_remain_video_frame_based": true,
+    "face_classification_uses_gaze_timestamps": true,
+    "face_observed_frames_are_not_mislabeled_as_interpolated": true,
+    "face_midframe_samples_are_track_interpolated": true,
+    "face_interpolation_endpoints_and_alpha_recorded": true,
+    "face_interpolation_retains_feature_hits": true,
+    "face_manifest_records_policy": true,
+    "face_qc_reports_time_modes": true
+  },
+  "details": {
+    "body": {
+      "sample_count": 300,
+      "gaze_rate_hz": 59.99999880000002,
+      "video_rate_hz": 30.000000300000004,
+      "body_source_rates_hz": [
+        120.0
+      ],
+      "assignment_status_counts": {
+        "body_3d_exact_partner": 300
+      }
+    },
+    "face": {
+      "sample_count": 5,
+      "time_mode_counts": {
+        "nearest_frame": 3,
+        "track_interpolated": 2
+      },
+      "interpolated_fraction": 0.4,
+      "gaze_rate_hz": 60.00000060000001,
+      "video_rate_hz": 30.000000300000004
+    }
+  },
+  "passed": 18,
+  "total": 18,
+  "failed": [],
+  "ok": true
+}

@@ -1,0 +1,26 @@
+{
+  "page_errors": [],
+  "console_errors": [],
+  "state": {
+    "card": "Role-locked partner-head projection\n\nR02 → ETM-A → Synthetic Neon to Tracker. The paired Calibration handoff is authoritative; switching the active role cannot reuse the other wearer’s profile.",
+    "hiddenProfile": "hidden",
+    "hiddenProfileValue": "",
+    "overrideOpen": "false",
+    "trim": "artifact_d69b059ce855",
+    "faceTrim": "artifact_d69b059ce855",
+    "associationOptions": [
+      {
+        "value": "",
+        "text": "Run participant association for this trim"
+      },
+      {
+        "value": "artifact_c349253d1d97",
+        "text": "S001_I01_R02_participant_association"
+      }
+    ],
+    "selectedAssociation": "artifact_c349253d1d97",
+    "profileVisible": false
+  },
+  "wrong_trim_association_id": "artifact_1b5a956dd55f",
+  "ok": true
+}

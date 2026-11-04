@@ -1,0 +1,59 @@
+OculoStudio v0.21.61 — Validation Report
+
+Release
+-------
+Shared-Audio Facial ↔ Ego Video Synchronization
+
+Executed validation
+-------------------
+PASS  Python compilation: oculostudio + neon_vicon_gaze3d.
+PASS  JavaScript syntax: app.js, interaction_workspace.js, aoi_review.js.
+PASS  Shared-audio backend: 37/37.
+PASS  Live Chromium UI: 20/20; page errors 0; console errors 0.
+PASS  CleanCore self-check from isolated installed wheel.
+PASS  Existing Pupil IMU ↔ Vicon automatic synchronization regression.
+PASS  Existing synchronization-precision regression.
+PASS  Existing R01 + R02 C3D-defined clip regression.
+PASS  Existing aligned-clip QC preview regression.
+PASS  Existing aligned ego + TSD + FaceMapper export regression.
+PASS  The four critical legacy regressions were repeated against the isolated installed wheel.
+
+Synthetic same-interaction test
+-------------------------------
+The two generated videos contained the same physical acoustic events but different microphone filtering, gain, noise, extra one-sided instructions, an approximately 3.1 s start offset and 400 ppm clock drift.
+
+Expected scale:              1.000400000
+Recovered scale:             1.000360367
+Expected offset:             -3.101680 s
+Recovered offset:            -3.097357 s
+Recovered drift:             360.367 ppm
+Matched windows:             12
+Leave-one-window-out P95:    8.723 ms
+Matched temporal coverage:   87.84%
+Unrelated-audio result:      FAILED
+
+Safety checks
+-------------
+PASS  Candidate creation does not publish a TimeGraph.
+PASS  R01/R02 or interaction mismatch is rejected before matching.
+PASS  Acceptance without explicit visual review is rejected.
+PASS  Start/middle/end split-video review is present.
+PASS  One stable visual A/V correction is explicitly audited.
+PASS  Unrelated audio fails closed and publishes no map.
+PASS  Pupil Native reference publishes the exact Native PTS → Pupil capture-clock bridge only after acceptance.
+PASS  Artifact-registration failure rolls back the TimeGraph.
+PASS  Source video and Native ZIP hashes remain unchanged.
+PASS  Arbitrary dynamic time warping is not used.
+
+Wheel integrity
+---------------
+File:   oculostudio-0.21.61-py3-none-any.whl
+Bytes:  846143
+SHA256: a99a260378fc13d9df334f44caa37c96310edeea6df17f78c4ab38ac38251b7f
+RECORD: 124 rows; 0 hash/size failures
+CRC:    PASS
+Isolated install version: 0.21.61
+
+Platform boundary
+-----------------
+The packaged FastAPI application, FFmpeg processing path, wheel, and Chromium UI were exercised. Windows Edge WebView2 and the .bat installation process require final confirmation after installation on the user’s Windows computer.

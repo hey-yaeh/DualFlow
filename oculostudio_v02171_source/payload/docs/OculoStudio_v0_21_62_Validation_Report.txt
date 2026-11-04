@@ -1,0 +1,68 @@
+OculoStudio v0.21.62 — Validation Report
+
+Release
+-------
+Direct Gaze-Ray C3D Clock for Body/Object AOI
+
+Problem reproduced on v0.21.61
+--------------------------------
+PASS  Previous Body AOI failed with the same TimeGraphError and the same
+      "No time-map path connects time_* to global" message.
+
+Root-cause correction
+---------------------
+PASS  Body AOI reuses gaze3d_c3d_time_sec from every calibrated gaze ray.
+PASS  Object AOI uses the same direct Vicon/C3D clock path.
+PASS  A project Timeseries-to-Global path is not required for matching C3D-defined clips.
+PASS  Body asset identity is checked against Calibration/trim lineage.
+PASS  At least 90% C3D time-range overlap is required; mismatched recordings fail closed.
+PASS  Legacy verified TimeGraph fallback remains available.
+
+Targeted final-wheel validation
+-------------------------------
+PASS  Body AOI direct clock:       6 / 6
+PASS  Object AOI direct clock:     6 / 6
+PASS  Gaze-sample-clock AOI:      24 / 24
+PASS  AOI timebase end-to-end:    18 / 18
+PASS  Body geometry integrity:    23 / 23
+PASS  Body resolution fallback:    6 / 6
+PASS  C3D-defined paired clips:    6 / 6
+PASS  Aligned ego/TSD/FM export:  37 / 37
+PASS  Aligned clip QC preview:    26 / 26
+PASS  Shared-audio video sync:    37 / 37
+PASS  CleanCore runtime checks
+PASS  Python compileall
+PASS  JavaScript syntax
+PASS  Wheel CRC and RECORD (124 rows, 0 failures)
+
+Measured direct-clock result
+----------------------------
+Body AOI rows:                300
+Body time mode:               gaze_ray_c3d_time
+Body Global path required:    False
+Object AOI rows:              300
+Object time mode:             gaze_ray_c3d_time
+Object Global path required:  False
+
+Overall
+-------
+Assertions passed: 202 / 202
+Failed assertions: 0
+All passed: True
+
+Wheel
+-----
+File:   oculostudio-0.21.62-py3-none-any.whl
+Size:   848702 bytes
+SHA256: d488673eaeaa3395d129ce1233a130c19a9f62fc77f070e95bd3f520a8a962cb
+
+Upgrade action
+--------------
+Install v0.21.62 and rerun only the failed Body AOI. Existing Calibration,
+C3D-defined Trim and Gaze 3D remain valid when the gaze-ray CSV contains
+'gaze3d_c3d_time_sec'.
+
+Platform boundary
+-----------------
+Core processing and final-wheel validation ran in Linux. The Windows WebView2
+shell and .bat installer still require final confirmation on the user's machine.

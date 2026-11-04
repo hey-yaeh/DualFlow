@@ -1,0 +1,64 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "release": "OculoStudio v0.21.48 Body AOI Human Review",
+  "version": "0.21.48",
+  "wheel": {
+    "filename": "oculostudio-0.21.48-py3-none-any.whl",
+    "size_bytes": 868934,
+    "sha256": "1a8d5b6dec8c175ebe43bde103ff1e438eecbc53d8cc77562b184a660cfa1339",
+    "pip_install_import_verified": true,
+    "installed_version_verified": "0.21.48"
+  },
+  "feature_guarantees": {
+    "existing_body_artifacts_reviewable_without_rerun": true,
+    "source_body_artifact_is_not_overwritten": true,
+    "reviewed_output_has_parent_lineage": true,
+    "automatic_values_and_decision_audit_are_preserved": true,
+    "pending_body_samples_and_frames_are_exposed": true,
+    "sample_frame_and_fixation_scopes_supported": true
+  },
+  "validation": {
+    "body_manual_review_backend": {
+      "passed": true,
+      "log": "body_manual.log"
+    },
+    "body_human_review_browser": {
+      "passed": true,
+      "log": "body_entry.log"
+    },
+    "body_visual_analytics": {
+      "passed": true,
+      "log": "body_visual.log"
+    },
+    "body_torso_surfaces": {
+      "passed": true,
+      "log": "torso.log"
+    },
+    "body_resolution_fallback": {
+      "passed": true,
+      "log": "resolution.log"
+    },
+    "body_result_handoff": {
+      "passed": true,
+      "log": "handoff.log"
+    },
+    "face_manual_review": {
+      "passed": true,
+      "log": "face_manual.log"
+    },
+    "face_human_review_entry": {
+      "passed": true,
+      "log": "face_entry.log"
+    }
+  },
+  "browser_validation": {
+    "engine": "Chromium",
+    "real_local_fastapi_server": true,
+    "page_errors": [],
+    "console_errors": [],
+    "responsive_width_px": 1720,
+    "evidence": "BODY_HUMAN_REVIEW_UI_VALIDATION_v0_21_48.json",
+    "preview": "OculoStudio_v0_21_48_BodyHumanReview.png"
+  },
+  "platform_note": "The Python wheel and local browser workflow were executed in the validation environment. Windows batch paths were statically checked; the final installation runs on the user Windows machine."
+}

@@ -1,0 +1,46 @@
+{
+  "release": "OculoStudio v0.21.54 — Gaze-Sample Clock AOI",
+  "ok": true,
+  "check_count": 24,
+  "passed_count": 24,
+  "failed": [],
+  "checks": {
+    "application_version": true,
+    "face_engine_version": true,
+    "body_api_sample_clock_chunk_default": true,
+    "face_api_track_interpolation_default": true,
+    "face_api_interpolation_limits": true,
+    "paired_intersection_matches_legacy_math": true,
+    "sample_clock_tracks_moving_body": true,
+    "synthetic_120hz_c3d_preflighted_at_200hz": true,
+    "raw_vicon_marker_protocol_named_correctly": true,
+    "sample_clock_torso_coverage_complete": true,
+    "sample_clock_interpolation_error_bounded_by_120hz": true,
+    "sample_clock_body_artifact_review_ready": true,
+    "legacy_video_clock_body_artifact_blocked": true,
+    "safe_face_track_interpolates_at_gaze_time": true,
+    "face_identity_change_falls_back": true,
+    "face_nearest_frame_legacy_policy_preserved": true,
+    "body_intersection_no_longer_uses_video_frame_batches": true,
+    "body_missing_scene_frame_no_longer_blocks_hit": true,
+    "body_timebase_export_packaged": true,
+    "face_temporal_provenance_packaged": true,
+    "fusion_preserves_temporal_fields": true,
+    "ui_exposes_face_time_model": true,
+    "ui_explains_body_sample_clock": true,
+    "cache_busting_version": true
+  },
+  "details": {
+    "paired_intersection_max_errors": {
+      "distance_mm": 6.821210263296962e-13,
+      "angular_deg": 4.263256414560601e-14,
+      "point_mm": 7.054082769849888e-13
+    },
+    "synthetic_preflight": {
+      "query_count": 399,
+      "source_rate_hz": 120.0,
+      "p95_query_to_source_sample_error_ms": 3.3333333333334103,
+      "seconds": 0.035281769999983226
+    }
+  }
+}

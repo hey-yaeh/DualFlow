@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#37392f"/><stop offset="1" stop-color="#1e211d"/></linearGradient>
+    <radialGradient id="lamp"><stop stop-color="#ffe3a1"/><stop offset="1" stop-color="#c68d39" stop-opacity="0"/></radialGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d7d0be"/><stop offset="1" stop-color="#aaa490"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="650" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="650" fill="#181b17" opacity=".12"/>
+  <rect x="20" y="35" width="270" height="480" rx="8" fill="#24271f"/>
+  <g opacity=".8">
+    <rect x="40" y="70" width="220" height="18" rx="5" fill="#5a5545"/>
+    <rect x="40" y="150" width="220" height="18" rx="5" fill="#5a5545"/>
+    <rect x="40" y="230" width="220" height="18" rx="5" fill="#5a5545"/>
+    <rect x="58" y="95" width="58" height="42" rx="5" fill="#87816c"/>
+    <rect x="128" y="102" width="40" height="35" rx="5" fill="#555f4b"/>
+    <circle cx="220" cy="122" r="22" fill="#9c7750"/>
+  </g>
+  <circle cx="820" cy="125" r="100" fill="url(#lamp)"/>
+  <path d="M820 0v88" stroke="#8e7f5e" stroke-width="7"/><circle cx="820" cy="102" r="25" fill="#f4c86e"/>
+  <g opacity=".7" fill="#516148"><ellipse cx="345" cy="400" rx="63" ry="170" transform="rotate(-24 345 400)"/><ellipse cx="260" cy="460" rx="48" ry="135" transform="rotate(22 260 460)"/></g>
+  <rect y="520" width="1200" height="130" fill="#5c4e3c"/>
+  <ellipse cx="630" cy="578" rx="335" ry="46" fill="#3b3228" opacity=".45"/>
+  <!-- seated person -->
+  <ellipse cx="570" cy="270" rx="86" ry="104" fill="#bd8f76"/>
+  <path d="M492 258q-5-120 90-121q94 8 76 139q-18-57-77-66q-45 29-89 48" fill="#42332c"/>
+  <path d="M450 510q18-177 122-180q109 1 151 180" fill="url(#shirt)"/>
+  <path d="M463 511q-17-104 51-145" stroke="#c7bfaa" stroke-width="55" stroke-linecap="round"/>
+  <path d="M704 510q10-103-56-146" stroke="#c7bfaa" stroke-width="55" stroke-linecap="round"/>
+  <circle cx="539" cy="273" r="8" fill="#2a211e"/><circle cx="606" cy="275" r="8" fill="#2a211e"/>
+  <path d="M550 320q28 17 54-2" fill="none" stroke="#7b4f46" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="570" cy="521" rx="77" ry="18" fill="#9a6444"/>
+  <path d="M540 482q35-25 68 0v65h-68z" fill="#514b40"/><path d="M608 495q39-4 34 24q-2 25-33 17" fill="none" stroke="#514b40" stroke-width="9"/>
+  <!-- foreground person -->
+  <ellipse cx="1080" cy="270" rx="115" ry="135" fill="#9a6b53"/>
+  <path d="M966 285q-22-157 125-167q112 30 102 172q-58-97-123-95q-62 19-104 90" fill="#302a27"/>
+  <path d="M890 650q35-280 184-270q124 25 142 270" fill="#242a2b"/>
+  <!-- tracking overlays -->
+  <rect x="467" y="151" width="212" height="238" rx="4" fill="none" stroke="#effd3f" stroke-width="3" opacity=".82"/>
+  <rect x="467" y="121" width="103" height="29" rx="7" fill="#effd3f"/><text x="480" y="141" font-family="Segoe UI, sans-serif" font-size="15" fill="#24261b" font-weight="700">FACE 1 · 0.98</text>
+  <g filter="url(#glow)"><circle cx="539" cy="273" r="7" fill="#74ef52"/><circle cx="606" cy="275" r="7" fill="#effd3f"/><circle cx="913" cy="287" r="8" fill="#effd3f"/></g>
+  <path d="M539 273 C650 240 770 270 913 287" fill="none" stroke="#76eb50" stroke-width="2.5" stroke-dasharray="9 6"/>
+  <path d="M606 275 C720 282 812 286 913 287" fill="none" stroke="#effd3f" stroke-width="2.5"/>
+  <g transform="translate(845 420)">
+    <rect width="320" height="190" rx="18" fill="#141711" opacity=".88" stroke="#6e7255"/>
+    <text x="16" y="28" font-family="Segoe UI,sans-serif" font-size="14" fill="#f0f1e8" font-weight="700">3D GAZE RAYS</text>
+    <g stroke="#697057" opacity=".45"><path d="M25 155L160 62L295 155" fill="none"/><path d="M25 155H295M25 120H295M25 85H295"/><path d="M80 120L215 28M135 120L270 28"/></g>
+    <circle cx="112" cy="96" r="12" fill="#dadbd0"/><path d="M112 108v42m0-26l-27 24m27-24l31 19m-31 7l-25 28m25-28l28 28" stroke="#b3b6a9" stroke-width="6" stroke-linecap="round"/>
+    <g stroke-width="2.5"><path d="M112 96L252 72" stroke="#effd3f"/><path d="M112 96L268 102" stroke="#74ef52"/><path d="M112 96L246 133" stroke="#effd3f"/></g>
+    <g fill="#fff"><circle cx="252" cy="72" r="4"/><circle cx="268" cy="102" r="4"/><circle cx="246" cy="133" r="4"/></g>
+  </g>
+</svg>

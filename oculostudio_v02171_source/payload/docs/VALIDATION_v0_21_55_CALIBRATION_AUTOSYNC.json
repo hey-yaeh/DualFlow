@@ -1,0 +1,97 @@
+{
+  "release": "OculoStudio 0.21.55",
+  "feature": "Calibration-integrated Pupil IMU ↔ assigned ETM Vicon synchronization",
+  "status": "PASS",
+  "scope": {
+    "estimation_inputs": [
+      "Pupil Timeseries imu.csv",
+      "assigned ETM wearer C3D/NPZ rigid-body markers"
+    ],
+    "ego_video_used": false,
+    "time_model": "affine TimeGraph with distributed motion-window anchors",
+    "project_role_mapping": {
+      "R01": "ETM-B",
+      "R02": "ETM-A"
+    }
+  },
+  "suites": {
+    "installed_wheel": {
+      "status": "PASS",
+      "version": "0.21.55",
+      "checks": [
+        "wheel RECORD/install",
+        "package import",
+        "Python compileall",
+        "JavaScript syntax",
+        "OculoStudio self-check"
+      ]
+    },
+    "dual_role_backend_integration": {
+      "status": "PASS",
+      "checks": [
+        "two role-specific Pupil IMU↔ETM mappings created without ego video",
+        "R01→ETM-B and R02→ETM-A assignment preserved",
+        "role-mismatched Pupil Timeseries blocked",
+        "missing role synchronization blocked",
+        "video-derived synchronization blocked",
+        "distributed drift required",
+        "calibration profiles and TimeGraphs bound into one immutable handoff",
+        "legacy profile-only handoff blocked",
+        "Gaze3D shared-start bypass blocked",
+        "stale assignment synchronization blocked"
+      ],
+      "role_metrics": {
+        "R01": {
+          "target": "ETM-B",
+          "confidence": "HIGH",
+          "production_ready": true,
+          "ego_video_used": false,
+          "estimated_offset_sec": 2.833877021333336,
+          "estimated_drift_ppm": 258.0733302841587,
+          "matched_window_count": 10,
+          "window_count": 11,
+          "p95_residual_ms": 7.31153595
+        },
+        "R02": {
+          "target": "ETM-A",
+          "confidence": "HIGH",
+          "production_ready": true,
+          "ego_video_used": false,
+          "estimated_offset_sec": -1.759166445666665,
+          "estimated_drift_ppm": -23.674869700673895,
+          "matched_window_count": 10,
+          "window_count": 11,
+          "p95_residual_ms": 10.944312799999981
+        }
+      },
+      "fixture_note": "Deterministic synthetic Pupil IMU and ETM rigid-body motion; validates algorithmic and lineage gates, not the user’s real recording metrics."
+    },
+    "api_review_acceptance": {
+      "status": "PASS",
+      "checks": [
+        "POST /api/time-maps/auto-fit",
+        "HIGH candidate held for explicit review when auto-save is off",
+        "POST /api/time-maps/auto-accept",
+        "accepted mapping registered in project state",
+        "accepted artifact reports production_ready and ego_video_used=false"
+      ]
+    },
+    "calibration_ui": {
+      "status": "PASS",
+      "checks": [
+        "Calibration exposes four formal phases",
+        "Pupil IMU↔Vicon synchronization is Phase 3",
+        "R01→ETM-B and R02→ETM-A are rendered independently",
+        "Both accepted mappings show offset, drift, windows and P95 residual",
+        "The UI explicitly states that ego video is not used",
+        "Phase 4 handoff is enabled only after both role mappings are production-ready",
+        "Completed synchronized handoff is visible"
+      ],
+      "page_errors": [],
+      "console_errors": []
+    }
+  },
+  "limitations": [
+    "No matched real Pupil imu.csv + ETM wearer C3D pair from S001/I01 was available in this environment; real offset, drift, residuals, and confidence must be measured after installation."
+  ]
+}

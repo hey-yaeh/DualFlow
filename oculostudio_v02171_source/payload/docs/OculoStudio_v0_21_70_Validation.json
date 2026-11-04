@@ -1,0 +1,80 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "application_version": "0.21.70",
+  "release": "Scope-Separated Data Management",
+  "validated_at_utc": "2026-11-04T13:00:00Z",
+  "feature_summary": {
+    "data_page": [
+      "Calibration Data workspace",
+      "Interaction Data workspace"
+    ],
+    "calibration_page": "operations only",
+    "ambiguous_global_dropzone_removed": true,
+    "browser_calibration_upload_supported": true,
+    "interaction_inventory_context_locked": true,
+    "existing_projects_preserved": true
+  },
+  "functional_validation": {
+    "scope_separated_data_management": {
+      "passed": true,
+      "checks_passed": 21,
+      "checks_total": 21
+    },
+    "project_calibration_sets": {
+      "passed": true,
+      "checks_passed": 35,
+      "checks_total": 35
+    },
+    "project_session_workspace": {
+      "passed": true,
+      "checks_passed": 29,
+      "checks_total": 29
+    },
+    "calibration_set_profile_builder": {
+      "passed": true,
+      "checks_passed": 19,
+      "checks_total": 19
+    },
+    "calibration_auto_sync": {
+      "passed": true,
+      "checks_passed": 13,
+      "checks_total": 13
+    },
+    "calibration_sync_precision": {
+      "passed": true,
+      "checks_passed": 5,
+      "checks_total": 5
+    },
+    "c3d_defined_clips": {
+      "passed": true,
+      "checks_passed": 1,
+      "checks_total": 1
+    },
+    "context_locked_aoi_review": {
+      "passed": true,
+      "checks_passed": 16,
+      "checks_total": 16
+    }
+  },
+  "functional_assertions": {
+    "passed": 139,
+    "total": 139,
+    "all_pass": true
+  },
+  "static_validation": {
+    "python_compileall": true,
+    "javascript_app_syntax": true,
+    "javascript_asset_import_syntax": true,
+    "page_errors": [],
+    "console_errors": []
+  },
+  "wheel": {
+    "filename": "oculostudio-0.21.70-py3-none-any.whl",
+    "size_bytes": 1075174,
+    "sha256": "e605b7728702403fdb3aa84fa90cc1c7f9be6158392ff7124924248546555971",
+    "record_entries": 131,
+    "isolated_install_version": "0.21.70",
+    "clean_core": true
+  },
+  "platform_note": "Core Python, FastAPI, Chromium UI and final wheel were tested on Linux. Windows WebView2 and the .bat installer require final native confirmation on the user machine."
+}

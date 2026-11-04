@@ -1,0 +1,69 @@
+OculoStudio v0.21.55 Validation Report
+===========================================
+
+STATUS: PASS
+
+Feature
+-------
+Calibration-integrated Pupil IMU ↔ assigned ETM Vicon synchronization.
+The estimator uses Pupil imu.csv and ETM rigid-body C3D/NPZ only; ego video is not used.
+
+Installed Wheel
+---------------
+Status: PASS
+- wheel RECORD/install
+- package import
+- Python compileall
+- JavaScript syntax
+- OculoStudio self-check
+
+Dual Role Backend Integration
+-----------------------------
+Status: PASS
+- two role-specific Pupil IMU↔ETM mappings created without ego video
+- R01→ETM-B and R02→ETM-A assignment preserved
+- role-mismatched Pupil Timeseries blocked
+- missing role synchronization blocked
+- video-derived synchronization blocked
+- distributed drift required
+- calibration profiles and TimeGraphs bound into one immutable handoff
+- legacy profile-only handoff blocked
+- Gaze3D shared-start bypass blocked
+- stale assignment synchronization blocked
+- R01 → ETM-B: HIGH, offset 2.833877 s, drift 258.073 ppm, windows 10/11, P95 7.312 ms, video=False
+- R02 → ETM-A: HIGH, offset -1.759166 s, drift -23.675 ppm, windows 10/11, P95 10.944 ms, video=False
+
+Api Review Acceptance
+---------------------
+Status: PASS
+- POST /api/time-maps/auto-fit
+- HIGH candidate held for explicit review when auto-save is off
+- POST /api/time-maps/auto-accept
+- accepted mapping registered in project state
+- accepted artifact reports production_ready and ego_video_used=false
+
+Calibration Ui
+--------------
+Status: PASS
+- Calibration exposes four formal phases
+- Pupil IMU↔Vicon synchronization is Phase 3
+- R01→ETM-B and R02→ETM-A are rendered independently
+- Both accepted mappings show offset, drift, windows and P95 residual
+- The UI explicitly states that ego video is not used
+- Phase 4 handoff is enabled only after both role mappings are production-ready
+- Completed synchronized handoff is visible
+
+Fail-closed gates verified
+--------------------------
+- role-mismatched Pupil Timeseries blocked
+- missing role synchronization blocked
+- video-derived synchronization blocked
+- distributed drift required
+- calibration profiles and TimeGraphs bound into one immutable handoff
+- legacy profile-only handoff blocked
+- Gaze3D shared-start bypass blocked
+- stale assignment synchronization blocked
+
+Limitation
+----------
+No matched real Pupil imu.csv + ETM wearer C3D pair from S001/I01 was available in this environment; real offset, drift, residuals, and confidence must be measured after installation.

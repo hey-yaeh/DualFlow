@@ -1,0 +1,34 @@
+OculoStudio v0.21.58 — Aligned Clip QC Preview
+
+VALIDATION RESULT: PASS
+
+Validated behavior
+------------------
+- Trim shows Generate QC preview for automatic C3D-defined clips.
+- The central card shows Review/Open aligned clip video.
+- The real preview job generates browser-compatible MP4 with FaceMapper/AOI/gaze overlays.
+- R01 and R02 use distinct preview plans and distinct cache videos.
+- Switching roles does not reuse the other role's player.
+- A fresh application document restores the matching role preview.
+- Preview generation does not register a scientific artifact or re-encode the source NRD video.
+- Manual recovery trim and its pre-trim preview endpoint remain present.
+
+Regression and package checks
+-----------------------------
+- Automatic paired C3D clip regression: PASS
+- Transactional mismatched-source rejection: PASS
+- CleanCore self-check: PASS
+- Python compileall: PASS
+- JavaScript syntax: PASS
+- Wheel RECORD hashes: PASS
+- Wheel archive integrity: PASS
+
+Wheel
+-----
+oculostudio-0.21.58-py3-none-any.whl
+SHA256: 7c011b0d920045d464612cc18a37348f3a3b7206332053b728e8526c092032c7
+Size: 810723 bytes
+
+Boundary
+--------
+Automated validation ran against a live FastAPI backend with Linux Chromium and real FFmpeg output. The Windows WebView desktop shell requires final confirmation on the user's Windows machine.

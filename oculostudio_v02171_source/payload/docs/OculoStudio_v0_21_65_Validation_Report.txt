@@ -1,0 +1,43 @@
+OculoStudio v0.21.65 — Context-Locked AOI Review
+
+Issue fixed
+-----------
+When R02 was active but the current R02 Native-reference trim did not yet have Face AOI or Body AOI, the UI could expose review buttons and pending counts from R01 or an obsolete R02 trim.
+
+Context contract
+----------------
+All Gaze Targets review and fusion surfaces now use the exact tuple:
+  session + interaction + active wearer role + Native-reference trim artifact ID
+
+An empty current context remains empty. There is no fallback to another role or an older trim.
+
+Validation
+----------
+Context-lock live Chromium UI: 16/16 PASS
+Role-locked partner projection regression: 15/15 PASS
+Existing Human Review entry regression: 16/16 PASS
+Page errors: 0
+Console errors: 0
+Python compileall: PASS
+JavaScript syntax (app/aoi_review/interaction_workspace): PASS
+Isolated final-wheel install: PASS
+Wheel ZIP CRC: PASS
+Wheel RECORD: 227/227 verified
+
+Observed UI behaviour
+---------------------
+- Before current R02 Face AOI exists: “Generate R02 Face AOI first”; no review button.
+- Before current R02 Body AOI exists: “Generate R02 Body AOI first”; no review button.
+- R01 pending counts do not appear in R02.
+- Old R02-trim pending counts do not appear in the current R02 trim.
+- AOI Review Player starts with “No artifact” and disabled review controls.
+- Fusion dropdowns contain no cross-context artifacts.
+- Once a matching current-context artifact exists, the normal review entry remains available and opens the correct queue.
+
+Compatibility
+-------------
+No scientific artifact is rewritten. Existing Calibration, Trim, Privacy, Gaze 3D, Participant Association, Face AOI, Body AOI, Object AOI and review outputs are preserved.
+
+Platform note
+-------------
+The final wheel, FastAPI backend and Chromium UI were run in this environment. The Windows WebView2 desktop shell and .bat installation still require final native confirmation on Windows.

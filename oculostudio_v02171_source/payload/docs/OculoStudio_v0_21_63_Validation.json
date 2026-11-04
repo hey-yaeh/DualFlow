@@ -1,0 +1,92 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "release": "OculoStudio v0.21.63 — Aligned Facial-Expression Video Export",
+  "validated_from_payload_wheel": true,
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "ffmpeg": "/usr/bin/ffmpeg",
+    "ffprobe": "/usr/bin/ffprobe",
+    "windows_desktop_installer_executed": false,
+    "note": "Core processing, installed wheel, FFmpeg output, FastAPI-backed Chromium UI, manifests and archive integrity were validated in Linux. Native Windows WebView2 and BAT execution require final confirmation on the user machine."
+  },
+  "feature_validation": {
+    "aligned_facial_export_backend": {
+      "passed": 34,
+      "total": 34,
+      "all_passed": true,
+      "measured": {
+        "clock_scale": 1.0003603668616743,
+        "clock_drift_ppm": 360.3668616742883,
+        "mapped_source_start_sec": 9.094079705,
+        "mapped_source_end_sec": 59.076067853,
+        "audio_tempo_factor": 0.99963976296,
+        "output_frame_count": 1500,
+        "output_video_bytes": 1284218
+      }
+    },
+    "aligned_facial_export_ui": {
+      "passed": 11,
+      "total": 11,
+      "all_passed": true,
+      "page_errors": [],
+      "console_errors": []
+    }
+  },
+  "regressions": {
+    "shared_audio_video_sync": {
+      "passed": 37,
+      "total": 37,
+      "all_passed": true
+    },
+    "aligned_ego_tsd_fm_export": {
+      "passed": 37,
+      "total": 37,
+      "all_passed": true
+    },
+    "aligned_clip_qc_preview": {
+      "passed": 26,
+      "total": 26,
+      "all_passed": true
+    },
+    "body_aoi_direct_c3d_clock": {
+      "passed": 6,
+      "total": 6,
+      "all_passed": true
+    },
+    "object_aoi_direct_c3d_clock": {
+      "passed": 6,
+      "total": 6,
+      "all_passed": true
+    },
+    "c3d_defined_paired_clip": {
+      "all_passed": true,
+      "maximum_start_boundary_error_ms": 0.0035,
+      "maximum_end_boundary_error_ms": 0.0245,
+      "source_video_reencoded": false
+    },
+    "clean_core": {
+      "all_passed": true,
+      "legacy_hits": []
+    }
+  },
+  "wheel_integrity": {
+    "filename": "oculostudio-0.21.63-py3-none-any.whl",
+    "size_bytes": 861353,
+    "zip_crc_passed": true,
+    "record_rows": 125,
+    "record_failures": [],
+    "isolated_install_version": "0.21.63"
+  },
+  "package_integrity": {
+    "payload_manifest_file_count": 271,
+    "payload_manifest_passed": true,
+    "installer_manifest_file_count": 276,
+    "installer_manifest_passed": true,
+    "final_zip_crc_passed": null,
+    "final_zip_ascii_paths_passed": null,
+    "final_extracted_wheel_install_passed": null,
+    "final_extracted_release_check_passed": null
+  },
+  "all_processing_and_ui_checks_passed": true
+}

@@ -1,0 +1,33 @@
+OculoStudio v0.21.54 — Real-Time AOI Review and Semantic Queue Reduction
+========================================================================
+
+Wheel: oculostudio-0.21.54-py3-none-any.whl
+Wheel SHA-256: 64678a6855459b1e5b237ce7fa81e06163e3b815f6221e773be03f04b99924ed
+Core functional checks: 195/195 PASS
+
+Validated suites:
+- real_time_playback: PASS (15/15)
+- semantic_queue_reduction: PASS (11/11)
+- fixation_reduction_regression: PASS (14/14)
+- gaze_sample_clock_regression: PASS (24/24)
+- body_geometry_gate_regression: PASS (23/23)
+- body_manual_review_regression: PASS (21/21)
+- face_manual_review_regression: PASS (40/40)
+- body_visual_analytics_regression: PASS (14/14)
+- body_result_handoff_regression: PASS (10/10)
+- torso_review_reduction_regression: PASS (18/18)
+- generic_aoi_review_browser: PASS (5/5)
+
+Key findings:
+- Playback advances immediately through a compact rolling cache; video, 2D overlay, 3D body evidence and gaze ray stay frame-locked.
+- The full paused scientific inspector is restored after playback stops.
+- Semantic queue reduction can clear raw-surface disagreements only when person, entity and exported coarse body label are unchanged.
+- Self occlusion, person/entity conflicts and different coarse body regions remain human-review decisions.
+- Adjacent target-stable fixation units can be presented as one review episode without deleting original gaze samples.
+
+Scope and limitations:
+- Playback and semantic queue-reduction validations use deterministic synthetic OculoStudio projects so frame movement and safety boundaries are reproducible.
+- Core Body/Face review, torso geometry, gaze-sample-clock and result-handoff paths were regression-tested against the current source tree.
+- The exact reduction for the user’s real Body AOI artifact cannot be inferred from screenshots; the re-evaluation job reports its actual before/after event and sample counts.
+- Existing manual decisions are protected; review-only re-evaluation must not silently discard completed human work.
+- Windows batch installation is statically checked here; final Windows execution occurs on the user’s machine.

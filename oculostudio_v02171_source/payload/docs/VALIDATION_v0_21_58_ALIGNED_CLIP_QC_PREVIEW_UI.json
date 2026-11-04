@@ -1,0 +1,255 @@
+{
+  "release": "0.21.58",
+  "feature": "Automatic C3D-defined aligned clip QC preview",
+  "checks": {
+    "aligned_heading": true,
+    "generate_button_visible": true,
+    "generate_button_enabled": true,
+    "generate_button_text": true,
+    "central_review_button": true,
+    "manual_recovery_collapsed": true,
+    "r01_player_rendered": true,
+    "r01_open_preview_button": true,
+    "aligned_player_label": true,
+    "temporary_qc_label": true,
+    "job_queue_label": true,
+    "r01_backend_kind": true,
+    "r01_automatic_flag": true,
+    "r02_button_enabled": true,
+    "r02_does_not_reuse_r01_player": true,
+    "role_preview_ids_are_distinct": true,
+    "role_overlay_ids_are_distinct": true,
+    "r02_backend_kind": true,
+    "r02_automatic_flag": true,
+    "r01_preview_restored_after_role_switch": true,
+    "r01_preview_restored_after_reload": true,
+    "role_history_has_both_previews": true,
+    "source_trim_artifacts_unchanged": true,
+    "all_pass": true
+  },
+  "page_errors": [],
+  "console_errors": [],
+  "unexpected_console_errors": [],
+  "ok": true,
+  "role_trim_artifacts": {
+    "R01": "artifact_ebb46d3bf3b6",
+    "R02": "artifact_f9752bbab356"
+  },
+  "role_previews": {
+    "R01": {
+      "schema_version": "oculostudio-pretrim-overlay-preview-1.1",
+      "temporary": true,
+      "registered_as_artifact": false,
+      "preview_kind": "aligned_clip_qc",
+      "automatic_c3d_defined": true,
+      "session_id": "session_61e0c8319eee",
+      "preview_id": "nativeplan_ad3ecc160368",
+      "overlay_id": "overlay_8de9f41820330ba7",
+      "recording_id": "recording-R01",
+      "request": {
+        "scope": "representative",
+        "segment_seconds": 8.0,
+        "sample_count": 7,
+        "output_fps": 30,
+        "include_face_boxes": true,
+        "include_landmarks": true,
+        "include_aoi": true,
+        "include_gaze": true,
+        "left_right_policy": "anatomical_auto",
+        "face_tolerance_ms": 8.0,
+        "gaze_frame_tolerance_ms": 20.0
+      },
+      "candidate_window": {
+        "start_media_ns": "499998000",
+        "end_media_ns": "1499994000",
+        "utc_start_ns": "1800000000499998000",
+        "utc_end_ns": "1800000001499994000"
+      },
+      "segments": [
+        {
+          "label": "FULL",
+          "start_media_ns": 499998000,
+          "end_media_ns": 1499994000,
+          "output_frames": 30,
+          "source_start_sec": 0.499998,
+          "source_end_sec": 1.499994
+        }
+      ],
+      "video_width": 160,
+      "video_height": 120,
+      "output_fps": 30,
+      "output_frame_count": 45,
+      "output_duration_sec": 1.5,
+      "face_mapper_diagnostics": {
+        "source_file": "/tmp/oculostudio_c3d_defined_clip_check_msynkrw4/project/cache/materialized/asset_1dc1662a712b/face_detections.csv",
+        "input_row_count": 60,
+        "accepted_face_rows": 60,
+        "unmatched_timestamp_rows": 0,
+        "invalid_geometry_rows": 0,
+        "frame_count_with_faces": 60,
+        "track_count": 1,
+        "fine_landmark_region_rows": 0,
+        "left_right_policy": "anatomical_auto",
+        "left_right_output_convention": "anatomical_subject",
+        "left_right_swap_applied": false,
+        "left_right_orientation": {
+          "evidence_count": 0,
+          "median_exported_left_minus_right_x_px": null,
+          "reason": "insufficient_bilateral_landmarks"
+        },
+        "aoi_settings": {},
+        "fine_feature_aoi_scale": 1.0,
+        "fine_feature_eye_scale": 1.0,
+        "fine_feature_nose_region_mode": "ellipse",
+        "fine_feature_containment_policy": "legacy_unbounded",
+        "landmark_columns": {
+          "left_eye": [
+            null,
+            null
+          ],
+          "right_eye": [
+            null,
+            null
+          ],
+          "nose": [
+            null,
+            null
+          ],
+          "mouth_left": [
+            null,
+            null
+          ],
+          "mouth_right": [
+            null,
+            null
+          ]
+        }
+      },
+      "gaze_diagnostics": {
+        "rows": 400,
+        "window_rows": 200,
+        "mapped": 200,
+        "invalid": 0,
+        "median_frame_error_ms": 8.333333
+      },
+      "overlay_counts": {
+        "frames": 30,
+        "face_instances": 30,
+        "gaze_samples": 197,
+        "aoi_other_face": 30
+      },
+      "notice": "Temporary QC cache preview of the already published C3D-defined aligned interval; source files and immutable artifacts are unchanged.",
+      "cache_reused": false,
+      "job_id": "job_3815b10ee476",
+      "video_bytes": 11098
+    },
+    "R02": {
+      "schema_version": "oculostudio-pretrim-overlay-preview-1.1",
+      "temporary": true,
+      "registered_as_artifact": false,
+      "preview_kind": "aligned_clip_qc",
+      "automatic_c3d_defined": true,
+      "session_id": "session_61e0c8319eee",
+      "preview_id": "nativeplan_76a1d60c02bd",
+      "overlay_id": "overlay_753f8299f79ec4d8",
+      "recording_id": "recording-R02",
+      "request": {
+        "scope": "representative",
+        "segment_seconds": 8.0,
+        "sample_count": 7,
+        "output_fps": 30,
+        "include_face_boxes": true,
+        "include_landmarks": true,
+        "include_aoi": true,
+        "include_gaze": true,
+        "left_right_policy": "anatomical_auto",
+        "face_tolerance_ms": 8.0,
+        "gaze_frame_tolerance_ms": 20.0
+      },
+      "candidate_window": {
+        "start_media_ns": "500003500",
+        "end_media_ns": "1500010500",
+        "utc_start_ns": "1900000000500003500",
+        "utc_end_ns": "1900000001500010500"
+      },
+      "segments": [
+        {
+          "label": "FULL",
+          "start_media_ns": 500003500,
+          "end_media_ns": 1500010500,
+          "output_frames": 31,
+          "source_start_sec": 0.5000035,
+          "source_end_sec": 1.5000105
+        }
+      ],
+      "video_width": 160,
+      "video_height": 120,
+      "output_fps": 30,
+      "output_frame_count": 46,
+      "output_duration_sec": 1.5333333333333334,
+      "face_mapper_diagnostics": {
+        "source_file": "/tmp/oculostudio_c3d_defined_clip_check_msynkrw4/project/cache/materialized/asset_ed3cb3bdf363/face_detections.csv",
+        "input_row_count": 60,
+        "accepted_face_rows": 60,
+        "unmatched_timestamp_rows": 0,
+        "invalid_geometry_rows": 0,
+        "frame_count_with_faces": 60,
+        "track_count": 1,
+        "fine_landmark_region_rows": 0,
+        "left_right_policy": "anatomical_auto",
+        "left_right_output_convention": "anatomical_subject",
+        "left_right_swap_applied": false,
+        "left_right_orientation": {
+          "evidence_count": 0,
+          "median_exported_left_minus_right_x_px": null,
+          "reason": "insufficient_bilateral_landmarks"
+        },
+        "aoi_settings": {},
+        "fine_feature_aoi_scale": 1.0,
+        "fine_feature_eye_scale": 1.0,
+        "fine_feature_nose_region_mode": "ellipse",
+        "fine_feature_containment_policy": "legacy_unbounded",
+        "landmark_columns": {
+          "left_eye": [
+            null,
+            null
+          ],
+          "right_eye": [
+            null,
+            null
+          ],
+          "nose": [
+            null,
+            null
+          ],
+          "mouth_left": [
+            null,
+            null
+          ],
+          "mouth_right": [
+            null,
+            null
+          ]
+        }
+      },
+      "gaze_diagnostics": {
+        "rows": 400,
+        "window_rows": 200,
+        "mapped": 200,
+        "invalid": 0,
+        "median_frame_error_ms": 8.333333
+      },
+      "overlay_counts": {
+        "frames": 31,
+        "face_instances": 31,
+        "gaze_samples": 200,
+        "aoi_other_face": 31
+      },
+      "notice": "Temporary QC cache preview of the already published C3D-defined aligned interval; source files and immutable artifacts are unchanged.",
+      "cache_reused": false,
+      "job_id": "job_7bb44d8b2b5d",
+      "video_bytes": 11322
+    }
+  },
+  "screenshot": "docs/OculoStudio_v0_21_58_AlignedClipQCPreview.png"
+}

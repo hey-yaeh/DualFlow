@@ -1,0 +1,117 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "release": "OculoStudio v0.21.61 — Shared-Audio Facial ↔ Ego Video Synchronization",
+  "application_version": "0.21.61",
+  "build_date": "2026-11-02",
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "ffprobe": "ffprobe version 7.1.5-0+deb13u1 Copyright (c) 2007-2026 the FFmpeg developers",
+    "windows_desktop_installer_executed": false,
+    "note": "Windows WebView2 and batch installation require final confirmation on the user’s Windows machine. The packaged FastAPI application, wheel, FFmpeg workflow and Chromium UI were exercised in Linux."
+  },
+  "wheel": {
+    "filename": "oculostudio-0.21.61-py3-none-any.whl",
+    "size_bytes": 846143,
+    "sha256": "a99a260378fc13d9df334f44caa37c96310edeea6df17f78c4ab38ac38251b7f",
+    "zip_crc_passed": true,
+    "record_rows": 124,
+    "record_failures": [],
+    "isolated_target_install": true,
+    "isolated_installed_version": "0.21.61"
+  },
+  "checks": {
+    "python_compileall": {
+      "passed": true,
+      "scope": [
+        "oculostudio",
+        "neon_vicon_gaze3d"
+      ]
+    },
+    "javascript_syntax": {
+      "passed": true,
+      "files": [
+        "app.js",
+        "interaction_workspace.js",
+        "aoi_review.js"
+      ]
+    },
+    "shared_audio_backend": {
+      "passed": true,
+      "passed_count": 37,
+      "check_count": 37,
+      "failed": []
+    },
+    "shared_audio_live_chromium_ui": {
+      "passed": true,
+      "passed_count": 20,
+      "check_count": 20,
+      "failed": [],
+      "page_errors": [],
+      "console_errors": []
+    },
+    "source_package_regressions": {
+      "calibration_autosync": true,
+      "calibration_sync_precision": true,
+      "c3d_defined_paired_clips": true,
+      "aligned_clip_qc_preview": true,
+      "aligned_ego_tsd_facemapper_export": true
+    },
+    "isolated_wheel_regressions": {
+      "cleancore_self_check": true,
+      "shared_audio_backend": true,
+      "shared_audio_live_chromium_ui": true,
+      "calibration_autosync": true,
+      "c3d_defined_paired_clips": true,
+      "aligned_clip_qc_preview": true,
+      "aligned_ego_tsd_facemapper_export": true
+    }
+  },
+  "measured_synthetic_same_interaction_case": {
+    "expected_scale": 1.0004,
+    "recovered_scale": 1.0003603668616743,
+    "expected_offset_sec": -3.1016799999999995,
+    "recovered_offset_sec": -3.09735691,
+    "recovered_drift_ppm": 360.3668616742883,
+    "global_correlation": 0.8406300697548263,
+    "aligned_correlation": 0.8807095727047137,
+    "matched_windows": 12,
+    "rejected_windows": 0,
+    "holdout_p95_residual_ms": 8.723274199999992,
+    "matched_time_coverage_fraction": 0.8783730934689091,
+    "negative_confidence": "FAILED",
+    "negative_global_correlation": 0.13672204259146784
+  },
+  "scientific_contract": {
+    "clock_model": "one affine source-media-PTS → reference-media-PTS mapping",
+    "arbitrary_dynamic_time_warping": false,
+    "distributed_audio_windows": true,
+    "short_one_sided_instruction_policy": "may be rejected as a local unmatched window only when remaining distributed evidence uniquely supports the same affine lag",
+    "holdout_validation": "leave-one-window-out",
+    "candidate_modifies_timegraph": false,
+    "visual_review_required_before_acceptance": true,
+    "review_positions": [
+      "start",
+      "middle",
+      "end"
+    ],
+    "pupil_native_bridge": "Native scene-video PTS → Pupil capture clock is published only on accepted candidates",
+    "source_media_modified": false,
+    "transactional_rollback": true
+  },
+  "compatibility": {
+    "existing_pupil_vicon_timegraphs_preserved": true,
+    "existing_calibration_handoffs_preserved": true,
+    "existing_aligned_clips_and_packages_preserved": true,
+    "existing_privacy_gaze3d_aoi_dyadic_outputs_preserved": true,
+    "rerun_required_for_existing_work": false
+  },
+  "limitations": [
+    "Both devices must contain sufficient common acoustic evidence from the same physical interaction.",
+    "Audio alignment does not by itself prove zero device-internal audio/video latency; start/middle/end visual review remains mandatory.",
+    "True pauses, restarts, large missing sections or clock discontinuities are not silently repaired with unconstrained time warping.",
+    "Windows WebView2 and the batch installer were not executed in this Linux environment."
+  ],
+  "automated_all_pass": true
+}

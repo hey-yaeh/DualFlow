@@ -1,0 +1,27 @@
+{
+  "release": "OculoStudio v0.21.69 \u2014 Calibration Set Physical Profile Builder",
+  "application_version": "0.21.69",
+  "checks": {
+    "version_0_21_69": true,
+    "data_card_shows_six_sources": true,
+    "data_card_shows_missing_hardware": true,
+    "data_card_has_build_button": true,
+    "modal_explains_actor_wearer_difference": true,
+    "modal_lists_p01_and_p03": true,
+    "modal_lists_both_etm_slots": true,
+    "modal_lists_six_sources": true,
+    "modal_has_one_build_action": true,
+    "modal_build_is_enabled": true,
+    "paired_page_uses_project_level_builder": true,
+    "paired_page_role_details_are_evidence_only": true,
+    "paired_page_has_builder_button": true,
+    "page_errors_absent": true,
+    "console_errors_absent": true
+  },
+  "page_errors": [],
+  "console_errors": [],
+  "passed_count": 15,
+  "check_count": 15,
+  "failed": [],
+  "all_pass": true
+}

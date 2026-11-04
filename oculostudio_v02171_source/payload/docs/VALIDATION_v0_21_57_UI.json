@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "calibration_phase_5_present": true,
+    "paired_result_visible": true,
+    "no_manual_start_field_in_calibration": true,
+    "no_manual_end_field_in_calibration": true,
+    "r01_inputs_locked": true,
+    "r02_inputs_locked": true,
+    "automatic_trim_card_visible": true,
+    "manual_recovery_collapsed": true,
+    "manual_fields_preserved_for_recovery": true,
+    "automatic_report_button": true,
+    "page_errors_absent": true,
+    "all_pass": true
+  },
+  "errors": []
+}

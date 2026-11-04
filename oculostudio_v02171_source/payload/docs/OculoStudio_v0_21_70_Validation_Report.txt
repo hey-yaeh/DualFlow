@@ -1,0 +1,26 @@
+OculoStudio v0.21.70 — Scope-Separated Data Management
+Validation report
+
+Functional assertions: 139/139 PASS
+
+- scope separated data management: 21/21 PASS
+- project calibration sets: 35/35 PASS
+- project session workspace: 29/29 PASS
+- calibration set profile builder: 19/19 PASS
+- calibration auto sync: 13/13 PASS
+- calibration sync precision: 5/5 PASS
+- c3d defined clips: 1/1 PASS
+- context locked aoi review: 16/16 PASS
+
+Static and package validation:
+- Python compileall: PASS
+- JavaScript syntax (app.js, asset_import.js): PASS
+- Live Chromium page errors: 0
+- Live Chromium console errors: 0
+- Wheel: oculostudio-0.21.70-py3-none-any.whl
+- Wheel SHA-256: e605b7728702403fdb3aa84fa90cc1c7f9be6158392ff7124924248546555971
+- Wheel RECORD entries: 131
+- Isolated wheel install: 0.21.70
+- CleanCore self-check: PASS
+
+Core Python, FastAPI, Chromium UI and final wheel were tested on Linux. Windows WebView2 and the .bat installer require final native confirmation on the user machine.

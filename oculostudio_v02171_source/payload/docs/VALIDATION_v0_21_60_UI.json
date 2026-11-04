@@ -1,0 +1,16 @@
+{
+  "release": "0.21.60",
+  "checks": [
+    "Visible topbar mode selector lists Guided workflow and Expert tools",
+    "Mode selection persists and switches the interface without ambiguous toggle wording",
+    "Calibration defaults to Paired summary",
+    "Calibration ribbon has no Use R01/Use R02 action",
+    "R01 and R02 are read-only detail-view choices",
+    "Selecting calibration detail does not change paired calibration context",
+    "Other Expert pages use an explicit Active role dropdown",
+    "No page errors or unexpected console errors"
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "ok": true
+}

@@ -1,0 +1,167 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "release": "OculoStudio v0.21.60 — Paired Calibration Views + Explicit Mode Selector",
+  "application_version": "0.21.60",
+  "validated_at_utc": "2026-11-02T13:30:00Z",
+  "checks": {
+    "installed_wheel_ui": {
+      "all_passed": true,
+      "checks": [
+        "Visible topbar mode selector lists Guided workflow and Expert tools",
+        "Mode selection persists and switches the interface without ambiguous toggle wording",
+        "Calibration defaults to Paired summary",
+        "Calibration ribbon has no Use R01/Use R02 action",
+        "R01 and R02 are read-only detail-view choices",
+        "Selecting calibration detail does not change paired calibration context",
+        "Other Expert pages use an explicit Active role dropdown",
+        "No page errors or unexpected console errors"
+      ],
+      "page_errors": [],
+      "console_errors": []
+    },
+    "mode_selector_contract": {
+      "visible_dropdown": true,
+      "guided_option": "Guided workflow",
+      "expert_option": "Expert tools",
+      "selection_persists": true,
+      "ambiguous_visible_toggle_removed": true
+    },
+    "paired_calibration_contract": {
+      "default_view": "paired",
+      "view_choices": [
+        "paired",
+        "R01",
+        "R02"
+      ],
+      "role_details_are_display_only": true,
+      "detail_switch_does_not_mutate_assignment": true,
+      "r01_mapping": "ETM-B",
+      "r02_mapping": "ETM-A",
+      "paired_actions_remain_paired": true
+    },
+    "calibration_auto_sync": {
+      "all_passed": true,
+      "checks": [
+        "two role-specific Pupil IMU↔ETM mappings created without ego video",
+        "R01→ETM-B and R02→ETM-A assignment preserved",
+        "role-mismatched Pupil Timeseries blocked",
+        "missing role synchronization blocked",
+        "video-derived synchronization blocked",
+        "distributed drift required",
+        "sub-sample local lags and independent leave-one-window-out residuals required",
+        "drift reported with a finite non-zero 95% interval",
+        "accepted synchronization preview evidence is readable without ego video",
+        "calibration profiles and TimeGraphs bound into one immutable handoff",
+        "legacy profile-only handoff blocked",
+        "Gaze3D shared-start bypass blocked",
+        "stale assignment synchronization blocked"
+      ],
+      "roles": {
+        "R01": {
+          "artifact_id": "artifact_44cff04b8457",
+          "artifact_label": "Automatic time sync · R01 · S001_I01_R01_TSD ↔ S001_I01_ETM_B",
+          "source_asset_id": "asset_41bb62589a7f",
+          "target_asset_id": "asset_fdbf5e86e6db",
+          "time_map_id": "map_12fb1ac217ce",
+          "confidence": "HIGH",
+          "accepted_by_user": false,
+          "sync_verified": true,
+          "distributed_drift_validated": true,
+          "precision_validated": true,
+          "production_ready": true,
+          "ego_video_used": false,
+          "estimated_offset_sec": 2.8411753953333374,
+          "estimated_drift_ppm": 143.22007759304256,
+          "matched_window_count": 11,
+          "window_count": 11,
+          "p95_residual_ms": 2.0033345000000002,
+          "assignment_artifact_id": "artifact_9d9b34528757"
+        },
+        "R02": {
+          "artifact_id": "artifact_ac8043edddfe",
+          "artifact_label": "Automatic time sync · R02 · S001_I01_R02_TSD ↔ S001_I01_ETM_A",
+          "source_asset_id": "asset_025f7c097b35",
+          "target_asset_id": "asset_517c1a90db33",
+          "time_map_id": "map_1a3aaad1192a",
+          "confidence": "HIGH",
+          "accepted_by_user": false,
+          "sync_verified": true,
+          "distributed_drift_validated": true,
+          "precision_validated": true,
+          "production_ready": true,
+          "ego_video_used": false,
+          "estimated_offset_sec": -1.7587365226666662,
+          "estimated_drift_ppm": -108.76878067545005,
+          "matched_window_count": 11,
+          "window_count": 12,
+          "p95_residual_ms": 2.5879635,
+          "assignment_artifact_id": "artifact_9d9b34528757"
+        }
+      }
+    },
+    "calibration_sync_precision": {
+      "all_passed": true,
+      "checks": [
+        "60 ppm drift recovered from co-start-like signals",
+        "local lags refined below one sample",
+        "leave-one-window-out residuals used for QC",
+        "zero drift retains a finite 95% interval",
+        "zero residual retains a finite estimator resolution"
+      ],
+      "drift_case": {
+        "estimated_drift_ppm": 62.84060618266807,
+        "drift_ci95_ppm": 14.17345691272106,
+        "p95_residual_ms": 1.7536271999999997,
+        "residual_resolution_ms": 2.0833333333333335,
+        "holdout_window_count": 9,
+        "window_time_span_sec": 300.0
+      },
+      "zero_case": {
+        "estimated_drift_ppm": -0.00023424229222968052,
+        "drift_ci95_ppm": 12.977685242509452,
+        "p95_residual_ms": 0.0003223499999999999,
+        "residual_resolution_ms": 2.0833333333333335,
+        "holdout_window_count": 10,
+        "residual_below_resolution": true
+      }
+    },
+    "c3d_defined_clips": {
+      "all_passed": true,
+      "maximum_start_boundary_error_ms": 0.0035,
+      "maximum_end_boundary_error_ms": 0.0105,
+      "source_video_reencoded": false,
+      "transactional_mismatch_rejection": true
+    },
+    "aligned_clip_qc_preview": {
+      "all_passed": true,
+      "passed": 26,
+      "total": 26,
+      "failed": []
+    },
+    "aligned_clip_export": {
+      "all_passed": true,
+      "passed": 37,
+      "total": 37,
+      "failed": []
+    },
+    "language_and_package": {
+      "python_compileall": true,
+      "javascript_app_node_check": true,
+      "javascript_interaction_workspace_node_check": true,
+      "wheel_record_hashes": true,
+      "wheel_zip_crc": true,
+      "installed_version": "0.21.60",
+      "clean_core": true
+    }
+  },
+  "compatibility": {
+    "scientific_algorithms_changed": false,
+    "existing_artifacts_invalidated": false,
+    "rerun_required": false
+  },
+  "platform_limitations": [
+    "The Windows WebView2 desktop shell and batch installer were not executed in this Linux validation environment.",
+    "Final native Windows confirmation is required after installation on the user machine."
+  ],
+  "all_pass": true
+}

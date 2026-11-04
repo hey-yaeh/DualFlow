@@ -1,0 +1,71 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "release": "OculoStudio v0.21.59 — Aligned Ego Video + TSD + FaceMapper Export",
+  "application_version": "0.21.59",
+  "validated_at": "2026-11-02",
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "windows_desktop_installer_executed": false,
+    "live_chromium_ui_with_real_backend": true,
+    "note": "The Windows desktop shell and batch installer require final confirmation on the user’s Windows machine. The packaged web UI was rendered in Chromium against a live FastAPI project through an in-process HTTP relay."
+  },
+  "wheel": {
+    "filename": "oculostudio-0.21.59-py3-none-any.whl",
+    "size_bytes": 820428,
+    "sha256": "1be50402fd4f7748c3c2be1ee88a53d7ef0f68318f956ab95fda824ee799ba69",
+    "zip_crc_passed": true,
+    "record_verified": true,
+    "isolated_target_install": true
+  },
+  "checks": {
+    "aligned_clip_export": {
+      "passed": 37,
+      "total": 37,
+      "all_passed": true,
+      "failed": []
+    },
+    "aligned_clip_qc_preview_regression": {
+      "passed": 26,
+      "total": 26,
+      "all_passed": true,
+      "failed": []
+    },
+    "c3d_defined_clip_regression": {
+      "all_passed": true,
+      "maximum_start_boundary_error_ms": 0.0035,
+      "maximum_end_boundary_error_ms": 0.0105,
+      "mismatched_sync_source_rejected_transactionally": true
+    },
+    "ui": {
+      "passed": 10,
+      "total": 10,
+      "all_passed": true,
+      "page_errors": [],
+      "console_errors": []
+    },
+    "language_and_package": {
+      "python_compileall": true,
+      "javascript_app_syntax": true,
+      "javascript_native_trim_syntax": true,
+      "wheel_record_verified": true,
+      "isolated_import_version": true,
+      "api_route_registered": true,
+      "cleancore_self_check": true
+    }
+  },
+  "contracts": {
+    "boundary_authority": "immutable Native-reference trim start_media_ns/end_media_ns",
+    "video": "clean CFR H.264/MP4, no QC slate or scientific overlay; explicit frame map required",
+    "audio": "optional source audio from the exact Native interval",
+    "tsd": "byte-identical copy from verified TSD_trimmed.zip, SHA-256 checked",
+    "facemapper": "byte-identical copy from verified FaceMapper_trimmed.zip, SHA-256 checked",
+    "source_mutation": false,
+    "role_isolation": "independent R01/R02 parent trims, artifacts and output paths"
+  },
+  "all_passed": true,
+  "limitations": [
+    "Synthetic fixtures validate timing, packaging, frame mapping, checksum preservation and UI wiring; the user’s real full-length MP4 export is computed on the Windows project after installation.",
+    "Windows WebView2 and the one-click BAT installer were not executed in this Linux validation environment."
+  ]
+}

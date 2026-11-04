@@ -1,0 +1,52 @@
+OculoStudio v0.21.68 — Direct Calibration Import Workspace
+
+RELEASE SCOPE
+-------------
+The Data page now separates Project-level Calibration Set sources from current-Interaction recordings.
+Calibration imports open a dedicated scan/review modal and do not navigate to the Calibration page.
+
+FUNCTIONAL VALIDATION
+---------------------
+Direct Calibration import workspace          18/18 PASS
+Project-level Calibration Sets               35/35 PASS
+Project / Session workspace                   29/29 PASS
+Context-locked AOI review regression          16/16 PASS
+
+Aggregate functional assertions              98/98 PASS
+
+DIRECT IMPORT BEHAVIOUR VERIFIED
+--------------------------------
+- Data displays explicit Calibration Set and Interaction import scopes.
+- The ordinary drop zone is labelled current-Interaction only.
+- Calibration import remains on the Data page.
+- Set ID, active revision, assigned Sessions and canonical destination are visible.
+- Folder/multi-file scan finds the six representative Calibration sources.
+- P01/P03, ETM-A/ETM-B, board and world-reference roles are detected.
+- Scanning does not mutate the Project.
+- A confirmed batch import completes and updates the Calibration Set source count.
+- The Interaction importer remains a separate workflow and warns about the Calibration importer.
+- Browser page errors: 0. Console errors: 0.
+
+STATIC / WHEEL VALIDATION
+-------------------------
+Python compileall                           PASS
+JavaScript syntax: app.js                   PASS
+JavaScript syntax: asset_import.js          PASS
+Wheel ZIP CRC                               PASS
+Wheel RECORD                                130 rows / 0 failures
+Isolated installed version                  0.21.68
+CleanCore self-check                        PASS
+
+PACKAGE INTEGRITY
+-----------------
+Payload manifest                            326 files / PASS
+Installer manifest                          331 files / PASS
+Final delivery ZIP                          332 entries / CRC PASS
+ZIP paths                                   ASCII-safe / PASS
+Final extracted installed version           0.21.68
+Final extracted direct-import check         18/18 PASS
+
+ENVIRONMENT BOUNDARIES
+----------------------
+- Windows WebView2 and native directory/file dialogs require final confirmation on Windows.
+- Core processing, FastAPI, Chromium UI, isolated wheel installation and package checks were run in this environment.

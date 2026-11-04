@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>OculoStudio</title>
+  <link rel="stylesheet" href="/static/styles.css?v=0.21.71" />
+<link rel="stylesheet" href="/static/motionstudio_bridge.css?v=0.21.71">
+  <link rel="stylesheet" href="/static/interaction_workspace.css?v=0.21.71">
+</head>
+<body>
+  <div id="ambient"></div>
+  <main id="app-shell" aria-label="OculoStudio application">
+    <header class="topbar">
+      <button class="brand" id="brand-home" type="button" aria-label="Open Project page">
+        <span class="brand-mark" aria-hidden="true"><i></i><b></b></span>
+        <span>OculoStudio</span>
+        <small>Workflow Hub</small>
+      </button>
+      <nav class="pipeline-tabs" id="pipeline-tabs" aria-label="Processing pipeline"></nav>
+      <div class="top-actions">
+        <label class="mode-select" for="ui-mode-select" title="Choose the interface workflow">
+          <span class="mode-select-label">Mode</span>
+          <select id="ui-mode-select" aria-label="Interface mode">
+            <option value="guided">Guided workflow</option>
+            <option value="expert">Expert tools</option>
+          </select>
+        </label>
+        <button class="mode-switch-compat" id="ui-mode-toggle" type="button" tabindex="-1" aria-hidden="true">Guided mode</button>
+        <span class="clean-badge" title="OculoStudio clean-room application core">Clean Core</span>
+        <button class="icon-btn refresh-button" id="refresh-state" type="button" title="Reload project status and job progress" aria-label="Reload project status and job progress" data-tooltip="Reload project status and job progress">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 11a8 8 0 1 0-2.34 5.66" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 5v6h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="sr-only">Reload project status and job progress</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="studio-grid">
+      <aside class="sidebar panel" aria-label="Project and assets">
+        <div id="session-card"></div>
+        <div class="sidebar-scroll">
+          <section class="sidebar-section">
+            <div class="section-label">Workspace</div>
+            <div id="overview-nav"></div>
+          </section>
+          <section class="sidebar-section">
+            <div class="section-title-row">
+              <div class="section-label">Assets</div>
+              <button class="mini-icon" id="asset-refresh-all" title="Refresh visible asset paths">↻</button>
+            </div>
+            <div id="asset-tree" class="asset-tree"></div>
+            <button class="soft-button full" id="import-asset-sidebar" type="button"><span>＋</span> Import asset</button>
+          </section>
+          <section class="sidebar-section">
+            <div class="section-label">Derived artifacts</div>
+            <div id="artifact-tree" class="artifact-tree"></div>
+          </section>
+        </div>
+        <div class="storage-strip">
+          <div><span>Project storage</span><strong id="storage-label">—</strong></div>
+          <div class="thin-progress"><i id="storage-progress"></i></div>
+        </div>
+      </aside>
+
+      <section class="workspace-column">
+        <div id="workspace" class="workspace"></div>
+        <section id="qc-strip" class="qc-strip" aria-label="Quality metrics"></section>
+      </section>
+
+      <aside class="properties panel" aria-label="Module properties">
+        <div id="module-card"></div>
+        <div id="properties-content" class="properties-content"></div>
+        <div class="job-area">
+          <div class="section-title-row">
+            <div class="section-label">Job queue</div>
+            <button class="mini-icon job-clear" id="clear-jobs" title="Clear completed, failed and cancelled jobs">Clear</button>
+          </div>
+          <div id="job-list" class="job-list"></div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="modal-root"></div>
+  <div id="toast-stack" aria-live="polite" aria-atomic="true"></div>
+  <script src="/static/native_trim.js?v=0.21.71" defer></script>
+  <script src="/static/asset_import.js?v=0.21.71" defer></script>
+  <script src="/static/aoi_review.js?v=0.21.71" defer></script>
+  <script src="/static/gaze3d_preview.js?v=0.21.71" defer></script>
+  <script src="/static/calibration_preview.js?v=0.21.71" defer></script>
+  <script src="/static/app.js?v=0.21.71" defer></script>
+<script src="/static/interaction_workspace.js?v=0.21.71" defer></script>
+  <script src="/static/motionstudio_bridge.js?v=0.21.71"></script>
+</body>
+</html>

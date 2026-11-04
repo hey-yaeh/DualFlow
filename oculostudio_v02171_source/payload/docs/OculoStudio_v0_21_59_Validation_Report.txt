@@ -1,0 +1,39 @@
+OculoStudio v0.21.59 — Validation Report
+
+Release: Aligned Ego Video + TSD + FaceMapper Export
+Application version: 0.21.59
+
+RESULT: PASS
+
+Validated behavior
+------------------
+- Formal role-specific aligned_clip_package artifact.
+- Clean aligned ego MP4 with optional source audio.
+- Explicit aligned_ego_frame_map.csv linking every output frame to Native frame/PTS.
+- Byte-identical, checksum-verified aligned TSD and FaceMapper ZIP copies.
+- Immutable Native-reference trim remains the sole start/end authority.
+- R01 and R02 artifacts and video paths remain independent.
+- Video-only, data-only and combined exports are supported.
+- Existing temporary aligned-clip QC preview and C3D-defined Trim regressions remain passing.
+
+Automated checks
+----------------
+Aligned export: 37/37 PASS
+QC preview regression: 26/26 PASS
+C3D-defined clip regression: PASS
+Live Chromium UI: 10/10 PASS; 0 page errors; 0 console errors
+Python compileall: PASS
+JavaScript syntax: PASS
+Wheel CRC + RECORD: PASS
+Isolated wheel installation/import: PASS
+CleanCore self-check: PASS
+
+Wheel
+-----
+oculostudio-0.21.59-py3-none-any.whl
+Size: 820428 bytes
+SHA-256: 1be50402fd4f7748c3c2be1ee88a53d7ef0f68318f956ab95fda824ee799ba69
+
+Platform boundary
+-----------------
+The packaged web UI was rendered against a live FastAPI project in Chromium. The Windows WebView2 desktop shell and BAT installer still require final confirmation on the user’s Windows machine.

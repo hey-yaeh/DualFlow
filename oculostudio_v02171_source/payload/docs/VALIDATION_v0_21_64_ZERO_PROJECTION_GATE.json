@@ -1,0 +1,5 @@
+{
+  "zero_projection_blocked": true,
+  "artifact_count_unchanged": true,
+  "message": "No valid in-view partner head projections were produced for R02 \u2192 ETM-A. The participant-association artifact was not published. Check the role-locked calibration profile, ETM/body assignment, shared-start trim, and partner head markers."
+}

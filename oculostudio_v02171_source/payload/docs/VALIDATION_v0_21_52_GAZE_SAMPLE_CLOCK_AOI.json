@@ -1,0 +1,222 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "release": "OculoStudio v0.21.52 — Gaze-Sample Clock AOI",
+  "generated_at_utc": "2026-11-01T14:21:42.123164+00:00",
+  "wheel": {
+    "name": "oculostudio-0.21.52-py3-none-any.whl",
+    "size_bytes": 769511,
+    "sha256": "afe1a55f7d004062731189efe6dfabfc619fa9edaaa660b3ff1c7bb9ff05a507",
+    "installed_into_clean_target": true,
+    "imported_version": "0.21.52"
+  },
+  "summary": {
+    "suite_count": 19,
+    "passed_suite_count": 19,
+    "check_count": 345,
+    "passed_check_count": 345,
+    "failed_check_count": 0,
+    "all_included_suites_passed": true
+  },
+  "suites": [
+    {
+      "name": "check_gaze_sample_clock_aoi",
+      "feature": null,
+      "check_count": 27,
+      "passed_count": 27,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_aoi_timebase_end_to_end",
+      "feature": "End-to-end separation of AOI computation clocks from video display clocks",
+      "check_count": 18,
+      "passed_count": 18,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_motionstudio_body_profile",
+      "feature": "Raw Vicon full-body 10-finger marker mapping and torso recovery",
+      "check_count": 23,
+      "passed_count": 23,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_body_geometry_integrity_gate",
+      "feature": "Body Geometry Integrity Gate and fixation-level Body AOI review",
+      "check_count": 23,
+      "passed_count": 23,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_body_aoi_torso_review_reduction",
+      "feature": "Torso geometry fallback and auditable Body AOI review reduction",
+      "check_count": 18,
+      "passed_count": 18,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_body_aoi_manual_review",
+      "feature": "Body AOI human review",
+      "check_count": 21,
+      "passed_count": 21,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_body_aoi_resolution_fallback",
+      "feature": null,
+      "check_count": 6,
+      "passed_count": 6,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_body_aoi_result_handoff",
+      "feature": null,
+      "check_count": 10,
+      "passed_count": 10,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_body_aoi_visual_analytics",
+      "feature": null,
+      "check_count": 14,
+      "passed_count": 14,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_body_geometry_integrity_ui",
+      "feature": "Body geometry acceptance UI",
+      "check_count": 9,
+      "passed_count": 9,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_body_human_review_ui",
+      "feature": "Body AOI human review entry and editor",
+      "check_count": 14,
+      "passed_count": 14,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_human_review_entry",
+      "feature": "Persistent Face AOI Human review entry from Body AOI",
+      "check_count": 16,
+      "passed_count": 16,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_face_aoi_feature_geometry",
+      "feature": "Green-box eyes, nasal bridge/alae envelope, balanced lips and complete-clip partner-face statistics",
+      "check_count": 34,
+      "passed_count": 34,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_face_aoi_auto_review_reduction",
+      "feature": "Direct exact-green-box acceptance plus temporal identity consensus",
+      "check_count": 15,
+      "passed_count": 15,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_face_edge_tolerance",
+      "feature": "Edge-inclusive green FaceMapper gate with explicit R02 entity labels",
+      "check_count": 16,
+      "passed_count": 16,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_nasal_envelope_direct_accept",
+      "feature": "Nasal bridge/alae envelope and direct green-box auto acceptance",
+      "check_count": 11,
+      "passed_count": 11,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_face_aoi_review_load_reduction",
+      "feature": "Strict green-box review reduction and balanced lip partition",
+      "check_count": 17,
+      "passed_count": 17,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_face_aoi_manual_review",
+      "feature": "Face AOI role-resolved manual review",
+      "check_count": 40,
+      "passed_count": 40,
+      "failed": [],
+      "ok": true
+    },
+    {
+      "name": "check_strict_green_gate_environment",
+      "feature": "Strict accepted-green-box face membership, balanced facial AOIs and environment fallback",
+      "check_count": 13,
+      "passed_count": 13,
+      "failed": [],
+      "ok": true
+    }
+  ],
+  "real_raw_c3d_validation": {
+    "path": "/mnt/data/S001_I01_R01_C3D(1).c3d",
+    "c3d_frames": 67762,
+    "c3d_rate_hz": 120.0,
+    "query_count": 112669,
+    "torso_count": 112669,
+    "pelvis_count": 112669,
+    "p95_query_error_ms": 3.958311144253912,
+    "seconds_including_read": 4.861023681000006
+  },
+  "end_to_end_timebase_validation": {
+    "body": {
+      "sample_count": 300,
+      "gaze_rate_hz": 59.99999880000002,
+      "video_rate_hz": 30.000000300000004,
+      "body_source_rates_hz": [
+        120.0
+      ],
+      "assignment_status_counts": {
+        "body_3d_exact_partner": 300
+      }
+    },
+    "face": {
+      "sample_count": 5,
+      "time_mode_counts": {
+        "nearest_frame": 3,
+        "track_interpolated": 2
+      },
+      "interpolated_fraction": 0.4,
+      "gaze_rate_hz": 60.00000060000001,
+      "video_rate_hz": 30.000000300000004
+    }
+  },
+  "validated_behaviour": [
+    "Body AOI performs ray–body intersection at each gaze sample timestamp.",
+    "Self/partner C3D is interpolated independently of the approximately 30 FPS video clock.",
+    "Video frames are used only for overlay, frame summaries and human-review navigation.",
+    "FaceMapper remains video-frame observation evidence; safe same-track geometry is estimated at gaze timestamps.",
+    "Exact observed FaceMapper frames are not mislabeled as interpolated evidence.",
+    "v0.21.51 and earlier Body AOI artifacts are blocked from review/fusion until regenerated.",
+    "Raw Vicon full-body 10-finger marker aliases build direct torso and pelvis geometry."
+  ],
+  "limitations": [
+    "The user-provided raw S001_I01_R01 C3D was tested; the corresponding R02 raw C3D was not available in this environment.",
+    "The full private S001 OculoStudio project, its gaze-ray artifact and FaceMapper artifact were not available for a complete project-level rerun.",
+    "A generic legacy AOI Review browser test was attempted twice but Chromium refused its random loopback URL with ERR_BLOCKED_BY_ADMINISTRATOR. Three other live Chromium suites for geometry gating, Body human review and persistent Human Review entry passed with no page or console errors.",
+    "Windows batch files were inspected and the bundled wheel was installed in a clean Linux target; an actual Windows installation must run on the user machine."
+  ]
+}

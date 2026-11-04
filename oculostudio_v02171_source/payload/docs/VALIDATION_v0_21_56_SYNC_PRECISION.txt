@@ -1,0 +1,73 @@
+OculoStudio v0.21.56 Validation Report
+======================================
+Release: Precision-Audited Clock Synchronization
+Date: 2026-11-02
+Status: PASS
+
+Problem corrected
+-----------------
+v0.21.55 could display 0.0 ppm drift and 0.0 ms residual after a recording had already been manually trimmed to a common start. The old local offsets were quantized to the comparison grid, and the fitted windows were also used to summarize residuals. This could make the synchronization look more exact than the evidence supported.
+
+Implemented correction
+----------------------
+1. Distributed-window lags are refined below one sample by a local quadratic correlation-peak estimate.
+2. Lag grid, peak width, curvature and finite local uncertainty are retained.
+3. Clock drift is reported with a finite 95% confidence interval and estimator resolution.
+4. Every accepted window is held out once; the affine map fitted to the remaining windows predicts that held-out offset.
+5. P95 residual now means leave-one-window-out residual whenever enough windows exist.
+6. A residual below estimator resolution is labelled precision-limited, not exact zero.
+7. Manual co-start alignment is shown as a prior for relative offset; it does not bypass drift estimation.
+8. Calibration adds a no-video evidence preview with aligned Pupil-IMU/ETM-C3D traces, local-offset trend, fitted drift and per-window holdout evidence.
+9. v0.21.55 automatic TimeGraphs remain viewable but are blocked from production handoff until rerun with the v0.21.56 precision audit.
+
+Known-drift synthetic validation
+--------------------------------
+Injected drift: 60.0 ppm
+Recovered drift: 62.841 ppm
+95% drift interval half-width: 14.173 ppm
+Leave-one-window-out P95: 1.754 ms
+Estimator resolution: 2.083 ms
+Holdout windows: 9
+
+Zero-drift precision case
+-------------------------
+Recovered drift: -0.000234 ppm
+95% drift interval half-width: 12.978 ppm
+Leave-one-window-out P95: 0.000322 ms
+Estimator resolution: 2.083 ms
+Residual correctly marked below resolution: True
+
+Regression validation
+---------------------
+Suites passed: 11/11
+Assertions passed: 195/195
+- PASS: Calibration role-specific automatic synchronization (13/13)
+- PASS: Sub-sample lag, drift CI and holdout residuals (5/5)
+- PASS: Calibration precision-audit UI contract (16/16)
+- PASS: Gaze-sample-clock AOI regression (24/24)
+- PASS: AOI timebase end-to-end regression (18/18)
+- PASS: Body geometry integrity gate regression (23/23)
+- PASS: Body fixation review reduction regression (14/14)
+- PASS: Body semantic review reduction regression (11/11)
+- PASS: Face AOI manual review regression (40/40)
+- PASS: Body AOI manual review regression (21/21)
+- PASS: Body AOI result handoff regression (10/10)
+
+Packaging preflight
+-------------------
+- Fresh wheel install: PASS
+- Installed version: 0.21.56
+- Wheel RECORD hashes and sizes: PASS
+- Python compile: PASS
+- JavaScript syntax: PASS
+- CleanCore runtime check: PASS
+- Preview API: PASS (300 decimated signal rows, 11 distributed windows)
+- Ego video used for synchronization preview: False
+
+Environment note
+----------------
+Browser navigation to loopback/file URLs is blocked by the validation environment policy. The preview endpoint was exercised directly; UI/server contracts passed; the release preview PNG was rendered from the release markup using page.set_content. The actual Windows installer is executed on the user’s Windows machine.
+
+Scientific scope
+----------------
+The known-drift tests validate the algorithm. They do not claim the user’s real recording has the synthetic drift values above. After installing v0.21.56, rerun R01 and R02 synchronization on the local Pupil IMU and assigned ETM C3D assets, inspect the evidence preview, then create a new Gaze 3D handoff.

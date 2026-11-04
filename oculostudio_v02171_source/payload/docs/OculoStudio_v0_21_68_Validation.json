@@ -1,0 +1,73 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "release": "OculoStudio v0.21.68 — Direct Calibration Import Workspace",
+  "validated_at_utc": "2026-11-03T20:13:17.331515+00:00",
+  "feature_summary": {
+    "data_page_explicit_scopes": true,
+    "direct_calibration_modal": true,
+    "no_navigation_to_calibration_page": true,
+    "scan_before_mutation": true,
+    "participant_hardware_board_world_detection": true,
+    "audited_batch_import": true,
+    "interaction_import_separate": true,
+    "advanced_legacy_scanner_retained": true
+  },
+  "test_suites": {
+    "direct_calibration_import": {
+      "passed": 18,
+      "total": 18,
+      "all_pass": true,
+      "failed": []
+    },
+    "project_calibration_sets": {
+      "passed": 35,
+      "total": 35,
+      "all_pass": true,
+      "failed": []
+    },
+    "project_session_workspace": {
+      "passed": 29,
+      "total": 29,
+      "all_pass": true,
+      "failed": []
+    },
+    "context_locked_aoi_review": {
+      "passed": 16,
+      "total": 16,
+      "all_pass": true,
+      "failed": []
+    }
+  },
+  "aggregate_functional_assertions": {
+    "passed": 98,
+    "total": 98
+  },
+  "static_and_package_checks": {
+    "python_compileall": true,
+    "javascript_syntax_app_js": true,
+    "javascript_syntax_asset_import_js": true,
+    "wheel_zip_crc": true,
+    "wheel_record_rows": 130,
+    "wheel_record_failures": [],
+    "isolated_install_version": "0.21.68",
+    "clean_core": true
+  },
+  "screenshots": {
+    "data_import_scopes": "OculoStudio_v0_21_68_DataImportScopes.png",
+    "calibration_import_dialog": "OculoStudio_v0_21_68_CalibrationImportDialog.png"
+  },
+  "package_integrity": {
+    "payload_manifest_file_count": 326,
+    "installer_manifest_file_count": 331,
+    "final_zip_entry_count": 332,
+    "final_zip_crc": true,
+    "ascii_safe_paths": true,
+    "final_extracted_install_version": "0.21.68",
+    "final_extracted_release_check": "18/18 PASS"
+  },
+  "environment_boundaries": [
+    "Windows WebView2 desktop shell and native folder/file dialogs require final confirmation on the user’s Windows machine.",
+    "The release checks used the real FastAPI backend and Chromium with a relay because this container blocks direct Chromium loopback navigation for some legacy scripts."
+  ],
+  "all_pass": true
+}

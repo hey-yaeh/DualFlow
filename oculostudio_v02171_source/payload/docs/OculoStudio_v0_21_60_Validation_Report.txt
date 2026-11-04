@@ -1,0 +1,42 @@
+OculoStudio v0.21.60 — Validation Report
+=========================================
+
+Release scope
+-------------
+- Visible Guided workflow / Expert tools dropdown in the top bar.
+- Calibration defaults to Paired summary for R01 + R02.
+- R01 details / R02 details are display-only and do not mutate assignment or paired handoff state.
+- Other Expert pages use an explicit Active role dropdown.
+- Existing processing algorithms and immutable artifacts are preserved.
+
+Installed-wheel UI validation
+-----------------------------
+PASS  Visible mode dropdown lists both target modes.
+PASS  Mode selection persists and changes the interface.
+PASS  Calibration defaults to Paired summary.
+PASS  Calibration has no visible Use R01 / Use R02 action.
+PASS  R01/R02 detail switching leaves paired calibration context unchanged.
+PASS  Non-Calibration Expert pages expose Active role selection.
+PASS  Page errors: 0.
+PASS  Console errors: 0.
+
+Processing regressions
+----------------------
+PASS  Calibration automatic sync: 13/13 checks.
+PASS  Calibration sync precision: 5/5 checks.
+PASS  C3D-defined paired clips; start boundary max 0.0035 ms, end boundary max 0.0105 ms.
+PASS  Aligned clip QC preview: 26/26 checks.
+PASS  Aligned ego + TSD + FaceMapper export: 37/37 checks.
+
+Package validation
+------------------
+PASS  Python compilation.
+PASS  JavaScript syntax for app.js, interaction_workspace.js and native_trim.js.
+PASS  Wheel RECORD hash and size verification.
+PASS  Wheel ZIP CRC.
+PASS  CleanCore self-check; installed version 0.21.60.
+
+Limitations
+-----------
+- The Windows WebView2 desktop shell and .bat installer cannot be executed in this Linux validation environment.
+- Install on the target Windows machine and confirm native rendering and dropdown interaction once.

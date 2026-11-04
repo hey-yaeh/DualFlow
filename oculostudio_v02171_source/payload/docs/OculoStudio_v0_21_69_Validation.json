@@ -1,0 +1,88 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "application_version": "0.21.69",
+  "release": "Calibration Set Physical Profile Builder",
+  "validated_at_utc": "2026-11-03T22:50:00Z",
+  "root_causes": [
+    "role-detail estimator selected Calibration recordings from the current Interaction participant instead of the physical ETM hardware",
+    "Project-level Calibration Set sources intentionally had no Interaction Global TimeGraph, while the old profile estimator required one",
+    "valid computed profiles could remain unbound when registration failed, while the UI reported only Profile missing"
+  ],
+  "feature_contract": {
+    "profile_scope": "physical ETM hardware",
+    "calibration_actor_may_differ_from_current_wearer": true,
+    "automatic_actor_to_hardware_pairing": true,
+    "calibration_only_internal_clock_search": true,
+    "paired_transactional_commit": true,
+    "safe_recovery_of_explicitly_tagged_unbound_profiles": true,
+    "role_details_are_evidence_or_recovery_only": true
+  },
+  "tests": {
+    "profile_builder_backend": {
+      "passed": 19,
+      "total": 19,
+      "all_pass": true
+    },
+    "profile_builder_live_ui": {
+      "passed": 15,
+      "total": 15,
+      "all_pass": true,
+      "page_errors": [],
+      "console_errors": []
+    },
+    "calibration_sets_workspace": {
+      "passed": 35,
+      "total": 35,
+      "all_pass": true
+    },
+    "calibration_import_workspace": {
+      "passed": 18,
+      "total": 18,
+      "all_pass": true
+    },
+    "calibration_autosync_regression": {
+      "passed": 13,
+      "total": 13,
+      "all_pass": true
+    },
+    "calibration_sync_precision_regression": {
+      "passed": 5,
+      "total": 5,
+      "all_pass": true
+    },
+    "c3d_defined_clip_regression": {
+      "all_pass": true,
+      "maximum_start_boundary_error_ms": 0.0035,
+      "maximum_end_boundary_error_ms": 0.0105,
+      "source_video_reencoded": false
+    },
+    "clean_core": {
+      "all_pass": true,
+      "legacy_hits": []
+    }
+  },
+  "wheel": {
+    "filename": "oculostudio-0.21.69-py3-none-any.whl",
+    "size_bytes": 1068976,
+    "sha256": "909f08e6705fc5d3290a04078acc5d615544f8306ccbef4eadb9ccc8f3cac3e5",
+    "record_rows": 131,
+    "record_failures": [],
+    "isolated_install_version": "0.21.69"
+  },
+  "package": {
+    "payload_manifest_file_count": 343,
+    "installer_manifest_file_count": 348,
+    "zip_entries": 349,
+    "zip_crc_pass": true,
+    "ascii_paths_only": true,
+    "payload_manifest_failures": [],
+    "installer_manifest_failures": [],
+    "final_extracted_install_version": "0.21.69",
+    "final_extracted_profile_builder_pass": true,
+    "final_extracted_profile_builder_checks": "19/19",
+    "final_extracted_clean_core": true
+  },
+  "functional_assertions_passed": 105,
+  "functional_assertions_total": 105,
+  "all_pass": true
+}

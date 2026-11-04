@@ -1,0 +1,44 @@
+{
+  "release": "OculoStudio v0.21.58 — Aligned Clip QC Preview",
+  "generated_at_utc": "2026-11-02T09:40:05.562622+00:00",
+  "overall_pass": true,
+  "wheel": {
+    "file": "oculostudio-0.21.58-py3-none-any.whl",
+    "size_bytes": 810723,
+    "sha256": "7c011b0d920045d464612cc18a37348f3a3b7206332053b728e8526c092032c7",
+    "installed_version": "0.21.58",
+    "archive_integrity": true,
+    "record_hashes_verified": true
+  },
+  "aligned_clip_qc_preview": {
+    "ui_all_pass": true,
+    "page_errors": [],
+    "console_errors": [],
+    "backend_failed_checks": [],
+    "r01_video_bytes": 11098,
+    "r02_video_bytes": 11440,
+    "r01_gaze_mapped": 200,
+    "r02_gaze_mapped": 200,
+    "role_isolation": true,
+    "reload_restore": true,
+    "no_new_scientific_artifact": true,
+    "source_video_not_reencoded": true
+  },
+  "regression": {
+    "c3d_defined_pair_check": true,
+    "transactional_mismatch_rejection": true,
+    "clean_core": true,
+    "python_compileall": true,
+    "javascript_syntax": true,
+    "aligned_preview_api_route": true,
+    "media_byte_range_route": true
+  },
+  "evidence_files": [
+    "docs/OculoStudio_v0_21_58_AlignedClipQCPreview.png",
+    "docs/VALIDATION_v0_21_58_ALIGNED_CLIP_QC_PREVIEW_UI.json",
+    "docs/VALIDATION_v0_21_58_ALIGNED_CLIP_QC_PREVIEW_BACKEND.json",
+    "docs/VALIDATION_v0_21_58_C3D_DEFINED_CLIPS.json",
+    "docs/VALIDATION_v0_21_58_CLEAN_CORE.json"
+  ],
+  "boundary": "Automated validation used Linux Chromium/FastAPI plus real FFmpeg output. Final Windows WebView shell behavior must be confirmed after installation on Windows."
+}

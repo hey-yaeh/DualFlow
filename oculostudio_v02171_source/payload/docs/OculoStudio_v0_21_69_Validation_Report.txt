@@ -1,0 +1,34 @@
+OculoStudio v0.21.69 — Calibration Set Physical Profile Builder
+Validation report
+
+ROOT CAUSES VERIFIED
+- Role-detail profile generation incorrectly depended on the current Interaction participant.
+- Project-level Calibration Set sources did not create Interaction Global TimeGraphs, but the old estimator required one.
+- Valid generated profiles could remain unbound after registration failure.
+
+NEW CONTRACT
+- Calibration actors are matched to physical ETM-A/ETM-B independently of current R01/R02 wearers.
+- The measured legacy calibration engine performs an internal calibration-only offset search.
+- ETM-A and ETM-B are validated before one transactional revision commit.
+- Explicitly tagged unbound profiles can be recovered without recomputation.
+- Data and Calibration pages expose one Project-level Build profiles workflow; role details are evidence/recovery only.
+
+VALIDATION
+- Profile builder backend: 19/19 PASS
+- Live Chromium builder UI: 15/15 PASS; page errors 0; console errors 0
+- Calibration Sets workspace: 35/35 PASS
+- Direct Calibration import: 18/18 PASS
+- Calibration auto-sync regression: 13/13 PASS
+- Calibration sync precision: 5/5 PASS
+- C3D-defined clips: PASS; max start boundary 0.0035 ms; max end boundary 0.0105 ms; source video re-encoded: False
+- CleanCore/static UI: PASS
+- Wheel: oculostudio-0.21.69-py3-none-any.whl; 1068976 bytes; SHA-256 909f08e6705fc5d3290a04078acc5d615544f8306ccbef4eadb9ccc8f3cac3e5; RECORD 131 rows, 0 failures
+
+PACKAGE INTEGRITY
+- Payload manifest: 343 files, 0 failures
+- Installer manifest: 348 files, 0 failures
+- Final installer ZIP: 349 entries, CRC PASS
+- ZIP paths: ASCII-safe
+- Final extracted wheel install: 0.21.69
+- Final extracted Profile Builder: 19/19 PASS
+- Final extracted CleanCore/static UI: PASS

@@ -1,0 +1,128 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "release": "OculoStudio v0.21.64 — Role-Locked Partner Projection",
+  "application_version": "0.21.64",
+  "validated_at_utc": "2026-11-02",
+  "root_cause": {
+    "role_profile_leak": "R02 could retain or auto-select the R01/ETM-B calibration-profile override after role switching.",
+    "trim_lineage_leak": "Face AOI selectors could expose participant associations created from another Native-reference trim.",
+    "silent_zero_projection": "Partner-only participant association could publish despite zero valid in-view partner projections."
+  },
+  "release_specific": {
+    "backend": {
+      "r02_resolved_etm_id": "ETM-A",
+      "profile_resolution_source": "paired_calibration_handoff",
+      "valid_partner_projection_rows": 90,
+      "wrong_profile_blocked": true,
+      "mismatched_trim_blocked": true,
+      "zero_projection_blocked": true,
+      "zero_projection_publishes_nothing": true
+    },
+    "ui": {
+      "role_locked_card": true,
+      "normal_profile_selector_hidden": true,
+      "emergency_override_closed": true,
+      "association_and_face_trim_equal": true,
+      "wrong_trim_association_excluded": true,
+      "page_errors": [],
+      "console_errors": []
+    },
+    "review_payload": {
+      "partner_projection_valid": true,
+      "matched_partner": true,
+      "coverage_code": "partner_face_covered",
+      "role_id": "R01",
+      "relation": "partner",
+      "projected_bbox": [
+        238.9191836877885,
+        110.95692575813284,
+        279.48081631221146,
+        161.17608995979936
+      ]
+    }
+  },
+  "regression_groups": {
+    "nasal_envelope_direct_accept": {
+      "passed": 11,
+      "total": 11
+    },
+    "face_feature_geometry": {
+      "passed": 34,
+      "total": 34
+    },
+    "face_edge_tolerance": {
+      "passed": 16,
+      "total": 16
+    },
+    "face_auto_review_reduction": {
+      "passed": 15,
+      "total": 15
+    },
+    "balanced_facial_aoi": {
+      "passed": 23,
+      "total": 23
+    },
+    "strict_green_gate_environment": {
+      "passed": 13,
+      "total": 13
+    },
+    "face_manual_review": {
+      "passed": 40,
+      "total": 40
+    },
+    "face_review_load_reduction": {
+      "passed": 17,
+      "total": 17
+    },
+    "aoi_timebase_end_to_end": {
+      "passed": 18,
+      "total": 18
+    },
+    "gaze_sample_clock_aoi": {
+      "passed": 24,
+      "total": 24
+    },
+    "body_aoi_direct_c3d_clock": {
+      "passed": 6,
+      "total": 6
+    },
+    "object_aoi_direct_c3d_clock": {
+      "passed": 6,
+      "total": 6
+    },
+    "aligned_clip_qc_preview": {
+      "passed": 26,
+      "total": 26
+    },
+    "aligned_ego_tsd_fm_export": {
+      "passed": 37,
+      "total": 37
+    },
+    "shared_audio_video_sync": {
+      "passed": 37,
+      "total": 37
+    },
+    "aligned_facial_video_export": {
+      "passed": 34,
+      "total": 34
+    },
+    "c3d_defined_paired_clips": {
+      "passed": 6,
+      "total": 6
+    }
+  },
+  "language_and_runtime": {
+    "python_compileall": true,
+    "javascript_app_js_node_check": true,
+    "javascript_interaction_workspace_node_check": true,
+    "javascript_aoi_review_node_check": true,
+    "clean_core_self_check": true
+  },
+  "platform_limitations": [
+    "Core Python, FastAPI, OpenCV/FFmpeg and Chromium UI checks were executed in Linux.",
+    "The Windows WebView2 desktop shell and .bat installer require final confirmation on the user’s Windows machine."
+  ],
+  "regression_assertions_passed": 363,
+  "regression_assertions_total": 363,
+  "all_release_specific_pass": true
+}

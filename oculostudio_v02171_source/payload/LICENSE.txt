@@ -1,0 +1,11 @@
+OculoStudio v0.5.4 FFprobe Fix — Research Preview License Notice
+
+Copyright (c) 2026 OculoStudio contributors.
+
+This research preview is supplied for evaluation and internal research use while its final public license is being selected. You may inspect, run, and modify the software for your own research. Redistribution, commercial use, or relicensing requires written permission from the copyright holder.
+
+Third-party input formats, body models, device software, codecs, and data remain subject to their own licenses and terms. No SMPL/SMPL-X model files, Pupil Labs software, Vicon software, Detectron2/DensePose runtime, legacy application source code, or participant data are included in this distribution.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. It is not a medical device and does not guarantee anonymization, calibration accuracy, semantic annotation correctness, or fitness for publication without human quality review.
+
+The tools/ffmpeg third-party executables are excluded from the above preview restriction. Their upstream GPLv3 terms and provenance are provided in tools/ffmpeg.

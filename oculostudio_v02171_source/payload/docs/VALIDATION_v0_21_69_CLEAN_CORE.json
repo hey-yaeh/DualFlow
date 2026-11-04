@@ -1,0 +1,65 @@
+{
+  "app": "OculoStudio",
+  "version": "0.21.69",
+  "python": "3.13.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "ffmpeg": "/usr/bin/ffmpeg",
+  "ffprobe": "/usr/bin/ffprobe",
+  "media_tools": {
+    "settings_file": "/home/oai/.config/OculoStudio/media_tools.json",
+    "settings": {},
+    "tools": {
+      "ffmpeg": {
+        "available": true,
+        "name": "ffmpeg",
+        "path": "/usr/bin/ffmpeg",
+        "source": "PATH",
+        "version": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers"
+      },
+      "ffprobe": {
+        "available": true,
+        "name": "ffprobe",
+        "path": "/usr/bin/ffprobe",
+        "source": "PATH",
+        "version": "ffprobe version 7.1.5-0+deb13u1 Copyright (c) 2007-2026 the FFmpeg developers"
+      }
+    }
+  },
+  "static_ui": true,
+  "static_files_present": true,
+  "static_routes_present": true,
+  "registered_route_paths": [
+    "/",
+    "/static"
+  ],
+  "optional": {
+    "webview": false,
+    "ezc3d": false,
+    "pyarrow": false
+  },
+  "builtin_c3d_reader": true,
+  "long_c3d_recovery": true,
+  "legacy_source_or_bridge_hits": [],
+  "clean_core": true,
+  "semantic_targets": true,
+  "native_reference_data_trim": true,
+  "pretrim_overlay_preview": true,
+  "raw_facemapper_source_preview": true,
+  "facemapper_preview_variants": [
+    "raw_mapper",
+    "canonical_mapper",
+    "filter_qc",
+    "privacy_mask"
+  ],
+  "pretrim_overlay_registered_as_artifact": false,
+  "native_trim_uses_global_timegraph": false,
+  "privacy_clip_from_audited_frame_map": true,
+  "face_aoi_sample_and_frame_outputs": true,
+  "body_aoi_independent_evidence": true,
+  "etm_role_resolution": true,
+  "etm_assignment_fail_closed": true,
+  "target_fusion_join_key": "gaze_sample_uid",
+  "artifact_video_byte_range_streaming": true,
+  "densepose_mode": "external_results_import_only",
+  "detectron2_required": false
+}

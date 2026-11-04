@@ -1,0 +1,22 @@
+{
+  "release": "0.21.56",
+  "ok": true,
+  "checks": {
+    "version_0_21_56": true,
+    "preview_button": true,
+    "preview_api_called": true,
+    "preview_endpoint": true,
+    "drift_ci_display": true,
+    "precision_limited_display": true,
+    "co_start_explanation": true,
+    "holdout_display": true,
+    "trace_chart": true,
+    "offset_chart": true,
+    "modal_css": true,
+    "subsample_engine": true,
+    "leave_one_out": true,
+    "finite_drift_interval": true,
+    "old_artifact_blocked": true,
+    "production_requires_precision": true
+  }
+}

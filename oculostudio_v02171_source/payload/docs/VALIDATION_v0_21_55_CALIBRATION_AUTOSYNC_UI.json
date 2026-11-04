@@ -1,0 +1,15 @@
+{
+  "release": "0.21.55",
+  "page_errors": [],
+  "console_errors": [],
+  "checks": [
+    "Calibration exposes four formal phases",
+    "Pupil IMU↔Vicon synchronization is Phase 3",
+    "R01→ETM-B and R02→ETM-A are rendered independently",
+    "Both accepted mappings show offset, drift, windows and P95 residual",
+    "The UI explicitly states that ego video is not used",
+    "Phase 4 handoff is enabled only after both role mappings are production-ready",
+    "Completed synchronized handoff is visible"
+  ],
+  "ok": true
+}

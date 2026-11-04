@@ -1,0 +1,18 @@
+{
+  "release": "0.21.59",
+  "checks": {
+    "central_export_action": true,
+    "right_panel_export_action": true,
+    "clean_video_checkbox": true,
+    "tsd_checkbox": true,
+    "facemapper_checkbox": true,
+    "audio_checkbox": true,
+    "formal_package_card": true,
+    "formal_video_player": true,
+    "immutable_artifact_badge": true,
+    "role_is_r01": true
+  },
+  "page_errors": [],
+  "console_errors": [],
+  "ok": true
+}

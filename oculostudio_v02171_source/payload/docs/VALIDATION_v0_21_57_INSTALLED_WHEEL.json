@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "version": "0.21.57",
+  "common_duration_sec": 1.0,
+  "role_trim_artifacts": {
+    "R01": "artifact_71aa7231165e",
+    "R02": "artifact_c207522a0688"
+  },
+  "maximum_start_boundary_error_ms": 0.0035,
+  "maximum_end_boundary_error_ms": 0.0105,
+  "source_video_reencoded": false,
+  "mismatched_sync_source_rejected_transactionally": true
+}

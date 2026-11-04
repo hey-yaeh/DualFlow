@@ -1,0 +1,110 @@
+{
+  "schema_version": "oculostudio-validation-body-semantic-review-1.0",
+  "version": "0.21.57",
+  "checks": {
+    "same_coarse_surface_resolved": true,
+    "same_coarse_surface_source_auditable": true,
+    "previous_policy_stays_strict": true,
+    "different_coarse_regions_remain_pending": true,
+    "self_occlusion_remains_pending": true,
+    "adjacent_exact_anchor_resolves_split_fixation": true,
+    "adjacent_exact_anchor_is_audited": true,
+    "conflicting_exact_anchor_does_not_resolve": true,
+    "adjacent_same_target_fixations_merge": true,
+    "changed_body_target_stays_separate": true,
+    "episode_keeps_all_original_samples": true
+  },
+  "notes": {
+    "semantic_summary": {
+      "schema_version": "oculostudio-body-aoi-auto-review-1.1",
+      "policy": "semantic_guided",
+      "policy_thresholds": {
+        "angle": 0.4,
+        "small_angle": 0.23,
+        "min_conf": 0.34,
+        "min_primitive": 0.56,
+        "margin": 0.21,
+        "share": 0.8,
+        "frame_anchors": 1,
+        "fixation_anchors": 1,
+        "fixation_gap_ms": 240,
+        "candidate_fixation": true,
+        "candidate_min_samples": 3,
+        "candidate_target_share": 0.92,
+        "candidate_body_fraction": 0.68,
+        "candidate_single_share": 0.66,
+        "candidate_median_angle": 0.56,
+        "candidate_p90_angle": 0.86,
+        "candidate_min_conf": 0.25,
+        "candidate_min_primitive": 0.58,
+        "candidate_margin": 0.21,
+        "candidate_max_gap_ms": 120,
+        "candidate_max_span_ms": 2600,
+        "temporal_run": true,
+        "run_min_samples": 4,
+        "run_gap_ms": 80,
+        "run_median_angle": 0.37,
+        "run_p90_angle": 0.6,
+        "run_min_conf": 0.31,
+        "run_min_primitive": 0.62,
+        "temporal_exact_anchor_ms": 240
+      },
+      "conflicted_fixation_count": 0,
+      "review_samples_before": 1,
+      "auto_resolved_samples": 1,
+      "review_samples_remaining": 0,
+      "sample_review_reduction_fraction": 1.0,
+      "review_frames_before": 1,
+      "review_frames_remaining": 0,
+      "frame_review_reduction_fraction": 1.0,
+      "review_fixations_before": 1,
+      "review_fixations_remaining": 0,
+      "fixation_review_reduction_fraction": 1.0,
+      "review_units_before": 1,
+      "review_units_remaining": 0,
+      "review_unit_reduction_fraction": 1.0,
+      "resolution_source_counts": {
+        "same_coarse_surface": 1
+      },
+      "review_reason_counts_before": {
+        "multiple_uncertainty_candidates": 1
+      },
+      "remaining_review_reason_counts": {},
+      "safety_guards": [
+        "automatic target relation, entity and body region are never changed",
+        "video-frame availability affects preview only and never suppresses 3D Body AOI computation",
+        "self-occlusion rows remain in human review",
+        "other-person and unresolved-entity candidates remain in human review",
+        "near-body acceptance requires angular, confidence and competing-candidate margins",
+        "frame and fixation consensus require matching exact-hit targets",
+        "candidate-only fixation consensus requires one unchanged social-body target, high target share, temporal continuity, bounded angular miss and no close competing surface",
+        "short temporal runs never cross target changes or fixation boundaries",
+        "all cleared flags retain sample-level audit columns"
+      ]
+    },
+    "episode_count": 2,
+    "episodes": [
+      {
+        "target": [
+          "partner",
+          "P02",
+          "head"
+        ],
+        "base_unit_count": 2,
+        "sample_count": 4
+      },
+      {
+        "target": [
+          "partner",
+          "P02",
+          "torso"
+        ],
+        "base_unit_count": 1,
+        "sample_count": 1
+      }
+    ]
+  },
+  "passed": 11,
+  "total": 11,
+  "ok": true
+}

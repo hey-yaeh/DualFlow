@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "rows_preserved": true,
+    "uses_direct_gaze_ray_c3d_time": true,
+    "global_path_not_required": true,
+    "clock_column_audited": true,
+    "object_geometry_built": true,
+    "query_overlap_gate_passed": true
+  },
+  "details": {
+    "rows": 300,
+    "qc": {
+      "alignment_mode": "timegraph",
+      "object_time_alignment_mode": "gaze_ray_c3d_time",
+      "alignment_basis": "Exact C3D query time already stored in calibrated gaze rays; no project Global Time path required",
+      "global_timegraph_required": false
+    }
+  },
+  "failed": [],
+  "ok": true
+}

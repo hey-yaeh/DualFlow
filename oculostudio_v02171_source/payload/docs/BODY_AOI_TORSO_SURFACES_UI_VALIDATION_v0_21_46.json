@@ -1,0 +1,18 @@
+{
+  "release": "0.21.46",
+  "test": "Body AOI torso surface browser rendering",
+  "fixture": "deterministic two-person synthetic C3D primitive payload",
+  "views": [
+    "Split X–Z/Y–Z"
+  ],
+  "assertions": {
+    "self_torso_surface_visible": true,
+    "partner_torso_surface_visible": true,
+    "pelvis_connected_to_torso": true,
+    "selected_torso_white_boundary": true,
+    "partner_solid_self_dashed_semantics_preserved": true,
+    "no_horizontal_overflow": true,
+    "console_errors": 0
+  },
+  "preview": "OculoStudio_v0_21_46_BodyAOI_TorsoSurfaces_Preview.png"
+}

@@ -1,0 +1,52 @@
+OculoStudio v0.21.71 — Independent AprilTag Board Geometry Resolver
+============================================================================
+
+Issue fixed
+-----------
+The Project-level Profile Builder no longer fails at 45% with:
+  The legacy engine did not produce a usable 4x4 board mapping
+when labelled head markers correctly identify the physical ETM but do not return a board mapping.
+
+Scientific correction
+---------------------
+- Head-marker evidence selects ETM-A / ETM-B.
+- Scene AprilTags plus the planar 16-marker board resolve the 4x4 Tag orientation.
+- The accepted 16 Tag corners and 4 outer corners are stored with the Calibration Set revision.
+- Both actors must agree on one board orientation.
+- The unchanged measured camera-to-tracker estimator receives the explicit mapping.
+
+Real CAL_S004_S007 validation
+-----------------------------
+Sources: 6/6 available
+C3D contract: 872 frames · 120 Hz
+Board: 16/16 markers valid · mapping auto_grid_rot0 · 16 Tag corners + 4 outer corners
+Identity: P01 / James → ETM-B (HIGH); P03 / Jessica → ETM-A (HIGH)
+ETM-A: ready; fixed reprojection RMS 1.367 px
+ETM-B: ready; fixed reprojection RMS 2.483 px
+Second run: reused both ready profiles; no recomputation
+
+Regression results
+------------------
+Profile Builder: 22/22 PASS
+Calibration Sets: 35/35 PASS
+Data management: 21/21 PASS
+Calibration import: 21/21 PASS
+Project–Session workspace: 29/29 PASS
+Context-locked AOI Review: 16/16 PASS
+Role-locked partner projection: 15/15 PASS
+Pupil–ETM auto-sync: PASS
+Sync precision: PASS
+C3D-defined clips: PASS
+Body/Object AOI direct C3D clock: 6/6 + 6/6 PASS
+Live Chromium Data UI: Board mapped, ETM-A ready and ETM-B ready; 0 page errors; 0 console errors
+
+Package integrity
+-----------------
+Wheel: oculostudio-0.21.71-py3-none-any.whl
+Wheel SHA-256: 7441b9f174ea438e8cb301315ddf7076c02c81fba437ebfe49dc665ce2caef22
+Wheel RECORD: 131 rows, 0 hash errors
+Isolated wheel installation: 0.21.71
+Python compile: PASS
+JavaScript syntax: PASS
+
+No re-import, wearer-resolution rerun or Pupil–ETM resynchronization is required.

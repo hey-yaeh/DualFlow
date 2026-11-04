@@ -1,0 +1,22 @@
+{
+  "release": "0.21.63",
+  "page_errors": [],
+  "console_errors": [],
+  "checks": {
+    "aligned_facial_export_section_visible": true,
+    "accepted_time_sync_auto_selected": true,
+    "export_button_enabled": true,
+    "audio_preservation_checked": true,
+    "formal_player_visible": true,
+    "open_latest_button_visible": true,
+    "central_automatic_card_has_facial_action": true,
+    "timing_section_renumbered": true,
+    "formal_video_streams": true,
+    "page_errors_absent": true,
+    "console_errors_absent": true
+  },
+  "passed_count": 11,
+  "check_count": 11,
+  "failed": [],
+  "all_pass": true
+}

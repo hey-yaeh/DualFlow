@@ -1,0 +1,19 @@
+{
+  "release": "0.21.52",
+  "feature": "Body geometry acceptance UI",
+  "checks": {
+    "passed_card_visible": true,
+    "passed_artifact_review_entry_enabled": true,
+    "blocked_card_visible": true,
+    "blocked_artifact_review_entry_disabled": true,
+    "blocked_artifact_removed_from_fusion": true,
+    "responsive_without_horizontal_overflow": true,
+    "no_page_errors": true,
+    "no_console_errors": true,
+    "installed_version": true
+  },
+  "page_errors": [],
+  "console_errors": [],
+  "failed": [],
+  "ok": true
+}

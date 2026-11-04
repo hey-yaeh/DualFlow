@@ -1,0 +1,256 @@
+{
+  "schema_version": "oculostudio-calibration-set-profile-builder-check-1.0",
+  "checks": {
+    "source_inventory_complete": true,
+    "current_interaction_participant_not_required": true,
+    "two_calibration_actors_found": true,
+    "build_completed": true,
+    "both_hardware_slots_ready": true,
+    "p01_mapped_to_etm_b": true,
+    "p03_mapped_to_etm_a": true,
+    "session_S004_has_both_profiles": true,
+    "session_S005_has_both_profiles": true,
+    "session_S006_has_both_profiles": true,
+    "session_S007_has_both_profiles": true,
+    "ambiguous_duplicate_hardware_fails": true,
+    "failed_pair_does_not_commit_half_profile": true,
+    "unbound_profiles_recovered_without_recompute": true,
+    "recovered_revision_has_both_hardware_profiles": true,
+    "ui_has_project_level_builder": true,
+    "ui_explains_actor_wearer_difference": true,
+    "ui_filters_active_calibration_set_profiles": true,
+    "ui_old_manual_route_is_recovery_only": true
+  },
+  "passed": 19,
+  "total": 19,
+  "all_pass": true,
+  "created_profiles": [
+    {
+      "hardware_id": "ETM_A",
+      "hardware_display_name": "ETM-A",
+      "participant_id": "P03",
+      "native_asset_id": "asset_e78084e00bff",
+      "tracker_asset_id": "asset_69fb08f98190",
+      "artifact_id": "artifact_c0dfd2f873a1",
+      "profile_path": "/tmp/oculo_calset_profile_gj15zpwx/project/sessions/S004/derived/calibration_profile/ETM-A_mount_v1_CAL_S004_S007/ETM-A_mount_v1_CAL_S004_S007.json",
+      "g3dcal_path": "/tmp/oculo_calset_profile_gj15zpwx/project/sessions/S004/derived/calibration_profile/ETM-A_mount_v1_CAL_S004_S007/ETM-A_mount_v1_CAL_S004_S007.json"
+    },
+    {
+      "hardware_id": "ETM_B",
+      "hardware_display_name": "ETM-B",
+      "participant_id": "P01",
+      "native_asset_id": "asset_73acab374099",
+      "tracker_asset_id": "asset_5b72baf24318",
+      "artifact_id": "artifact_266a28621b71",
+      "profile_path": "/tmp/oculo_calset_profile_gj15zpwx/project/sessions/S004/derived/calibration_profile/ETM-B_mount_v1_CAL_S004_S007/ETM-B_mount_v1_CAL_S004_S007.json",
+      "g3dcal_path": "/tmp/oculo_calset_profile_gj15zpwx/project/sessions/S004/derived/calibration_profile/ETM-B_mount_v1_CAL_S004_S007/ETM-B_mount_v1_CAL_S004_S007.json"
+    }
+  ],
+  "final_status": {
+    "calibration_set_id": "calset_41090184629b",
+    "calibration_set_code": "CAL_S004_S007",
+    "calibration_set_label": "Calibration S004-S007",
+    "revision_id": "calrev_92fb1ce4526e",
+    "revision_number": 1,
+    "revision_status": "ready",
+    "owner_session_id": "session_56e93378301c",
+    "applicable_session_ids": [
+      "session_56e93378301c"
+    ],
+    "sources": [
+      {
+        "asset_id": "asset_73acab374099",
+        "source_session_id": "session_56e93378301c",
+        "label": "P01_calibration_S004-S007.zip",
+        "path": "/tmp/oculo_calset_profile_gj15zpwx/project/P01_calibration_S004-S007.zip",
+        "kind": "pupil_native",
+        "calibration_role": "pupil_calibration",
+        "participant_id": "P01",
+        "hardware_hint": null,
+        "available": true
+      },
+      {
+        "asset_id": "asset_e78084e00bff",
+        "source_session_id": "session_56e93378301c",
+        "label": "P03_calibration_S004-S007.zip",
+        "path": "/tmp/oculo_calset_profile_gj15zpwx/project/P03_calibration_S004-S007.zip",
+        "kind": "pupil_native",
+        "calibration_role": "pupil_calibration",
+        "participant_id": "P03",
+        "hardware_hint": null,
+        "available": true
+      },
+      {
+        "asset_id": "asset_deef9c56420c",
+        "source_session_id": "session_56e93378301c",
+        "label": "calibration_board_S004-S007.c3d",
+        "path": "/tmp/oculo_calset_profile_gj15zpwx/project/calibration_board_S004-S007.c3d",
+        "kind": "c3d",
+        "calibration_role": "calibration_board",
+        "participant_id": null,
+        "hardware_hint": null,
+        "available": true
+      },
+      {
+        "asset_id": "asset_69fb08f98190",
+        "source_session_id": "session_56e93378301c",
+        "label": "eye_tracker_A_S004-S007.c3d",
+        "path": "/tmp/oculo_calset_profile_gj15zpwx/project/eye_tracker_A_S004-S007.c3d",
+        "kind": "c3d",
+        "calibration_role": "tracker_candidate",
+        "participant_id": null,
+        "hardware_hint": "ETM_A",
+        "available": true
+      },
+      {
+        "asset_id": "asset_5b72baf24318",
+        "source_session_id": "session_56e93378301c",
+        "label": "eye_tracker_B_S004-S007.c3d",
+        "path": "/tmp/oculo_calset_profile_gj15zpwx/project/eye_tracker_B_S004-S007.c3d",
+        "kind": "c3d",
+        "calibration_role": "tracker_candidate",
+        "participant_id": null,
+        "hardware_hint": "ETM_B",
+        "available": true
+      },
+      {
+        "asset_id": "asset_42d254e8d74a",
+        "source_session_id": "session_56e93378301c",
+        "label": "markers_world_S004-S007.c3d",
+        "path": "/tmp/oculo_calset_profile_gj15zpwx/project/markers_world_S004-S007.c3d",
+        "kind": "c3d",
+        "calibration_role": "world_reference",
+        "participant_id": null,
+        "hardware_hint": null,
+        "available": true
+      }
+    ],
+    "pupil_recordings": [
+      {
+        "asset_id": "asset_73acab374099",
+        "source_session_id": "session_56e93378301c",
+        "label": "P01_calibration_S004-S007.zip",
+        "path": "/tmp/oculo_calset_profile_gj15zpwx/project/P01_calibration_S004-S007.zip",
+        "kind": "pupil_native",
+        "calibration_role": "pupil_calibration",
+        "participant_id": "P01",
+        "hardware_hint": null,
+        "available": true
+      },
+      {
+        "asset_id": "asset_e78084e00bff",
+        "source_session_id": "session_56e93378301c",
+        "label": "P03_calibration_S004-S007.zip",
+        "path": "/tmp/oculo_calset_profile_gj15zpwx/project/P03_calibration_S004-S007.zip",
+        "kind": "pupil_native",
+        "calibration_role": "pupil_calibration",
+        "participant_id": "P03",
+        "hardware_hint": null,
+        "available": true
+      }
+    ],
+    "board_candidates": [
+      {
+        "asset_id": "asset_deef9c56420c",
+        "source_session_id": "session_56e93378301c",
+        "label": "calibration_board_S004-S007.c3d",
+        "path": "/tmp/oculo_calset_profile_gj15zpwx/project/calibration_board_S004-S007.c3d",
+        "kind": "c3d",
+        "calibration_role": "calibration_board",
+        "participant_id": null,
+        "hardware_hint": null,
+        "available": true
+      }
+    ],
+    "tracker_candidates": [
+      {
+        "asset_id": "asset_69fb08f98190",
+        "source_session_id": "session_56e93378301c",
+        "label": "eye_tracker_A_S004-S007.c3d",
+        "path": "/tmp/oculo_calset_profile_gj15zpwx/project/eye_tracker_A_S004-S007.c3d",
+        "kind": "c3d",
+        "calibration_role": "tracker_candidate",
+        "participant_id": null,
+        "hardware_hint": "ETM_A",
+        "available": true
+      },
+      {
+        "asset_id": "asset_5b72baf24318",
+        "source_session_id": "session_56e93378301c",
+        "label": "eye_tracker_B_S004-S007.c3d",
+        "path": "/tmp/oculo_calset_profile_gj15zpwx/project/eye_tracker_B_S004-S007.c3d",
+        "kind": "c3d",
+        "calibration_role": "tracker_candidate",
+        "participant_id": null,
+        "hardware_hint": "ETM_B",
+        "available": true
+      }
+    ],
+    "world_candidates": [
+      {
+        "asset_id": "asset_42d254e8d74a",
+        "source_session_id": "session_56e93378301c",
+        "label": "markers_world_S004-S007.c3d",
+        "path": "/tmp/oculo_calset_profile_gj15zpwx/project/markers_world_S004-S007.c3d",
+        "kind": "c3d",
+        "calibration_role": "world_reference",
+        "participant_id": null,
+        "hardware_hint": null,
+        "available": true
+      }
+    ],
+    "board_definitions": [],
+    "hardware_slots": {
+      "ETM_A": {
+        "hardware_id": "ETM_A",
+        "hardware_display_name": "ETM-A",
+        "ready": true,
+        "profiles": [
+          {
+            "source_session_id": "session_56e93378301c",
+            "artifact_id": "artifact_c0dfd2f873a1",
+            "label": "ETM-A_mount_v1_CAL_S004_S007",
+            "hardware_id": "ETM_A",
+            "hardware_display_name": "ETM-A",
+            "mount_version": "mount_v1",
+            "available": true,
+            "created_at": "2026-11-03T22:43:37.237+00:00"
+          }
+        ]
+      },
+      "ETM_B": {
+        "hardware_id": "ETM_B",
+        "hardware_display_name": "ETM-B",
+        "ready": true,
+        "profiles": [
+          {
+            "source_session_id": "session_56e93378301c",
+            "artifact_id": "artifact_266a28621b71",
+            "label": "ETM-B_mount_v1_CAL_S004_S007",
+            "hardware_id": "ETM_B",
+            "hardware_display_name": "ETM-B",
+            "mount_version": "mount_v1",
+            "available": true,
+            "created_at": "2026-11-03T22:43:37.260+00:00"
+          }
+        ]
+      }
+    },
+    "recoverable_profiles": {
+      "ETM_A": [],
+      "ETM_B": []
+    },
+    "recoverable_hardware": [],
+    "missing_hardware": [],
+    "source_complete": true,
+    "ready": true,
+    "can_build": false,
+    "problems": [],
+    "contract": {
+      "profile_scope": "physical_hardware",
+      "current_interaction_participant_required": false,
+      "calibration_actor_may_differ_from_interaction_wearer": true,
+      "identity_method": "AprilTag camera / world-head evidence selects the physical ETM tracker"
+    }
+  }
+}

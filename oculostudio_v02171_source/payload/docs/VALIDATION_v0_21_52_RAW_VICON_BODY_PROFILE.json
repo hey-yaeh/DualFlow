@@ -1,0 +1,32 @@
+{
+  "release": "OculoStudio v0.21.52",
+  "feature": "Raw Vicon full-body 10-finger marker mapping and torso recovery",
+  "checks": {
+    "installed_version": true,
+    "profile_names_raw_vicon_fullbody": true,
+    "pelvis_has_all_six_waist_markers": true,
+    "left_shoulder_cluster_mapped": true,
+    "right_shoulder_cluster_mapped": true,
+    "wrist_hand_knee_aliases_mapped": true,
+    "protocol_detected": true,
+    "protocol_confidence_high": true,
+    "torso_all_frames": true,
+    "pelvis_all_frames": true,
+    "torso_is_direct_marker_geometry": true,
+    "complete_upper_limbs": true,
+    "complete_hands": true,
+    "waist_markers_recorded": true,
+    "valid_frame_counts_recorded": true,
+    "geometry_gate_passes": true,
+    "integrity_retains_protocol": true,
+    "torso_participates_in_exact_ray_intersection": true,
+    "underscore_exporter_prefix_supported": true,
+    "body_aoi_provenance_is_v6_sample_clock": true,
+    "gate_error_reports_marker_protocol": true,
+    "gaze_targets_shows_marker_protocol": true,
+    "body_review_shows_marker_protocol": true
+  },
+  "passed": 23,
+  "failed": [],
+  "ok": true
+}

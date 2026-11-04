@@ -1,0 +1,44 @@
+{
+  "release": "0.21.48",
+  "feature": "Body AOI human review entry and editor",
+  "checks": {
+    "body_entry_visible_in_body_mode": true,
+    "body_pending_count_visible": true,
+    "right_property_entry_visible": true,
+    "body_editor_open": true,
+    "body_editor_fields": true,
+    "body_actions_available": true,
+    "jumps_to_first_pending_frame": true,
+    "body_automatic_target_visible": true,
+    "responsive_without_horizontal_overflow": true,
+    "ui_decision_saves": true,
+    "source_body_aoi_immutable": true,
+    "no_page_errors": true,
+    "no_console_errors": true,
+    "installed_version": true
+  },
+  "page_errors": [],
+  "console_errors": [],
+  "before": {
+    "entryVisible": true,
+    "buttonText": "Review Body AOI",
+    "count": "3 pending",
+    "sideVisible": true,
+    "mode": "body"
+  },
+  "after": {
+    "panelHidden": false,
+    "progress": "0 / 3 flagged samples resolved",
+    "status": "not started",
+    "guidance": "Selected sample 1 is flagged.Correct Relation, Body region or Entity ID, mark it no_body, or accept Partner · Torso · P02.",
+    "auto": "Automatic targetPartner · TorsoAutomatic entity / confidenceP02 · 0.440Automatic geometryexact ray hit · 1.69 m · partner visible first",
+    "relationOptions": 4,
+    "regionOptions": 22,
+    "noBody": true,
+    "apply": true,
+    "currentFrame": 0,
+    "pageWidth": 1720
+  },
+  "failed": [],
+  "ok": true
+}

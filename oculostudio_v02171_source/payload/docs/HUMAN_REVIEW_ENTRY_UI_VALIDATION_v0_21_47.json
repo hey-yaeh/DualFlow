@@ -1,0 +1,48 @@
+{
+  "release": "0.21.47",
+  "feature": "Persistent Face AOI Human review entry from Body AOI",
+  "page_errors": [],
+  "console_errors": [],
+  "checks": {
+    "entry_visible_in_body_mode": true,
+    "entry_enabled_with_face_artifact": true,
+    "pending_count_is_truthful": true,
+    "body_mode_was_active_before_open": true,
+    "opens_matching_face_artifact": true,
+    "manual_panel_is_open": true,
+    "jumps_to_first_pending_frame": true,
+    "manual_queue_reports_pending": true,
+    "responsive_without_horizontal_overflow": true,
+    "body_aoi_source_unchanged": true,
+    "installed_version": true,
+    "persistent_player_entry_is_packaged": true,
+    "expert_panel_and_job_entries_are_packaged": true,
+    "guided_workflow_entry_is_packaged": true,
+    "no_page_errors": true,
+    "no_console_errors": true
+  },
+  "before_click": {
+    "mode": "body",
+    "artifact": "artifact_c6a0ef69c2cb",
+    "entryVisible": true,
+    "buttonVisible": true,
+    "buttonDisabled": false,
+    "buttonText": "Review flagged samples",
+    "status": "S001_I01_R01_face_aoi · 3 flagged samples in 2 frames still need a human decision."
+  },
+  "after_click": {
+    "mode": "face",
+    "artifact": "artifact_a72701053595",
+    "manualHidden": false,
+    "progress": "0 / 3 flagged samples resolved",
+    "status": "not started",
+    "badge": "Face AOI · 3 pending groups · 2 frames",
+    "currentFrame": 0,
+    "scrollTop": 0,
+    "panelTop": 183.40625,
+    "pageWidth": 1660
+  },
+  "first_pending_frame": 0,
+  "failed": [],
+  "ok": true
+}

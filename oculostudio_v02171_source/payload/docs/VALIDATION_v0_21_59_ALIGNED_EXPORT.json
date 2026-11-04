@@ -1,0 +1,59 @@
+{
+  "release": "OculoStudio v0.21.59 — Aligned Ego + TSD + FaceMapper Export",
+  "checks": {
+    "installed_version": true,
+    "right_panel_export_button": true,
+    "central_export_button": true,
+    "formal_video_player": true,
+    "three_output_controls": true,
+    "preserve_audio_control": true,
+    "api_endpoint_wired": true,
+    "artifact_kind_wired": true,
+    "no_boundary_reestimation": true,
+    "byte_identical_data_copy": true,
+    "r01_artifact_kind": true,
+    "r01_parent_lineage": true,
+    "r01_video_exists": true,
+    "r01_frame_map_exists": true,
+    "r01_tsd_exists": true,
+    "r01_fm_exists": true,
+    "r01_tsd_checksum_preserved": true,
+    "r01_fm_checksum_preserved": true,
+    "r01_frame_map_monotonic": true,
+    "r01_frames_within_verified_trim": true,
+    "r01_frame_count_matches_video": true,
+    "r01_clean_formal_artifact": true,
+    "r02_artifact_kind": true,
+    "r02_parent_lineage": true,
+    "r02_video_exists": true,
+    "r02_frame_map_exists": true,
+    "r02_tsd_exists": true,
+    "r02_fm_exists": true,
+    "r02_tsd_checksum_preserved": true,
+    "r02_fm_checksum_preserved": true,
+    "r02_frame_map_monotonic": true,
+    "r02_frames_within_verified_trim": true,
+    "r02_frame_count_matches_video": true,
+    "r02_clean_formal_artifact": true,
+    "roles_do_not_share_artifact": true,
+    "roles_do_not_share_video": true,
+    "data_only_supported": true
+  },
+  "failed": [],
+  "role_outputs": {
+    "R01": {
+      "artifact_id": "artifact_8d8002e0863c",
+      "video_bytes": 5204,
+      "frame_rows": 30,
+      "tsd_sha256": "e1398806a569cb93f5b20059bddf5ba1ab1c28dafa42fd6f23aeb28c763e1f84",
+      "facemapper_sha256": "b42c3dae4b6741386be14171a79c090344dffa6ef1c428185653ed97f2235c01"
+    },
+    "R02": {
+      "artifact_id": "artifact_4974c5dccb6d",
+      "video_bytes": 5392,
+      "frame_rows": 31,
+      "tsd_sha256": "474426858d4ae2de9fc933727dba6f4d30d1219c98e3cde689887b6805e737ab",
+      "facemapper_sha256": "fb1c0cf1e875c904837ac1178835811622c66a5600ff7c9307992e2ba19d007a"
+    }
+  }
+}

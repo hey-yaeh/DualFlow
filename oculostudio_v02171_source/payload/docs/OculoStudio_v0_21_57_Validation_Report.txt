@@ -1,0 +1,88 @@
+OculoStudio v0.21.57 — C3D-Defined Pupil Clips
+Validation report
+Generated: 2026-11-02 (Europe/Helsinki project date)
+
+RELEASE PURPOSE
+---------------
+This release removes manual ego-video start/end entry from the normal workflow when the interaction body C3D files preserve the authoritative Vicon interval and a precision-audited Pupil↔Vicon TimeGraph already exists.
+
+New default workflow:
+  Original NRD + TSD + FaceMapper
+      -> Calibration wearer assignment and precision-audited synchronization
+      -> common R01/R02 body-C3D interval in Vicon time
+      -> inverse role-specific TimeGraph
+      -> role-specific Pupil clock interval
+      -> exact NRD .time / MP4 PTS frame mapping
+      -> paired immutable Native-reference trim artifacts
+      -> Trim review -> Privacy -> Gaze 3D -> AOI
+
+IMPLEMENTED BEHAVIOUR
+---------------------
+1. The physical interaction window is the half-open overlap of the R01 and R02 body C3D ranges.
+2. R01 and R02 use their own accepted affine Pupil↔Vicon TimeGraphs; the same Vicon interval is inverted independently into each Pupil clock.
+3. NRD frame boundaries are resolved from the companion .time array and actual MP4 presentation timestamps, not from time multiplied by nominal FPS.
+4. The same Pupil interval is applied to TSD and FaceMapper tables.
+5. R01 and R02 are published transactionally. A failure in either role rolls back both role trims and the paired clip-set artifact.
+6. A new immutable aligned_clip_set artifact binds both role trims, the common Vicon interval, synchronized Calibration handoff, body C3Ds, assigned ETM C3Ds and accepted TimeGraphs.
+7. The source NRD MP4 is not rewritten or re-encoded. The output is a virtual media interval, exact frame map and trimmed tables. Privacy may later create a physical encoded clip from the same frame map.
+8. Manual start/end fields remain available only as a collapsed recovery workflow.
+9. The main workflow order is Data -> Calibration/automatic clips -> Trim inspection -> Privacy -> Gaze 3D -> Gaze Targets.
+
+FAIL-CLOSED GATES
+-----------------
+The paired job is blocked before publication when:
+- a role uses a TSD other than the Timeseries source used by its accepted synchronization;
+- the R01 and R02 body C3Ds have no common physical interval or insufficient overlap;
+- an assigned ETM C3D cannot cover the common interval;
+- a mapped Pupil interval falls outside the corresponding NRD clock beyond tolerance;
+- NRD, TSD and FaceMapper do not resolve to the same Pupil recording;
+- either role export fails.
+
+VALIDATION SUMMARY
+------------------
+Core and regression checks: 151 / 151 passed.
+
+Covered areas:
+- paired C3D-defined clip generation;
+- common Vicon overlap and inverse TimeGraph mapping;
+- exact NRD frame boundaries and boundary-error reporting;
+- source video not re-encoded;
+- mismatched TSD rejection;
+- no-overlap rejection;
+- insufficient NRD coverage rejection;
+- transactional rollback when the second role fails;
+- asynchronous API job completion and result publication;
+- Calibration Phase 5 and Trim review UI;
+- manual time fields hidden from the normal Calibration workflow and preserved in a collapsed recovery section;
+- wheel installation and v0.21.57 import;
+- wheel ZIP/RECORD integrity;
+- Calibration automatic synchronization and precision audit regression;
+- gaze-sample-clock Body AOI regression;
+- body geometry integrity gate regression;
+- fixation-level and semantic Body review reduction regression;
+- Face AOI edge-tolerance regression.
+
+Representative deterministic fixture result:
+- common Vicon duration: 3.000 s;
+- two role trim artifacts: created;
+- start boundary error: below 0.03 ms;
+- end boundary error: below 0.03 ms;
+- source NRD video re-encoded: no.
+
+VALIDATION SCOPE AND LIMITATIONS
+--------------------------------
+- Algorithm, transaction, API, UI and installer-wheel checks use deterministic synthetic fixtures so exact expected boundaries and failure behaviour can be asserted.
+- The user’s real R01/R02 common C3D interval, mapped Pupil boundaries and frame errors are computed after installation from the local project. This report does not claim those real-project values in advance.
+- UI validation used packaged HTML/CSS/JavaScript with a real backend-generated project state. The validation environment blocks Chromium loopback navigation, so the UI was exercised through the packaged static application and generated state rather than by browsing the local server URL.
+- Existing trim and downstream artifacts are preserved. Downstream Privacy/Gaze 3D/AOI artifacts must be regenerated when switching to the new automatic trim lineage.
+
+FILES
+-----
+Machine-readable validation:
+  OculoStudio_v0_21_57_Validation.json
+Release notes:
+  RELEASE_NOTES_v0_21_57.md
+  RELEASE_NOTES_v0_21_57_CN.md
+Preview images:
+  OculoStudio_v0_21_57_C3DDefinedClips_Preview.png
+  OculoStudio_v0_21_57_TrimReview_Preview.png

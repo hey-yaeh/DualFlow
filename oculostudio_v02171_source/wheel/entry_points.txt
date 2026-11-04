@@ -1,0 +1,4 @@
+[console_scripts]
+oculostudio = oculostudio.cli:main
+oculostudio-motionstudio = oculostudio.motionstudio_bridge.cli:main
+oculostudio-server = oculostudio.cli:serve_entry

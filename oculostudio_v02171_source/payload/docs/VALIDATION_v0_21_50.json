@@ -1,0 +1,102 @@
+{
+  "release": "OculoStudio v0.21.50",
+  "feature": "Body Geometry Integrity Gate and Fixation Review",
+  "generated_utc": "2026-11-01T11:35:47.958707+00:00",
+  "summary": {
+    "suites": 10,
+    "checks": 173,
+    "all_suites_passed": true,
+    "compileall_passed": true,
+    "javascript_syntax_passed": true
+  },
+  "suites": [
+    {
+      "name": "body_manual_review",
+      "kind": "core_regression",
+      "passed": 21,
+      "total": 21,
+      "ok": true
+    },
+    {
+      "name": "face_manual_review",
+      "kind": "core_regression",
+      "passed": 40,
+      "total": 40,
+      "ok": true
+    },
+    {
+      "name": "geometry_gate",
+      "kind": "core_regression",
+      "passed": 23,
+      "total": 23,
+      "ok": true
+    },
+    {
+      "name": "resolution_fallback",
+      "kind": "core_regression",
+      "passed": 6,
+      "total": 6,
+      "ok": true
+    },
+    {
+      "name": "result_handoff",
+      "kind": "core_regression",
+      "passed": 10,
+      "total": 10,
+      "ok": true
+    },
+    {
+      "name": "torso_review_reduction",
+      "kind": "core_regression",
+      "passed": 18,
+      "total": 18,
+      "ok": true
+    },
+    {
+      "name": "torso_surfaces",
+      "kind": "core_regression",
+      "passed": 18,
+      "total": 18,
+      "ok": true
+    },
+    {
+      "name": "visual_analytics",
+      "kind": "core_regression",
+      "passed": 14,
+      "total": 14,
+      "ok": true
+    },
+    {
+      "name": "OculoStudio_v0_21_50_BodyGeometryIntegrity_Preview.validation",
+      "kind": "live_ui",
+      "passed": 9,
+      "total": 9,
+      "ok": true
+    },
+    {
+      "name": "OculoStudio_v0_21_50_BodyHumanReviewRegression.validation",
+      "kind": "live_ui",
+      "passed": 14,
+      "total": 14,
+      "ok": true
+    }
+  ],
+  "validated_behaviour": [
+    "required self/partner geometry is checked before gaze-ray intersection",
+    "missing torso fails closed and writes actionable preflight diagnostics",
+    "warn/off artifacts remain diagnostic-only and cannot enter human review or target fusion",
+    "legacy unverifiable Body AOI artifacts are conservatively blocked",
+    "torso/pelvis fallback remains available and participates in real intersection",
+    "Body AOI review units merge repeated flagged samples by fixation while preserving all samples and frames",
+    "Face AOI review semantics remain unchanged",
+    "valid and blocked UI states were exercised in Chromium",
+    "Body manual-review decisions save without mutating the source artifact"
+  ],
+  "environment_note": "Backend and Chromium UI validation ran in the build environment. Windows installer paths and batch files are statically checked; final installation executes on the user Windows machine.",
+  "packaging_checks": {
+    "wheel_record_verified": true,
+    "wheel_zip_integrity_verified": true,
+    "wheel_import_version": "0.21.50",
+    "wheel_file_count": 121
+  }
+}

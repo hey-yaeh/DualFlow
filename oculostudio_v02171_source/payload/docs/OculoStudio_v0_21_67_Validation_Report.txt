@@ -1,0 +1,63 @@
+OculoStudio v0.21.68 — Project Calibration Sets
+
+Release validation summary
+==========================
+
+Feature
+-------
+Project-level, revisioned Calibration Sets can own AprilTag calibration sources and ETM profiles once, then assign the active revision to multiple Sessions. Interaction recordings remain independent.
+
+Primary Calibration Set validation
+----------------------------------
+35 / 35 checks passed.
+
+Verified behaviours
+-------------------
+- Wizard creates CAL_S004_S007 and binds S004–S007.
+- Folder layout v3 writes calibration_sets/<SET>/revisions/rev_001.
+- One canonical source is registered; Session references use the same immutable source path.
+- Raw calibration bytes are not duplicated.
+- Calibration sources create no provisional Global-Time maps.
+- ETM-A/ETM-B profile references are inherited by all assigned Sessions.
+- Data page separates Calibration Sets from Interaction data.
+- Manager creates/activates revisions and preserves source/profile lineage.
+- Chromium page errors: 0.
+- Chromium console errors: 0.
+
+Regression validation
+---------------------
+Functional checks counted across the selected release suites: 254 / 254 passed.
+
+Included suites
+---------------
+- Context-locked AOI Review
+- Role-locked partner projection
+- Body/Object AOI direct C3D clock
+- C3D-defined clips
+- Aligned Clip QC Preview
+- Formal aligned ego + TSD + FaceMapper export
+- Shared-audio facial↔ego sync
+- Formal aligned facial-video export
+- Calibration auto-sync and precision audit
+- Gaze-sample-clock AOI
+
+Wheel and installed-package validation
+--------------------------------------
+- Python compileall: PASS
+- app.js syntax: PASS
+- aoi_review.js syntax: PASS
+- Wheel ZIP CRC: PASS
+- Wheel RECORD: 127 rows, 0 failures
+- Isolated wheel install version: 0.21.68
+- Installed-wheel Calibration Set validation: 35 / 35 PASS
+- Installed-wheel C3D-defined clip regression: PASS
+- Wheel SHA-256: a862cac098cbfcbf71e964bab69da86a83de1d8da06369028709ecb5396d327b
+
+- Payload manifest: 313 files, PASS
+- Installer manifest: 318 files, PASS
+
+The final ZIP is CRC-tested and re-extracted after packaging.
+
+Boundary
+--------
+Core Python, FastAPI, FFmpeg and Chromium checks were executed in the build environment. Windows WebView2, native folder dialogs and .bat installation still require final confirmation on the user’s Windows machine.

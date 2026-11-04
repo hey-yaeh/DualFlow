@@ -1,0 +1,46 @@
+{
+  "release": "OculoStudio v0.21.58 — Aligned Clip QC Preview",
+  "checks": {
+    "installed_version": true,
+    "right_panel_generate_button": true,
+    "central_review_button": true,
+    "open_preview_button": true,
+    "automatic_endpoint_wired": true,
+    "aligned_job_operation": true,
+    "per_preview_role_history": true,
+    "aligned_overlay_semantics": true,
+    "manual_recovery_preserved": true,
+    "r01_automatic_plan_available": true,
+    "r01_preview_kind": true,
+    "r01_automatic_flag": true,
+    "r01_video_exists": true,
+    "r01_not_artifact": true,
+    "r01_gaze_mapped": true,
+    "r02_automatic_plan_available": true,
+    "r02_preview_kind": true,
+    "r02_automatic_flag": true,
+    "r02_video_exists": true,
+    "r02_not_artifact": true,
+    "r02_gaze_mapped": true,
+    "role_preview_ids_are_distinct": true,
+    "role_overlay_ids_are_distinct": true,
+    "both_roles_restorable": true,
+    "no_scientific_artifact_created": true,
+    "source_video_not_reencoded": true
+  },
+  "failed": [],
+  "role_previews": {
+    "R01": {
+      "preview_id": "nativeplan_950d0ac83d94",
+      "overlay_id": "overlay_83cffe058df80a2d",
+      "video_bytes": 11098,
+      "gaze_mapped": 200
+    },
+    "R02": {
+      "preview_id": "nativeplan_893a52fa48a8",
+      "overlay_id": "overlay_b047b977b4680744",
+      "video_bytes": 11440,
+      "gaze_mapped": 200
+    }
+  }
+}

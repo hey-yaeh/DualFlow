@@ -1,0 +1,9 @@
+{
+  "http_status": 200,
+  "job_id": "job_265eb5c68484",
+  "job_status": "completed",
+  "operation": "c3d_defined_aligned_clips",
+  "result_artifact_id": "artifact_8d74e3694aea",
+  "error": null,
+  "ok": true
+}

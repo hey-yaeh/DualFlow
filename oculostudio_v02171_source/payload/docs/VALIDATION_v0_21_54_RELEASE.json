@@ -1,0 +1,106 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "release": "OculoStudio v0.21.54 — Real-Time AOI Review and Semantic Queue Reduction",
+  "version": "0.21.54",
+  "wheel": {
+    "name": "oculostudio-0.21.54-py3-none-any.whl",
+    "size_bytes": 780003,
+    "sha256": "64678a6855459b1e5b237ce7fa81e06163e3b815f6221e773be03f04b99924ed"
+  },
+  "core_functional_checks": {
+    "passed": 195,
+    "total": 195,
+    "ok": true
+  },
+  "suites": [
+    {
+      "name": "real_time_playback",
+      "passed": 15,
+      "total": 15,
+      "ok": true
+    },
+    {
+      "name": "semantic_queue_reduction",
+      "passed": 11,
+      "total": 11,
+      "ok": true
+    },
+    {
+      "name": "fixation_reduction_regression",
+      "passed": 14,
+      "total": 14,
+      "ok": true
+    },
+    {
+      "name": "gaze_sample_clock_regression",
+      "passed": 24,
+      "total": 24,
+      "ok": true
+    },
+    {
+      "name": "body_geometry_gate_regression",
+      "passed": 23,
+      "total": 23,
+      "ok": true
+    },
+    {
+      "name": "body_manual_review_regression",
+      "passed": 21,
+      "total": 21,
+      "ok": true
+    },
+    {
+      "name": "face_manual_review_regression",
+      "passed": 40,
+      "total": 40,
+      "ok": true
+    },
+    {
+      "name": "body_visual_analytics_regression",
+      "passed": 14,
+      "total": 14,
+      "ok": true
+    },
+    {
+      "name": "body_result_handoff_regression",
+      "passed": 10,
+      "total": 10,
+      "ok": true
+    },
+    {
+      "name": "torso_review_reduction_regression",
+      "passed": 18,
+      "total": 18,
+      "ok": true
+    },
+    {
+      "name": "generic_aoi_review_browser",
+      "passed": 5,
+      "total": 5,
+      "ok": true
+    }
+  ],
+  "key_observations": {
+    "playback_start_seconds": 0.008333,
+    "playback_observed_seconds": 1.700235,
+    "playback_observed_video_frame": "51",
+    "playback_ray_changed": true,
+    "full_inspector_restored_after_pause": true,
+    "semantic_same_coarse_surface_resolved": true,
+    "different_coarse_regions_remain_pending": true,
+    "self_occlusion_remains_pending": true
+  },
+  "scope_and_limits": [
+    "Playback and semantic queue-reduction validations use deterministic synthetic OculoStudio projects so frame movement and safety boundaries are reproducible.",
+    "Core Body/Face review, torso geometry, gaze-sample-clock and result-handoff paths were regression-tested against the current source tree.",
+    "The exact reduction for the user’s real Body AOI artifact cannot be inferred from screenshots; the re-evaluation job reports its actual before/after event and sample counts.",
+    "Existing manual decisions are protected; review-only re-evaluation must not silently discard completed human work.",
+    "Windows batch installation is statically checked here; final Windows execution occurs on the user’s machine."
+  ],
+  "artifacts": {
+    "live_preview": "OculoStudio_v0_21_54_RealTimeAOIReview_Preview.png",
+    "paused_preview": "OculoStudio_v0_21_54_ReviewPaused_Preview.png",
+    "release_notes": "RELEASE_NOTES_v0_21_54.md"
+  },
+  "ok": true
+}

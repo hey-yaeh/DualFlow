@@ -1,0 +1,30 @@
+{
+  "release": "OculoStudio v0.21.69 \u2014 Direct Calibration Import Workspace",
+  "application_version": "0.21.69",
+  "checks": {
+    "installed_version_0_21_69": true,
+    "data_has_two_explicit_import_scopes": true,
+    "interaction_drop_zone_is_explicit": true,
+    "calibration_import_stays_on_data_page": true,
+    "modal_shows_project_level_scope": true,
+    "modal_shows_assigned_sessions": true,
+    "scan_finds_six_files": true,
+    "participant_detection": true,
+    "hardware_detection": true,
+    "board_and_world_detection": true,
+    "confirm_before_mutation": true,
+    "import_button_visible": true,
+    "direct_batch_import_completed": true,
+    "data_card_source_count_updated": true,
+    "interaction_import_is_separate": true,
+    "interaction_import_warns_about_calibration": true,
+    "page_errors_absent": true,
+    "console_errors_absent": true
+  },
+  "page_errors": [],
+  "console_errors": [],
+  "passed_count": 18,
+  "check_count": 18,
+  "failed": [],
+  "all_pass": true
+}

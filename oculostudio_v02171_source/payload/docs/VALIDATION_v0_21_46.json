@@ -1,0 +1,55 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "release": "OculoStudio v0.21.46 — Body AOI Torso Surfaces",
+  "application_version": "0.21.46",
+  "validated_utc": "2026-10-31T21:45:00Z",
+  "wheel": {
+    "filename": "oculostudio-0.21.46-py3-none-any.whl",
+    "size_bytes": 724047,
+    "sha256": "69a4b3f275c5ec109fa6dff5f63fd227f72e7af169a1a17c9e49b3000af1bc2a",
+    "record_verified": true
+  },
+  "installation": {
+    "pip_no_deps_target_install": true,
+    "imported_package_version": "0.21.46",
+    "importlib_metadata_version": "0.21.46",
+    "clean_core_self_check": true
+  },
+  "static": {
+    "javascript_syntax_check": true,
+    "python_compile_check": true,
+    "static_cache_version": "0.21.46"
+  },
+  "targeted_checks": {
+    "body_aoi_torso_surfaces": {
+      "passed": true,
+      "rendered_torso_like_pixels": 3147,
+      "radius_aware_bounds": true
+    },
+    "body_aoi_visual_analytics_regression": true,
+    "body_aoi_result_handoff_regression": true,
+    "body_aoi_resolution_fallback_regression": true
+  },
+  "browser_validation": {
+    "engine": "system Chromium via Playwright",
+    "viewport_px": [
+      1500,
+      980
+    ],
+    "console_errors": 0,
+    "world_canvas_css_px": [
+      453,
+      258
+    ],
+    "split_view_torso_visible_for_self": true,
+    "split_view_torso_visible_for_partner": true,
+    "selected_partner_torso_highlighted": true,
+    "preview": "docs/OculoStudio_v0_21_46_BodyAOI_TorsoSurfaces_Preview.png"
+  },
+  "scientific_compatibility": {
+    "intersection_algorithm_changed": false,
+    "labels_changed": false,
+    "existing_artifact_regeneration_required": false,
+    "qc_export_visualisation_updated": true
+  }
+}

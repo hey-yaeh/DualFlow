@@ -1,0 +1,202 @@
+{
+  "schema_version": "oculostudio-release-validation-1.0",
+  "release": "OculoStudio v0.21.71 — Independent AprilTag Board Geometry Resolver",
+  "application_version": "0.21.71",
+  "created_at_utc": "2026-11-04T16:55:00Z",
+  "issue": {
+    "job": "Build physical ETM profiles",
+    "previous_failure_progress_fraction": 0.45,
+    "previous_error": "The legacy engine did not produce a usable 4x4 board mapping",
+    "root_cause": [
+      "The labelled-head identity route correctly selected ETM-A/ETM-B but returned no AprilTag board-corner mapping.",
+      "The downstream legacy bridge incorrectly required the same identity branch to provide both tracker identity and board orientation.",
+      "All six Calibration sources were valid; source upload and classification were not the failure."
+    ]
+  },
+  "fix": {
+    "separate_evidence_routes": {
+      "hardware_identity": "labelled participant head markers → physical ETM-A/ETM-B",
+      "board_orientation": "scene AprilTags + planar 16-marker board + selected tracker proximity"
+    },
+    "revision_scoped_board_definition": true,
+    "actor_agreement_required": true,
+    "explicit_mapping_forwarded_to_estimator": true,
+    "reused_on_subsequent_builds": true,
+    "profile_pair_transactional": true
+  },
+  "real_uploaded_calibration_validation": {
+    "source_set": "CAL_S004_S007",
+    "source_files": [
+      "P01_calibration_S004-S007.zip",
+      "P03_calibration_S004-S007.zip",
+      "calibration_board_S004-S007.c3d",
+      "eye_tracker_A_S004-S007.c3d",
+      "eye_tracker_B_S004-S007.c3d",
+      "markers_world_S004-S007.c3d"
+    ],
+    "c3d_contract": {
+      "frames": 872,
+      "frame_rate_hz": 120.0,
+      "board_markers": 16,
+      "tracker_markers_each": 6
+    },
+    "board_geometry": {
+      "ready": true,
+      "resolvable": true,
+      "mapping_source": "combined_head_identity_plus_apriltag_board_geometry",
+      "mapping_variant": "auto_grid_rot0",
+      "definition_path": "/mnt/data/oculo_v2171_real_project/calibration_sets/CAL_S004_S007/revisions/rev_001/derived/board_geometry/board_definition.json",
+      "tag_corner_count": 16,
+      "outer_corner_count": 4,
+      "problems": [],
+      "warnings": [],
+      "board_filename": "calibration_board_S004-S007.c3d",
+      "board_point_count": 16,
+      "board_frame_count": 872,
+      "board_frame_rate_hz": 120.0,
+      "metrics": {
+        "board_filename": "calibration_board_S004-S007.c3d",
+        "point_count": 16,
+        "frame_count": 872,
+        "frame_rate_hz": 120.0,
+        "marker_labels": [
+          "*100",
+          "*121",
+          "*89",
+          "*105",
+          "*125",
+          "*112",
+          "*147",
+          "*83",
+          "*118",
+          "*88",
+          "*114",
+          "*85",
+          "*95",
+          "*109",
+          "*127",
+          "*102"
+        ],
+        "tag_corner_count": 16,
+        "outer_corner_count": 4
+      }
+    },
+    "identity_mapping": {
+      "P01 / James": "ETM-B",
+      "P03 / Jessica": "ETM-A"
+    },
+    "profiles": [
+      {
+        "display_name": "ETM-A_mount_v1_S004-S007",
+        "participant_id": "P03",
+        "module_serial_number": "928364",
+        "fixed_reprojection_rms_px": 1.3670819669928187,
+        "direct_pnp_median_rms_px": 1.0816892209164668,
+        "calibration_scene_to_c3d_offset_sec": -16.489448999999727,
+        "candidate_transform_count": 17,
+        "inlier_transform_count": 14
+      },
+      {
+        "display_name": "ETM-B_mount_v1_S004-S007",
+        "participant_id": "P01",
+        "module_serial_number": "150942",
+        "fixed_reprojection_rms_px": 2.4827038463141777,
+        "direct_pnp_median_rms_px": 0.706637524905139,
+        "calibration_scene_to_c3d_offset_sec": -13.864809999999837,
+        "candidate_transform_count": 32,
+        "inlier_transform_count": 32
+      }
+    ],
+    "both_profiles_ready": true,
+    "second_run": {
+      "status": "ready",
+      "message": "ETM-A and ETM-B profiles already exist",
+      "recomputed": false
+    }
+  },
+  "tests": {
+    "calibration_set_profile_builder": {
+      "passed": 22,
+      "total": 22,
+      "all_pass": true
+    },
+    "calibration_sets": {
+      "passed": 35,
+      "total": 35,
+      "all_pass": true
+    },
+    "data_management": {
+      "passed": 21,
+      "total": 21,
+      "all_pass": true
+    },
+    "calibration_import": {
+      "passed": 21,
+      "total": 21,
+      "all_pass": true
+    },
+    "project_session_workspace": {
+      "passed": 29,
+      "total": 29,
+      "all_pass": true
+    },
+    "calibration_auto_sync": {
+      "all_pass": true
+    },
+    "sync_precision": {
+      "all_pass": true
+    },
+    "c3d_defined_clips": {
+      "all_pass": true
+    },
+    "body_aoi_direct_clock": {
+      "passed": 6,
+      "total": 6,
+      "all_pass": true
+    },
+    "object_aoi_direct_clock": {
+      "passed": 6,
+      "total": 6,
+      "all_pass": true
+    },
+    "context_locked_aoi_review": {
+      "passed": 16,
+      "total": 16,
+      "all_pass": true
+    },
+    "role_locked_partner_projection": {
+      "passed": 15,
+      "total": 15,
+      "all_pass": true
+    },
+    "live_data_ui": {
+      "release": "0.21.71",
+      "page_errors": [],
+      "console_errors": [],
+      "checks": {
+        "board_mapped_visible": true,
+        "etm_a_ready": true,
+        "etm_b_ready": true,
+        "six_sources_visible": true
+      },
+      "all_pass": true
+    },
+    "python_compile": true,
+    "javascript_syntax": true
+  },
+  "wheel": {
+    "filename": "oculostudio-0.21.71-py3-none-any.whl",
+    "size_bytes": 1081566,
+    "sha256": "7441b9f174ea438e8cb301315ddf7076c02c81fba437ebfe49dc665ce2caef22",
+    "record_rows": 131,
+    "record_hashes_verified": true,
+    "zip_crc_verified": true,
+    "isolated_install_version": "0.21.71",
+    "isolated_profile_builder_passed": 22,
+    "installed_source_matches_build_tree": true
+  },
+  "limitations": [
+    "Windows WebView2 desktop-shell rendering and the BAT installer require final confirmation on the user’s Windows machine.",
+    "The scientific core and full visual QC were run on the six uploaded CAL_S004_S007 sources in the available build environment."
+  ]
+}

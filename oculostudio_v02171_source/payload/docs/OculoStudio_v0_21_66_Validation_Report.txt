@@ -1,0 +1,49 @@
+OculoStudio v0.21.66 — Project–Session Folder Workspace
+
+Release-specific validation
+===========================
+Project / Session / shared Calibration assertions: 28 / 28 PASS
+Context-locked AOI review regression:             16 / 16 PASS
+Role-locked partner projection regression:         15 / 15 PASS
+Shared-audio video synchronization regression:     37 / 37 PASS
+Aligned ego + TSD + FaceMapper export:             37 / 37 PASS
+Aligned facial-video export:                       34 / 34 PASS
+Body AOI direct-clock regression:                   6 / 6 PASS
+Object AOI direct-clock regression:                 6 / 6 PASS
+---------------------------------------------------------------
+Functional assertions:                            179 / 179 PASS
+
+Installed wheel
+===============
+Version: 0.21.66
+Wheel ZIP CRC: PASS
+Wheel RECORD entries: 126
+Wheel RECORD failures: 0
+Required files present: PASS
+Python compileall: PASS
+JavaScript syntax (app / Interaction workspace / import / AOI review): PASS
+CleanCore self-check: PASS
+Static UI routes/files: PASS
+Legacy source/bridge hits: 0
+
+Project workspace guarantees
+============================
+- Typed and pasted parent paths are validated, not treated as decorative placeholders.
+- S004-S007 can be created atomically in one Project.
+- Each Session receives a human-readable sessions/S### folder and isolated imports, derived, reports, annotations and cache directories.
+- Sessions can be batch-added after project creation.
+- Interaction IDs can be planned before source files are imported.
+- ETM-A / ETM-B profiles can be applied from one source Session to selected target Sessions with parent lineage and SHA-256 provenance.
+- Applying an already-shared profile is idempotent.
+- Interaction-specific wearer assignment, offset, drift, TimeGraph and Trim are never copied with hardware Calibration.
+- Non-empty target folders fail closed.
+- Existing legacy labels such as “Session S001” remain accepted.
+
+UI validation
+=============
+Chromium page errors: 0
+Chromium console errors: 0
+
+Boundary
+========
+The final Windows WebView2 desktop shell, native folder picker and .bat installer still require confirmation on the user’s Windows computer.

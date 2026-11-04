@@ -1,0 +1,35 @@
+OculoStudio v0.21.53 — Evidence-Guided Body Review Reduction
+============================================================
+
+Wheel: oculostudio-0.21.53-py3-none-any.whl
+SHA-256: 3baded4ade526a9ddf957e0ca23329559f574dbd0ca3c315b05e7a3947b956b3
+Validation suites: 10 / 10 passed
+Boolean checks: 202 / 202 passed
+
+Key guarantees
+--------------
+- Automatic Body relation/entity/region targets are never changed by review reduction.
+- Homogeneous candidate-only fixations may be auto-accepted only after target, angular, confidence, temporal-continuity and competing-surface checks.
+- Target conflicts, self occlusion, close competing surfaces, missing preview evidence and low-confidence geometry remain pending.
+- Existing v0.21.52+ sample-clock Body AOI can be reprocessed without rerunning C3D interpolation or ray intersection.
+- The source artifact remains immutable and saved manual decisions block reprocessing to avoid silent loss of human work.
+- Review events are displayed separately from high-rate gaze sample counts.
+
+Suites
+------
+- body_fixation_review_reduction: PASS (14/14 boolean checks; VALIDATION_v0_21_53_BODY_REVIEW_REDUCTION.json)
+- gaze_sample_clock_core: PASS (24/24 boolean checks; t_gaze_clock.log)
+- aoi_timebase_end_to_end: PASS (18/18 boolean checks; VALIDATION_v0_21_53_AOI_TIMEBASE_END_TO_END.json)
+- body_geometry_integrity_gate: PASS (23/23 boolean checks; VALIDATION_v0_21_53_BODY_GEOMETRY_GATE.json)
+- torso_review_reduction_regression: PASS (18/18 boolean checks; t_torso_review.log)
+- body_manual_review_regression: PASS (21/21 boolean checks; t_body_manual.log)
+- face_manual_review_regression: PASS (40/40 boolean checks; t_face_manual.log)
+- face_auto_review_regression: PASS (15/15 boolean checks; t_face_auto.log)
+- body_visual_analytics_regression: PASS (14/14 boolean checks; t_visual.log)
+- body_review_live_ui: PASS (15/15 boolean checks; OculoStudio_v0_21_53_BodyReviewReduction_Preview.validation.json)
+
+Limits and interpretation
+-------------------------
+- The real reduction for S001/I01 cannot be predicted from the screenshot alone; run Re-evaluate saved evidence to obtain before/after event counts.
+- The live UI test used a deterministic synthetic project. Core sample-clock and geometry regressions were run from the final installed wheel.
+- Windows batch paths and wheel references were statically checked; the actual Windows installation executes on the user machine.

@@ -1,0 +1,46 @@
+OculoStudio v0.21.63 — Aligned Facial-Expression Video Export
+Validation report
+
+NEW FEATURE
+- Formal aligned facial-expression video export: 34 / 34 PASS
+- Live Chromium Trim UI and real MP4 player: 11 / 11 PASS
+- Page errors: 0
+- Console errors: 0
+
+MEASURED SYNTHETIC END-TO-END CASE
+- Same physical interaction recorded by facial and Pupil/ego devices
+- Added start offset, approximately 400 ppm device-clock drift, microphone filtering/noise, and one-sided extra instructions
+- Accepted shared-audio TimeGraph scale: 1.0003603668616743
+- Recovered drift: 360.366861674 ppm
+- Export interval: 50.000 s
+- Output: 1500 frames at 30 fps
+- Facial audio preserved and retimed by factor 0.999639762960
+- Output video and frame map cover the exact immutable Native-reference physical interval
+- Source facial video and Native recording remained byte-unchanged
+- Wrong Native-reference lineage was rejected
+- Synchronization and Trim were not re-estimated
+- Arbitrary Dynamic Time Warping was not used
+
+REGRESSION CHECKS
+- Shared-audio facial↔ego synchronization: 37 / 37 PASS
+- Formal aligned ego + TSD + FaceMapper export: 37 / 37 PASS
+- Aligned Clip QC Preview: 26 / 26 PASS
+- Body AOI direct gaze-ray C3D clock: 6 / 6 PASS
+- Object AOI direct gaze-ray C3D clock: 6 / 6 PASS
+- C3D-defined paired R01/R02 clips: PASS
+- CleanCore runtime/static UI invariant check: PASS
+
+WHEEL
+- Version: 0.21.63
+- Wheel ZIP CRC: PASS
+- Wheel RECORD: 125 rows, 0 failures
+- Isolated wheel installation and import: PASS
+
+PACKAGE
+- Payload package manifest: 271 files, PASS
+- Installer package manifest: 276 files, PASS
+- The final installer archive is CRC-tested and extracted again before delivery.
+
+BOUNDARY
+- Core processing, FFmpeg generation, installed wheel, FastAPI-backed Chromium UI and archive integrity were validated in Linux.
+- The Windows WebView2 desktop shell and BAT installer cannot be executed in this environment and require final native confirmation after installation on Windows.

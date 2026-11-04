@@ -1,0 +1,304 @@
+Metadata-Version: 2.4
+Name: oculostudio
+Version: 0.21.71
+Summary: A clean interaction-centred workflow for Pupil Labs eye tracking, Vicon motion, privacy, world-space gaze and dyadic attention.
+Author: OculoStudio contributors
+License: Research preview — see LICENSE.txt
+Keywords: eye tracking,Pupil Labs,Vicon,C3D,gaze,privacy,dyadic attention
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: <3.14,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: fastapi<1,>=0.110
+Requires-Dist: uvicorn[standard]<1,>=0.29
+Requires-Dist: pydantic<3,>=2.7
+Requires-Dist: numpy<3,>=1.26
+Requires-Dist: pandas<3,>=2.1
+Requires-Dist: scipy<2,>=1.11
+Requires-Dist: opencv-contrib-python-headless<5,>=4.8
+Requires-Dist: matplotlib<4,>=3.8
+Requires-Dist: pillow<13,>=10
+Requires-Dist: imageio-ffmpeg<0.7,>=0.6
+Provides-Extra: desktop
+Requires-Dist: pywebview<7,>=5.1; extra == "desktop"
+Provides-Extra: c3d
+Requires-Dist: ezc3d<2,>=1.5; extra == "c3d"
+Provides-Extra: parquet
+Requires-Dist: pyarrow<24,>=15; extra == "parquet"
+Provides-Extra: dev
+Requires-Dist: pytest<10,>=8; extra == "dev"
+Requires-Dist: httpx<1,>=0.27; extra == "dev"
+Requires-Dist: build<2,>=1.2; extra == "dev"
+Provides-Extra: all
+Requires-Dist: pywebview<7,>=5.1; extra == "all"
+Requires-Dist: ezc3d<2,>=1.5; extra == "all"
+Requires-Dist: pyarrow<24,>=15; extra == "all"
+Provides-Extra: motionstudio
+Requires-Dist: torch>=2.2; extra == "motionstudio"
+Requires-Dist: smplx>=0.1.28; extra == "motionstudio"
+Dynamic: license-file
+
+# OculoStudio v0.21.71 — Independent AprilTag Board Geometry Resolver
+
+## v0.21.71
+
+- Fixes Calibration Set profile jobs that failed at 45% with `The legacy engine did not produce a usable 4x4 board mapping` even though all six Calibration sources were present.
+- Separates two independent evidence tasks: labelled head-marker geometry resolves the physical ETM-A/ETM-B identity, while scene AprilTags plus the planar 16-marker board resolve the 4×4 Tag-corner orientation.
+- Stores the accepted 16 Tag-corner + 4 outer-corner mapping as a revision-scoped Calibration Set resource and reuses it for both ETM profiles and later rebuilds.
+- Requires all calibration actors to agree on one board orientation; disagreement or incomplete marker geometry fails closed before profile estimation.
+- Adds a Calibration source preflight that reports board marker count, C3D frames/rate, mapping status and specific blocking reasons before expensive profile estimation.
+- Passes explicit board geometry into the unchanged measured camera-to-tracker estimator, preserving AprilTag detection, PnP, calibration-only clock search, robust SE(3) aggregation and QC.
+- Shows Board mapped / pending alongside ETM-A and ETM-B readiness in Data and in the Project-level Profile Builder.
+- Validated end-to-end on the uploaded `CAL_S004_S007` sources: P01/James→ETM-B and P03/Jessica→ETM-A, with both full production profiles published transactionally.
+
+# OculoStudio v0.21.70 — Scope-Separated Data Management
+
+## v0.21.70
+
+- Rebuilds Data as two self-contained workspaces: Project-level Calibration Data and current Interaction Data.
+- Gives each scope its own drop zone, file/folder chooser, target context, inventory and inspector.
+- Supports appending browser-selected Calibration files directly into the selected Calibration Set without routing through the Calibration page.
+- Routes global drag-and-drop by the visible target block and refuses ambiguous drops outside either scope.
+- Filters the Interaction inventory to the active I-code plus explicitly unassigned files, hiding other Interactions in the same Session.
+- Removes routine source-file management from Calibration; that page now performs wearer resolution, physical-profile building, clock synchronization and paired handoff operations only.
+- Preserves Calibration Set revisions, Session inheritance, existing Interaction assets and legacy recovery tools.
+
+# OculoStudio v0.21.69 — Calibration Set Physical Profile Builder
+
+## v0.21.69
+
+- Moves measured ETM-A / ETM-B hardware-profile generation from Interaction role details to the Project-level Calibration Set.
+- Matches P01/P03 AprilTag calibration recordings to physical ETM-A/ETM-B independently of the current Interaction wearer.
+- Removes the erroneous prerequisite for a Calibration recording→Project Global TimeGraph; the legacy measured-profile engine performs its own calibration-only clock search.
+- Publishes the two physical hardware profiles transactionally and propagates traceable references to every assigned Session.
+- Recovers valid, explicitly tagged profiles created by an earlier failed role-detail registration without recomputing them.
+- Keeps role detail pages as evidence/recovery views and exposes one clear Build physical profiles action on Data and Calibration pages.
+
+# OculoStudio v0.21.66 — Project–Session Folder Workspace
+
+## v0.21.66
+
+- Adds a three-step Project creation wizard with explicit parent directory, Project folder and display name.
+- Creates multiple Sessions atomically from ranges such as `S004-S007`.
+- Uses human-readable `sessions/S###/` folders for imports, derived outputs, reports, annotations and cache.
+- Adds a Project Session Manager for later Session creation and Interaction planning.
+- Adds a project-level shared Calibration library with traceable, idempotent profile application across Sessions.
+- Preserves per-Interaction wearer resolution, clock synchronization, drift and Trim.
+- Keeps existing Projects and legacy Session labels compatible.
+
+# OculoStudio v0.21.65 — Context-Locked AOI Review
+
+## v0.21.65
+
+- Locks participant-head projection to the active role's paired Calibration handoff.
+- Prevents R02 from reusing an R01/ETM-B calibration profile after role switching.
+- Lists only participant-association, FaceMapper-filter and Privacy artifacts from the exact selected Native-reference trim.
+- Rejects partner-only participant association when no valid in-view partner projection is produced.
+- Preserves all v0.21.63 aligned facial-video export functionality.
+
+## v0.21.63
+
+- Adds a formal **Export aligned facial video** action after an accepted, visually reviewed shared-audio facial↔ego TimeGraph.
+- Reuses the immutable C3D-defined Native-reference interval; no start/end boundary or synchronization is re-estimated.
+- Samples original facial frames on the ego/reference output clock, applying both the accepted offset and clock drift across the full interaction.
+- Retimes the facial audio by the same affine scale, writes an explicit output-frame→facial-source→ego/Native lineage map, and publishes an immutable role-specific artifact.
+- Requires matching interaction, role, original Native reference, accepted visual review, intact source files, and complete source coverage; all mismatches fail closed.
+- Keeps the original facial video, ego recording, TimeGraph, Trim, TSD, FaceMapper, Gaze 3D, AOI, and prior artifacts unchanged.
+
+# OculoStudio v0.21.62 — Direct Gaze-Ray C3D Clock for Body/Object AOI
+
+## v0.21.62
+
+- Fixes Body AOI jobs that failed with `No time-map path connects time_* to global` after verified Calibration/Gaze 3D.
+- Reuses the exact per-sample ETM/Vicon query time already stored in `gaze3d_c3d_time_sec`; a redundant Timeseries→Global path is no longer required for matching C3D-defined interactions.
+- Separates ray-generation alignment provenance from downstream Body/Object geometry clock provenance.
+- Validates that selected body/object C3Ds overlap the gaze-ray C3D clock before intersection, and fails closed on mismatched interactions.
+- Keeps project-Global TimeGraph fallback for legacy/raw recordings that do not carry a reusable C3D clock.
+
+# OculoStudio v0.21.61 — Shared-Audio Facial ↔ Ego Video Synchronization
+
+OculoStudio is a project-centric workflow for Pupil Labs gaze, Vicon motion, privacy video, calibrated 3D gaze, semantic AOI and dyadic attention.
+
+## v0.21.61
+
+- Adds robust synchronization for facial-expression and ego videos that recorded the same physical interaction.
+- Extracts the two audio tracks without modifying the videos, builds microphone-robust acoustic signatures, searches the coarse offset, and fits one affine offset + drift map from distributed local matches.
+- Tolerates short one-sided instructions when the remaining window uniquely supports the same lag, rejects weak/ambiguous or affine-inconsistent windows, and validates accepted anchors with leave-one-window-out prediction.
+- Never uses arbitrary dynamic time warping. FAILED candidates never modify the TimeGraph.
+- Requires split-video review at the beginning, middle and end before a candidate can be accepted. A stable device-internal A/V correction can be audited explicitly.
+- When the ego reference is a Pupil Native recording, also creates the exact Native MP4 PTS → Pupil capture-clock bridge, so the external facial video joins the existing Pupil/Vicon TimeGraph.
+- Adds role and interaction guards, source-change detection, range-streamed review media, immutable Time Sync artifacts, and transactional rollback if publishing fails.
+
+# OculoStudio v0.21.60 — Paired Calibration Views + Explicit Mode Selector
+
+OculoStudio is a project-centric workflow for Pupil Labs gaze, Vicon motion, privacy video, calibrated 3D gaze, semantic AOI and dyadic attention.
+
+## v0.21.60
+
+- Replaces the ambiguous Guided/Expert toggle with a visible dropdown that lists **Guided workflow** and **Expert tools** as explicit destinations.
+- Makes Calibration open in an authoritative **Paired summary** for R01 + R02 rather than presenting one role as the active calibration subject.
+- Adds **R01 details** and **R02 details** as read-only evidence/profile views; changing the detail view cannot reassign wearers, rewrite ETM bindings, or replace the paired handoff.
+- Replaces `Use R01 / Use R02` on other Expert pages with an explicit **Active role** selector used only for role-specific review, processing, and export.
+- Preserves all existing projects, profiles, TimeGraphs, C3D-defined clips, aligned ego/TSD/FM packages, Privacy outputs, gaze rays, AOIs, and review decisions.
+- This is a workflow-semantics and UI release; scientific processing algorithms and immutable artifacts are unchanged.
+
+# OculoStudio v0.21.59 — Aligned Ego Video + TSD + FaceMapper Export
+
+OculoStudio is a project-centric workflow for Pupil Labs gaze, Vicon motion, privacy video, calibrated 3D gaze, semantic AOI and dyadic attention.
+
+## v0.21.59
+
+- Adds a formal **Export aligned ego + TSD + FM** action to the verified automatic Trim workflow.
+- Reuses the immutable Native-reference trim interval; no boundary is re-entered or re-estimated.
+- Creates a clean CFR ego-video MP4 with optional source audio and an explicit output-frame-to-Native-PTS map.
+- Copies the verified TSD and FaceMapper ZIPs byte-for-byte and checks their SHA-256 hashes.
+- Publishes one role-specific immutable package with manifest, report, source trim manifest and source frame map.
+- Supports combined, video-only and data-only revisions while keeping R01 and R02 independent.
+- Retains the temporary aligned-clip QC preview as a separate visual-inspection workflow.
+
+# OculoStudio v0.21.58 — Aligned Clip QC Preview
+
+OculoStudio is a project-centric workflow for Pupil Labs gaze, Vicon motion, privacy video, calibrated 3D gaze, semantic AOI and dyadic attention.
+
+## v0.21.58
+
+- Restores the missing **Generate QC preview** action on the automatic C3D-defined Trim page.
+- Adds **Review aligned clip video** beside the verified automatic clip and **Open preview** after rendering.
+- Reuses the immutable automatic trim plan, exact NRD `.time` / MP4 PTS interval, FaceMapper geometry and retained TSD gaze samples; no start/end time is re-entered.
+- Keeps R01 and R02 preview state separate and restores the matching preview after role switching or reopening the project.
+- Renders representative, distributed, boundary or full-interval temporary overlays without modifying the aligned clip, source recordings or scientific artifacts.
+- Preserves the collapsed manual-recovery trim and its original pre-trim overlay workflow.
+
+# OculoStudio v0.21.57 — C3D-Defined Pupil Clips
+
+OculoStudio is a project-centric workflow for Pupil Labs gaze, Vicon motion, privacy video, calibrated 3D gaze, semantic AOI and dyadic attention.
+
+## v0.21.57
+
+- Moves Calibration before normal Trim so the accepted Pupil↔Vicon TimeGraph becomes the authority for interaction boundaries.
+- Derives one common physical interval from the overlap of the R01 and R02 body C3D recordings.
+- Inverts each role-specific affine TimeGraph to map that common Vicon interval into the corresponding Pupil recording clock.
+- Resolves exact NRD frame boundaries through the companion `.time` clock and actual MP4 presentation timestamps instead of nominal FPS or typed timecodes.
+- Creates R01 and R02 Native-reference trim artifacts transactionally and publishes a paired `aligned_clip_set` only when both roles succeed.
+- Trims TSD and FaceMapper tables with the same immutable interval while leaving the source NRD video unchanged; Privacy may encode a physical clip later.
+- Reports frame-boundary error, C3D overlap coverage, source assets, accepted TimeGraph lineage and explicit no-manual-timecode provenance.
+- Keeps manual start/end entry only inside a collapsed recovery section and blocks mismatched TSD, insufficient NRD coverage, missing common C3D overlap and partial pair publication.
+
+# OculoStudio v0.21.56 — Precision-Audited Clock Synchronization
+
+OculoStudio is a project-centric workflow for Pupil Labs gaze, Vicon motion, privacy video, calibrated 3D gaze, semantic AOI and dyadic attention.
+
+## v0.21.56
+
+- Refines distributed-window lags below one sample instead of reporting only the integer comparison grid.
+- Reports clock drift with a finite 95% confidence interval and estimator resolution.
+- Uses leave-one-window-out residuals so validation windows are independent of the affine map fitted for each prediction.
+- Labels sub-resolution residuals as precision-limited rather than exact zero.
+- Adds a no-video evidence preview with aligned Pupil IMU/ETM-C3D traces and local-offset drift diagnostics.
+- Requires a v0.21.56 precision audit before an automatic TimeGraph can enter a production Gaze 3D handoff.
+
+## v0.21.55
+
+- Adds Pupil IMU ↔ assigned ETM Vicon automatic synchronization as the formal third phase of Calibration; ego-video pixels are not used.
+- Estimates both clock offset and drift from distributed motion windows and saves an auditable affine TimeGraph only when verification gates pass.
+- Runs role-specific synchronization against the immutable wearer assignment, preserving the project mapping R01→ETM-B and R02→ETM-A.
+- Requires both role mappings, both hardware profiles and distributed-drift validation before creating the immutable Gaze 3D handoff.
+- Makes REVIEW candidates require explicit acceptance and keeps FAILED candidates from modifying the TimeGraph.
+- Prevents Native-trim Gaze 3D from silently falling back to shared-start when the Calibration handoff requires a verified TimeGraph.
+- Records offset, drift ppm, correlation, matched windows, residuals, source assets, role, wearer-assignment revision and explicit no-video provenance.
+
+# OculoStudio v0.21.54 — Real-Time AOI Review and Semantic Queue Reduction
+
+OculoStudio is a project-centric workflow for Pupil Labs gaze, Vicon motion, privacy video, calibrated 3D gaze, semantic AOI and dyadic attention.
+
+## v0.21.54
+
+- Makes AOI preview responsive with compact rolling playback packets and separate full-review/playback caches.
+- Keeps decoded video, 2D overlay, 3D body evidence and gaze ray synchronized while playing, then restores the complete scientific inspector after pause.
+- Restores an explicit `▶ Play` / `Ⅱ Pause` control with live/buffering/paused status.
+- Adds semantic coarse-target review reduction for raw-surface disagreements that preserve the same person, entity and exported coarse body label.
+- Groups adjacent target-stable fixation units into review episodes while retaining self occlusion, person/entity conflicts and different coarse body regions for human review.
+- Re-evaluates saved v0.21.52+ gaze-sample-clock Body AOI into a new immutable child artifact without rerunning C3D interpolation or ray intersection.
+
+
+
+## v0.21.53
+
+- Adds evidence-guided fixation consensus for Body AOI: a complete near-body fixation can leave the queue when every pending sample preserves one self/partner body target, has bounded angular miss, adequate geometry confidence, temporal continuity, and no close competing surface.
+- Keeps target conflicts, self occlusion, missing preview evidence, low-confidence geometry and close competing body surfaces in human review.
+- Reports review events separately from high-rate gaze samples so the user sees the actual number of decisions rather than only the raw sample count.
+- Adds a review-only reprocessing job that creates a new immutable child Body AOI from saved gaze-sample intersections without rerunning C3D interpolation or changing automatic targets.
+- Records fixation-level evidence, target share, angular statistics, exact-anchor count and resolution source for every automatically accepted sample.
+
+
+## v0.21.52
+
+- Computes Body AOI at every valid gaze timestamp instead of reusing one body snapshot for all samples mapped to the same approximately 30 FPS video frame.
+- Interpolates self and partner raw Vicon C3D geometry independently at the exact gaze-sample clock; the video clock is now display/review only.
+- Makes missing video frames non-blocking for 3D Body AOI while retaining explicit preview-availability fields and timebase diagnostics.
+- Adds a fail-closed temporal-integrity gate so legacy video-frame-clock Body AOI artifacts cannot enter human review or target fusion until regenerated.
+- Keeps FaceMapper observations at native video FPS, but optionally performs conservative same-track interpolation to each gaze timestamp when track identity, gap and motion checks pass.
+- Records per-sample Face geometry provenance, interpolation endpoints, alpha, gap, confidence and fallback reason.
+- Exports estimated gaze/video/C3D rates and query-to-source timing errors so the computation clock is visible and auditable.
+- Corrects marker-profile provenance terminology: the OCUMO `FWT/MWT/BWT` and `FSH/TSH/BSH` labels are read directly from raw Vicon C3D and do not imply MotionStudio processing.
+
+
+## v0.21.51
+
+- Adds native support for the MotionStudio `production10fingers_smplh_surface_layout_combined` marker protocol used by the OCUMO body C3D files.
+- Builds pelvis and hip anchors from `LFWT/LMWT/LBWT` and `RFWT/RMWT/RBWT`, and shoulder anchors from `LFSH/LTSH/LBSH` and `RFSH/RTSH/RBSH`.
+- Maps the same protocol's elbow, wrist, hand, knee and foot markers so the complete body rather than only head/distal limbs participates in Body AOI intersection.
+- Detects the marker protocol per C3D, records exact matched markers and valid-frame counts, and shows the protocol in geometry integrity diagnostics.
+- Accepts common exporter prefixes such as `Subject_MARKER` and `Subject-MARKER` in addition to Vicon's `Subject:MARKER` convention.
+- Preserves the v0.21.50 fail-closed torso gate, fixation-level review queue and downstream review/fusion protections.
+
+
+## v0.21.50
+
+- Adds a fail-closed Body Geometry Integrity Gate before gaze-ray intersection. Required self/partner streams must meet configurable body-timeline and torso-coverage thresholds.
+- Writes a standalone preflight diagnostic when geometry fails, including the affected role, entity, C3D source, torso/pelvis counts, unresolved landmarks and recommended corrective actions.
+- Prevents invalid or unverifiable Body AOI artifacts from entering human review or target fusion; older artifacts remain viewable for diagnosis.
+- Shows per-person body, torso, pelvis and fallback coverage in Gaze Targets and the Body review player.
+- Groups repeated flagged samples into fixation-level review units and opens the representative frame while preserving every affected frame and sample for audit.
+- Preserves the v0.21.49 torso reconstruction, near-body auto-review policy, immutable reviewed-artifact lineage and source evidence.
+
+
+## v0.21.49
+
+- Reconstructs missing torso and pelvis primitives frame-wise from observed bilateral shoulders and hips, with conservative head/neck-to-pelvis fallbacks, reduced confidence and explicit geometry provenance.
+- Shows a dashed, translucent visual torso for older Body AOI artifacts that contain limbs but no central torso row; rerunning Body AOI upgrades this from a display fallback to real ray-intersection geometry.
+- Replaces the all-or-nothing uncertainty-cone review rule with an auditable policy: clear-margin near-body candidates and matching exact-hit evidence in the same frame or fixation can be accepted automatically without changing the predicted target.
+- Keeps self-occlusion, missing scene frames, unresolved/other entities and competing surfaces in the human queue.
+- Adds Conservative, Adaptive, Balanced and Off policies, sample-level audit columns, before/after review metrics and auto-resolution summaries.
+- Renames uncertainty-cone hits in the review UI to near-body candidates.
+
+## v0.21.48
+
+- Adds a dedicated Body AOI human-review queue for every sample marked `review_required`.
+- Adds persistent Body review entries above the AOI player, in the Gaze Targets property panel and on completed Body AOI jobs.
+- Supports accepting the automatic target, correcting self/partner/other, correcting coarse or detailed body region and entity ID, marking `no_body`, deferring, clearing, and sample/frame/fixation scope.
+- Applies saved decisions immediately in the player while preserving the original automatic Body AOI evidence.
+- Finalizes completed review into a new immutable reviewed Body AOI artifact with decision ledger, lineage, automatic-value audit columns and recomputed frame/QC tables.
+- Preserves all v0.21.47 Face AOI review entry, v0.21.46 torso surfaces and prior Body AOI visual analytics.
+
+## v0.21.47
+
+- Restores a persistent Face AOI Human review entry above the AOI Review Player in Face, Body and Fused-target modes.
+- Opens the matching Face AOI artifact, switches the player to Face AOI, jumps to the first pending frame and scrolls directly to the editable review panel.
+- Keeps the Face review entry visible even when Body AOI was opened from the job queue.
+
+## v0.21.46
+
+- Renders torso and pelvis primitives as radius-aware translucent body surfaces in both X–Z and Y–Z evidence views.
+- Preserves self/partner line semantics, selected-hit highlighting and exported QC rendering.
+
+## v0.21.45
+
+- Fixes Body AOI result handoff and adds an explicit review action to completed Body AOI jobs.
+
+## v0.21.44
+
+- Adds coordinated Body AOI video, 3D evidence, timeline, body maps, proportions and occlusion diagnostics.

@@ -1,0 +1,51 @@
+{
+  "release": "0.21.54",
+  "checks": {
+    "application_version": true,
+    "play_button_visible_before": true,
+    "play_button_never_ellipsis": true,
+    "video_advances_near_real_time": true,
+    "video_is_playing": true,
+    "live_status_visible": true,
+    "overlay_frame_advances": true,
+    "world_frame_tracks_overlay": true,
+    "live_frame_readout_tracks_overlay": true,
+    "gaze_ray_has_direction": true,
+    "gaze_ray_changes_with_video": true,
+    "pause_button_restored": true,
+    "full_inspector_restored_after_pause": true,
+    "no_page_errors": true,
+    "no_console_errors": true
+  },
+  "page_errors": [],
+  "console_errors": [],
+  "before": {
+    "time": 0.008333,
+    "button": "\u25b6 Play",
+    "status": "Paused \u00b7 full review frame",
+    "overlay": "0",
+    "world": "0",
+    "ray": "-0.098116,-0.093333,0.990789"
+  },
+  "during": {
+    "time": 1.700235,
+    "paused": false,
+    "button": "\u2161 Pause",
+    "status": "Playing \u00b7 live 3D overlay",
+    "overlay": "51",
+    "presented": "51",
+    "world": "51",
+    "ray": "-0.110533,-0.093261,0.989487",
+    "frameReadout": "51"
+  },
+  "after": {
+    "paused": true,
+    "button": "\u25b6 Play",
+    "status": "Paused \u00b7 full review frame",
+    "summary": "Current frame\n      Video frame58Native frame118\n      Samples3Mean confidence0.940\n    Frame primary targetP02 \u00b7 Partner \u00b7 Head\n    partner_head 3\n    \n    ",
+    "payload": "58"
+  },
+  "passed": 15,
+  "total": 15,
+  "ok": true
+}

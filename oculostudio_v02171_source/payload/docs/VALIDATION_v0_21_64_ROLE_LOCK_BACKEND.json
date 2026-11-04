@@ -1,0 +1,14 @@
+{
+  "session_id": "session_711cea875c6a",
+  "assignment_id": "artifact_873883b5549b",
+  "trim_r01": "artifact_a9e368f46751",
+  "trim_r02": "artifact_d69b059ce855",
+  "association_id": "artifact_c349253d1d97",
+  "face_aoi_id": "artifact_678c2aa206b4",
+  "valid_partner_projection_rows": 90,
+  "resolved_etm_id": "ETM-A",
+  "profile_resolution_source": "paired_calibration_handoff",
+  "wrong_profile_blocked": true,
+  "mismatched_trim_blocked": true,
+  "project_root": "/mnt/data/oculo_v02164_role_lock_project"
+}

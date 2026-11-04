@@ -1,0 +1,11 @@
+{
+  "mismatched_tsd_rejected": true,
+  "mismatch_publishes_nothing": true,
+  "no_overlap_rejected": true,
+  "no_overlap_publishes_nothing": true,
+  "second_export_failure_raised": true,
+  "transactional_rollback": true,
+  "insufficient_nrd_coverage_rejected": true,
+  "coverage_failure_publishes_nothing": true,
+  "all_pass": true
+}

@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "artifact_id": "artifact_fb13970699aa",
+  "common_duration_sec": 3.0,
+  "role_trim_ids": {
+    "R01": "artifact_7427891d0bf1",
+    "R02": "artifact_d3a0e30610e0"
+  },
+  "maximum_start_boundary_error_ms": 0.0035,
+  "maximum_end_boundary_error_ms": 0.0245,
+  "source_video_reencoded": false,
+  "artifact_count": 6
+}

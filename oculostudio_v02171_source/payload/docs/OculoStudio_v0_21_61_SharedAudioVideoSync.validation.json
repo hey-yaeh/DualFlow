@@ -1,0 +1,31 @@
+{
+  "release": "0.21.61",
+  "page_errors": [],
+  "console_errors": [],
+  "checks": {
+    "mode_selector_is_explicit_dropdown": true,
+    "guided_mode_is_initially_explicit": true,
+    "expert_mode_selection_is_explicit": true,
+    "calibration_opens_in_paired_summary": true,
+    "role_detail_views_are_read_only_choices": true,
+    "panel_visible_in_calibration": true,
+    "source_video_selected": true,
+    "native_ego_selected": true,
+    "run_button_enabled": true,
+    "scientific_contract_visible": true,
+    "split_video_review_visible": true,
+    "three_review_positions_visible": true,
+    "visual_correction_control_visible": true,
+    "visual_confirmation_required": true,
+    "accept_button_visible": true,
+    "source_video_streams": true,
+    "reference_video_streams": true,
+    "audio_trace_canvas_visible": true,
+    "page_errors_absent": true,
+    "console_errors_absent": true
+  },
+  "passed_count": 20,
+  "check_count": 20,
+  "failed": [],
+  "all_pass": true
+}
